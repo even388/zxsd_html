@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="applicable-device" content="pc">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="keywords" content="个人购买流程,企业购买流程,二哥网" />
+    <meta name="description" content="二哥网购买流程频道为大家介绍商品服务的购买流程，包括手机电脑,家居家电,母婴,户外旅游,汽车用品,金融,教育,房地产等采购流程，让购物消费更专业·更放心" />
+    <meta http-equiv="mobile-agent"content="format=html5;url=http://m.2ge.cn/lc/" />
+    <title>购买流程_二哥网</title>
+    <link href="/home/images/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="/home/css/yijuNew.css" />
+    <base target="_blank">
+</head>
+<body class="backcolor">
+<!--#include virtual="/tops.html" -->
+<div class="outer">
+    <div class="banner">
+        <ul class="ban-yiju">
+            <#list imagelist as image>
+            <#if image_index == 0>
+            <li style="z-index:1;background-image:url(${image.image_path});"><a href="${image.link_url}"></a></li>
+            <#break>
+        </#if>
+    </#list>
+    <#list imagelist as image>
+    <#if image_index gt 0 && image_index lte 5>
+    <li style="background-image:url(${image.image_path});"><a href="${image.link_url}"></a></li>
+</#if>
+</#list>
+</ul>
+<ol>
+    <li class="current-yiju"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+<span class="left"></span>
+<span class="right"></span>
+</div>
+</div>
+<div class="wrap2">
+    <div class="wrap-inner footbottom">
+        <div class="shuma" id="zhengce">
+            <div class="guojia">
+                <div class="line_pd"></div>
+                <h2 class="yh2 havet">
+                    <span class="title"><img src="/home/images/haveyy.png">个人购买流程</span>
+                    <a class="more" href="/home/article-list/101-0"><span>MORE</span><strong>+</strong></a>
+                </h2>
+                <dl>
+                    <dt>
+                        <#list ardgrlist as yj>
+                        <#if yj_index == 0>
+                        <a href="/ard/${yj.article_id}.html">
+                            <img src="${yj.title_image}" height="111" width="165" alt="${yj.title}" />
+                            <p>${yj.title}</p>
+                        </a>
+                    </#if>
+                </#list>
+                </dt>
+                <#list ardgrlist as yj>
+                <#if yj_index gt 0>
+                <dd><a href="/ard/${yj.article_id}.html" >${yj.title}</a></dd>
+            </#if>
+        </#list>
+        </dl>
+    </div>
+    <div class="guojia difang">
+        <div class="line_pd"></div>
+        <h2 class="yh2 havet">
+            <span class="title"><img src="/home/images/haveyy.png">企业采购流程</span>
+            <a class="more" href="/home/article-list/102-0"><span>MORE</span><strong>+</strong></a>
+        </h2>
+        <dl>
+            <dt>
+                <#list ardqylist as yj>
+                <#if yj_index == 0>
+                <a href="/ard/${yj.article_id}.html">
+                    <img src="${yj.title_image}" height="111" width="165" alt="${yj.title}" />
+                    <p>${yj.title}</p>
+                </a>
+            </#if>
+        </#list>
+        </dt>
+        <#list ardqylist as yj>
+        <#if yj_index gt 0>
+        <dd><a href="/ard/${yj.article_id}.html" style="width: 281px;" >${yj.title}</a></dd>
+    </#if>
+</#list>
+</dl>
+</div>
+</div>
+<div class="newYiJu shuma newLiuCheng"  style="margin-bottom:0px;">
+    <h2 class="yh2">
+        <span class="title">房产/汽车/汽车用品</span>
+        <a class="more" href="/fenlei/1201/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="liuChengWords">
+                <ul class="liuChengUl">
+                    <#if ardlist_115 ??>
+                    <#list ardlist_115 as lc>
+                    <li class="liuChengLi">
+                        <span class="spanImg"><a href="/ard/${lc.article_id}.html"><img src="${lc.title_image}" alt="${lc.title}"></a></span>
+                        <h3><a href="/ard/${lc.article_id}.html">${lc.title}</a></h3>
+                        <p>
+                  			<#if (lc.content_intro?? && lc.content_intro?length>60)>
+								${lc.content_intro?substring(0,60)}...
+							<#else>
+								${lc.content_intro}
+							</#if>
+                 			<a class="adetail" href="/ard/${lc.article_id}.html">详情</a>
+                   		</p>
+                    </li>
+                    </#list>
+                    </#if>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="newYiJu shuma newLiuCheng"  style="margin-bottom:0px;">
+    <h2 class="yh2">
+        <span class="title">家居/家具/家装/厨具</span>
+        <a class="more" href="/fenlei/1178/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="liuChengWords">
+                <ul class="liuChengUl">
+                    <#if ardlist_112 ??>
+                    <#list ardlist_112 as lc>
+                    <li class="liuChengLi">
+                        <span class="spanImg"><a href="/ard/${lc.article_id}.html"><img src="${lc.title_image}" alt="${lc.title}"></a></span>
+                        <h3><a href="/ard/${lc.article_id}.html">${lc.title}</a></h3>
+                        <p>
+                            <#if (lc.content_intro?? && lc.content_intro?length>60)>
+                            ${lc.content_intro?substring(0,60)}...
+                            <#else>
+                            ${lc.content_intro}
+                        </#if>
+                        <a class="adetail" href="/ard/${lc.article_id}.html">详情</a>
+                        </p>
+                    </li>
+                </#list>
+            </#if>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<div class="newYiJu shuma newLiuCheng"  style="margin-bottom:0px;">
+    <h2 class="yh2">
+        <span class="title">食品/酒类/生鲜/特产</span>
+        <a class="more" href="/fenlei/1152/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="liuChengWords">
+                <ul class="liuChengUl">
+                    <#if ardlist_108 ??>
+                    <#list ardlist_108 as lc>
+                    <li class="liuChengLi">
+                        <span class="spanImg"><a href="/ard/${lc.article_id}.html"><img src="${lc.title_image}" alt="${lc.title}"></a></span>
+                        <h3><a href="/ard/${lc.article_id}.html">${lc.title}</a></h3>
+                        <p>
+                            <#if (lc.content_intro?? && lc.content_intro?length>60)>
+                            ${lc.content_intro?substring(0,60)}...
+                            <#else>
+                            ${lc.content_intro}
+                        </#if>
+                        <a class="adetail" href="/ard/${lc.article_id}.html">详情</a>
+                        </p>
+                    </li>
+                </#list>
+            </#if>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<div class="newYiJu shuma newLiuCheng"  style="margin-bottom:0px;">
+    <h2 class="yh2">
+        <span class="title">医药保健/计生情趣</span>
+        <a class="more" href="/fenlei/1159/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="liuChengWords">
+                <ul class="liuChengUl">
+                    <#if ardlist_109 ??>
+                    <#list ardlist_109 as lc>
+                    <li class="liuChengLi">
+                        <span class="spanImg"><a href="/ard/${lc.article_id}.html"><img src="${lc.title_image}" alt="${lc.title}"></a></span>
+                        <h3><a href="/ard/${lc.article_id}.html">${lc.title}</a></h3>
+                        <p>
+                            <#if (lc.content_intro?? && lc.content_intro?length>60)>
+                            ${lc.content_intro?substring(0,60)}...
+                            <#else>
+                            ${lc.content_intro}
+                        </#if>
+                        <a class="adetail" href="/ard/${lc.article_id}.html">详情</a>
+                        </p>
+                    </li>
+                </#list>
+            </#if>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<div class="newYiJu shuma newLiuCheng"  style="margin-bottom:0px;">
+    <h2 class="yh2">
+        <span class="title">机票/酒店/旅游/生活</span>
+        <a class="more" href="/fenlei/1218/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="liuChengWords">
+                <ul class="liuChengUl">
+                    <#if ardlist_118 ??>
+                    <#list ardlist_118 as lc>
+                    <li class="liuChengLi">
+                        <span class="spanImg"><a href="/ard/${lc.article_id}.html"><img src="${lc.title_image}" alt="${lc.title}"></a></span>
+                        <h3><a href="/ard/${lc.article_id}.html">${lc.title}</a></h3>
+                        <p>
+                            <#if (lc.content_intro?? && lc.content_intro?length>60)>
+                            ${lc.content_intro?substring(0,60)}...
+                            <#else>
+                            ${lc.content_intro}
+                        </#if>
+                        <a class="adetail" href="/ard/${lc.article_id}.html">详情</a>
+                        </p>
+                    </li>
+                </#list>
+            </#if>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+<div class="top" id="ltop">
+    <img src="/home/images/toptou.jpg">
+</div>
+</div>
+</div>
+<!--#include virtual="/foots.html" -->
+<script type="text/javascript">
+    localStorage.topval = 108;
+</script>
+</body>
+</html>

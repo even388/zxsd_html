@@ -1,0 +1,825 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>经验分享_二哥网</title>
+    <meta name="keywords" content="购买经验,使用经验,二哥网" />
+    <meta name="description" content="二哥网经验分享频道是一个为消费者提供各种商品和服务的热门经验,最新经验,购买经验,使用经验,通用经验等交流的平台，用户可以这里分享自己的购物、使用的心得和体会" />
+    <link href="/home/images/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="/home/css/share.css" />
+    <link rel="stylesheet" type="text/css" href="/home/css/shfw.css" />
+    <link rel="stylesheet" type="text/css" href="/home/css/bgt.css" />
+    <link rel="stylesheet" type="text/css" href="/home/css/jyfx.css" />
+    <link rel="stylesheet" type="text/css" href="/home/css/login.css" />
+    <link rel="stylesheet" href="/home/js/ztree/css/demo.css" type="text/css">
+    <link rel="stylesheet" href="/home/js/ztree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/home/css/swiper.min.css">
+    <script type="text/javascript" src="/home/js/swiper.min.js"></script>
+    <base target="_blank">
+    <style>
+        .ke-dialog-default{
+            width:456px!important;
+            height:253px!important;
+        }
+        .ke-dialog-content{
+            box-sizing:border-box;
+            border:1px solid #ccc!important;
+        }
+        .ke-dialog-header{
+            height:37px!important;
+            line-height:37px!important;
+            background:#f3f3f3!important;
+            font-size:14px!important;
+            color:#404040!important;
+        }
+        .ke-dialog-icon-close{
+            background:url(/home/images/shazi.png) no-repeat!important;
+            top:11px!important;
+            right:11px!important;
+        }
+        .ke-upload-area{
+            width:87px!important;
+        }
+        .ke-form{
+            width:auto!important;
+        }
+        .ke-upload-button{
+            width:89px!important;
+            height:34px!important;
+            border-radius:5px!important;
+            box-sizing:border-box;
+            overflow:hidden;
+        }
+        .ke-button-common{margin-top:6px;}
+        .ke-dialog-body{
+            height:140px!important;
+        }
+        .ke-dialog-footer{
+            width:220px!important;
+            height:34px;
+            margin:0 auto;
+        }
+        .ke-dialog-yes{
+            width:100px!important;
+            height:34px!important;
+            text-align:center!important;
+            line-height:34px!important;
+            background:#2cbe1d!important;
+            border-radius:5px;
+            overflow:hidden!important;
+            float:left!important;
+            margin:0!important;
+            margin-right:20px!important;
+        }
+        .ke-dialog-yes .ke-button{
+            width:100px!important;
+            height:34px!important;
+            background:#2cbe1d!important;
+            font-size:15px!important;
+            color:#fff!important;
+        }
+        .ke-dialog-no{
+            width:100px!important;
+            height:34px!important;
+            text-align:center!important;
+            line-height:34px!important;
+            background:#b5b5b5!important;
+            border-radius:5px;
+            overflow:hidden!important;
+            float:left!important;
+            margin:0!important;
+        }
+        .ke-dialog-no .ke-button{
+            width:100px!important;
+            height:34px!important;
+            background:#b5b5b5!important;
+            font-size:15px!important;
+            color:#fff!important;
+        }
+        .ke-edit-iframe{height:100%!important;}
+        .fenLei .placeholder {position: absolute;top: 0;z-index: 10;color:rgba(213, 213, 213, 1);line-height:30px;font-size:14px;}
+        .wrap1{overflow: initial;}
+    </style>
+</head>
+<body>
+<!--#include virtual="/tops.html" -->
+<div class="wrapper">
+    <div class="outer">
+        <div class="banner">
+            <ul class="ban-yiju">
+                <#list imagelist as image>
+                <#if image_index == 0>
+                <li style="z-index:1;background-image:url(${image.image_path});"><a href="${image.link_url}"></a></li>
+                <#break>
+            </#if>
+        </#list>
+        <#list imagelist as image>
+        <#if image_index gt 0 && image_index lte 5>
+        <li style="background-image:url(${image.image_path});"><a href="${image.link_url}"></a></li>
+    </#if>
+</#list>
+</ul>
+<ol>
+    <li class="current-yiju"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+<span class="left"></span>
+<span class="right"></span>
+</div>
+</div>
+<!--中间开始-->
+<div class="wrap1 wma">
+    <!--回到顶部开始-->
+    <div class="top" id="ltop">
+        <img src="/home/images/toptou.jpg">
+    </div>
+    <!--回到顶部结束-->
+    <!--经验分享-->
+    <div class="experience_share">
+        <div class="experience" style="height:456px">
+            <h2 class="exptitle"><span>经验分享</span><a class="mores" href="/mds/1-0">MORE <strong>+</strong></a></h2>
+            <div class="experw">
+                <ul class="experw_left">
+                    <#list pra_list as pra>
+                    <#if pra_index == 0>
+                    <li>
+                        <a href="${pra.page_url!}.html" class="dta">
+                            <img src="${pra.title_image!}" alt="${pra.title}"/>
+                        </a>
+                        <a href="${pra.page_url!}.html" class="dtab">
+                            <p>${pra.title}</p>
+                        </a>
+                    </li>
+                </#if>
+            </#list>
+            <#list pra_list as pra>
+            <#if pra_index gt 0 && pra_index lt 3>
+            <li>
+                <a href="${pra.page_url!}.html" class="dta">
+                    <img src="${pra.title_image!}" alt="${pra.title}"/>
+                </a>
+                <a href="${pra.page_url!}.html" class="dtab">
+                    <p>${pra.title}</p>
+                </a>
+            </li>
+        </#if>
+    </#list>
+    </ul>
+    <ul class="experw_right">
+        <#list pra_list as pra>
+        <#if pra_index gte 3>
+        <li><a href="${pra.page_url!}.html">${pra.title}</a></li>
+    </#if>
+</#list>
+</ul>
+</div>
+</div>
+<div class="share">
+    <div class="share_content">
+        <p class="numb">已有<span>${memnum.contNum}</span>条经验</p>
+        <p class="numb">已有<span>${memnum.memNum}</span>位贡献者</p>
+        <a class="share_button" target="_self" onclick="exletDivCenter('#models')" href="javascript:void(0);">我要分享</a>
+        <a class="rules" href="/member/memberaction/Incentiveplan.do">奖励规则 >></a>
+    </div>
+</div>
+<!--经验分享弹框-->
+<div class="divyin" id="models">
+    <div  id="luru">
+        <div class="neirong">
+            <label class="fanxiang">经验分享<span class="shenHeChengGong">审核成功后获得10哥币</span></label><img  src="/home/images/shazi.png" class="qu quxiao"/>
+            <div class="fenLei">
+                <div class="fenLeiWrapOut" id="jyfx_goods_out">
+                    <div class="fenLeiWrap">
+                        <div class="fenLeiOut" >
+                            <h2>选择分类<i><img src="/home/images/shazi.png"/></i></h2>
+                            <div class="spfl">
+                                <span style="float:left;">请选择行业分类：</span>
+                                <label id="tishi1" class="fenlei"></label>
+                                <span style="float: right;margin-right:30px;">
+		                        <input type="checkbox" name="jyfx" id="sp" value="001" /><label for="sp">暂不选择</label>
+		                        </span>
+                            </div>
+                            <div class="ztree" id="jyfx_goods" style="overflow: auto;background: #f3f3f3;height: 390px;margin:0px 30px 20px 30px;">
+
+                            </div>
+                        </div>
+                        <div class="fenLeiBtn">
+                            <button class="baoCun" onclick="saveJyfxGoods();">保存</button>
+                            <button class="guanBi">关闭</button>
+                        </div>
+                    </div>
+                </div>
+                <table>
+                    <tr>
+                        <td><label>分类：</label></td>
+                        <td >
+                            <input type="text" id="jyfx_goods_text" disabled="disabled">
+                            <input type="hidden" id="jyfx_goods_val" >
+                            <span class="xuanZeFenLei">选择分类</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td >
+                            <label id="tishi22" class="fenlei"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>标题：</label></td>
+                        <td  style="position:relative;">
+                            <input type="text" id="title2" placeholder="请输入标题，建议30字以内" maxlength="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td >
+                            <label id="tishi3" class="fenlei"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>内容：</label></td>
+                        <td >
+                            <div style="width:799px; height:300px;">
+                                <textarea id="comment" cols="100" rows="8" style="width:100px;height:200px;visibility:hidden;" runat="server"> </textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td >
+                            <label id="tishiC2" class="fenlei"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <div class="shangchuan">
+                                <div class="juzhong">
+                                    <div class="tijiao" onclick="expkinded('2')">提交 </div><div class="cunCaoGao" onclick="expkinded('1')">存草稿 </div><div class="quxiao">取消 </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- 正确提示开始 -->
+        <div class="addtosr">
+            <div class="biaos"><label style="margin-left:5px;">我要发布经验</label><!-- <label style="float:right" class="closeds">关闭</label> --></div>
+            <div class="tabs">
+                <label>您的文章<span id="jyfx_span"></span>，请进<a target="_blank" href="/member/memberaction/expshare.do">个人中心>我的经验分享</a>查看审核进展</label>
+                <input type="button" id="clo" style="" class="closeds" value="知道了"/>
+            </div>
+        </div>
+        <!-- 正确提示结束 -->
+    </div>
+
+</div>
+<!--经验分享弹框结束-->
+</div>
+<!--经验分享结束-->
+<!--最新经验开始-->
+<div class="experience_share new_exper">
+    <h2 class="exptitle"><span>最新经验</span><a class="mores" href="/mds/2-0">MORE <strong>+</strong></a></h2>
+    <div class="experience">
+        <div class="experw" style="height:252px">
+            <ul class="experw_left">
+                <#list pub_list as pra>
+                <#if pra_index == 0>
+                <li>
+                    <a href="${pra.page_url!}.html" class="dta">
+                        <img src="${pra.title_image!}" alt="${pra.title}"/>
+                    </a>
+                    <a href="${pra.page_url!}.html" class="dtab">
+                        <p>${pra.title}</p>
+                    </a>
+                </li>
+            </#if>
+        </#list>
+        </ul>
+        <ul class="experw_right">
+            <#list pub_list as pra>
+            <#if pra_index gte 1 && pra_index lte 6>
+            <li><a href="${pra.page_url!}.html">${pra.title}</a></li>
+        </#if>
+    </#list>
+    </ul>
+</div>
+<ul class="experienimg">
+    <#list pub_list as pra>
+    <#if pra_index gt 6>
+    <li>
+        <a class="exper_img" href="${pra.page_url!}.html">
+            <img src="${pra.title_image!}" alt="${pra.title}"/>
+        </a>
+        <a class="exper_text" href="${pra.page_url!}.html">
+            ${pra.title}
+        </a>
+    </li>
+</#if>
+</#list>
+</ul>
+</div>
+<div class="share">
+    <ul class="experienced_list">
+        <#list weeklist as pai>
+        <li>
+            <#if pai.member_icon ??>
+            <img class="exlistl" src="${pai.member_icon!}"/>
+            <#else>
+            <img class="exlistl" src="/home/images/iconmr.png"/>
+        </#if>
+        <div class="exlist_textr">
+            <h1>${pai.member_nickname!}</h1>
+            <p>贡献<strong>${pai.contNum!}条经验</strong></p>
+        </div>
+        </li>
+    </#list>
+    </ul>
+</div>
+</div>
+<!--最新经验结束-->
+<!-- 购买经验 -->
+<div class="buy_experience">
+    <h2 class="exptitle htab">
+        <span>购买经验</span>
+        <a class="mores" href="/mds/121-0">MORE <strong>+</strong></a>
+    </h2>
+    <div class="pwalltab">
+        <div class="pwall" style="display:block">
+            <div id="gm" class="swiper-container experiww">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <#list gmlist as fx>
+                        <#if fx_index gte 4 && fx_index lt 8>
+                        <div class="swslide">
+                            <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+                            <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+                            <div class="swione swione2">
+                                <div class="swione_name">网友</div>
+                                <div class="swione_text">${fx.member_nickname}</div>
+                                <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+                            </div>
+                        </div>
+                    </#if>
+                </#list>
+            </div>
+            <div class="swiper-slide">
+                <#list gmlist as fx>
+                <#if fx_index gte 8 && fx_index lt 12>
+                <div class="swslide">
+                    <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+                    <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+                    <div class="swione swione2">
+                        <div class="swione_name">网友</div>
+                        <div class="swione_text">${fx.member_nickname}</div>
+                        <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+                    </div>
+                </div>
+            </#if>
+        </#list>
+    </div>
+    <div class="swiper-slide">
+        <#list gmlist as fx>
+        <#if fx_index gte 12 && fx_index lt 16>
+        <div class="swslide">
+            <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+            <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+            <div class="swione swione2">
+                <div class="swione_name">网友</div>
+                <div class="swione_text">${fx.member_nickname}</div>
+                <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+            </div>
+        </div>
+    </#if>
+</#list>
+</div>
+<div class="swiper-slide">
+    <#list gmlist as fx>
+    <#if fx_index gte 16 && fx_index lt 20>
+    <div class="swslide">
+        <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+        <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+        <div class="swione swione2">
+            <div class="swione_name">网友</div>
+            <div class="swione_text">${fx.member_nickname}</div>
+            <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+        </div>
+    </div>
+</#if>
+</#list>
+</div>
+<div class="swiper-slide">
+    <#list gmlist as fx>
+    <#if fx_index gte 20 && fx_index lt 24>
+    <div class="swslide">
+        <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+        <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+        <div class="swione swione2">
+            <div class="swione_name">网友</div>
+            <div class="swione_text">${fx.member_nickname}</div>
+            <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+        </div>
+    </div>
+</#if>
+</#list>
+</div>
+</div>
+<div id="gm_page" class="swiper-pagination"></div>
+</div>
+<div id="gm_pre" class="swiper-button-next"></div>
+<div id="gm_next" class="swiper-button-prev"></div>
+</div>
+
+</div>
+</div>
+<!-- 购买经验结束 -->
+<!-- 使用经验 -->
+<div class="buy_experience">
+    <h2 class="exptitle htab">
+        <span>使用经验</span>
+        <a class="mores" href="/mds/122-0">MORE <strong>+</strong></a>
+    </h2>
+    <div class="pwalltab">
+        <div class="pwall" style="display:block">
+            <div id="sy" class="swiper-container experiww">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <#list sylist as fx>
+                        <#if fx_index gte 4 && fx_index lt 8>
+                        <div class="swslide">
+                            <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+                            <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+                            <div class="swione swione2">
+                                <div class="swione_name">网友</div>
+                                <div class="swione_text">${fx.member_nickname}</div>
+                                <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+                            </div>
+                        </div>
+                    </#if>
+                </#list>
+            </div>
+            <div class="swiper-slide">
+                <#list sylist as fx>
+                <#if fx_index gte 8 && fx_index lt 12>
+                <div class="swslide">
+                    <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+                    <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+                    <div class="swione swione2">
+                        <div class="swione_name">网友</div>
+                        <div class="swione_text">${fx.member_nickname}</div>
+                        <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+                    </div>
+                </div>
+            </#if>
+        </#list>
+    </div>
+    <div class="swiper-slide">
+        <#list sylist as fx>
+        <#if fx_index gte 12 && fx_index lt 16>
+        <div class="swslide">
+            <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+            <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+            <div class="swione swione2">
+                <div class="swione_name">网友</div>
+                <div class="swione_text">${fx.member_nickname}</div>
+                <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+            </div>
+        </div>
+    </#if>
+</#list>
+</div>
+<div class="swiper-slide">
+    <#list sylist as fx>
+    <#if fx_index gte 16 && fx_index lt 20>
+    <div class="swslide">
+        <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+        <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+        <div class="swione swione2">
+            <div class="swione_name">网友</div>
+            <div class="swione_text">${fx.member_nickname}</div>
+            <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+        </div>
+    </div>
+</#if>
+</#list>
+</div>
+<div class="swiper-slide">
+    <#list sylist as fx>
+    <#if fx_index gte 20 && fx_index lt 24>
+    <div class="swslide">
+        <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+        <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+        <div class="swione swione2">
+            <div class="swione_name">网友</div>
+            <div class="swione_text">${fx.member_nickname}</div>
+            <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+        </div>
+    </div>
+</#if>
+</#list>
+</div>
+</div>
+<div id="sy_page" class="swiper-pagination"></div>
+</div>
+<div id="sy_pre" class="swiper-button-next"></div>
+<div id="sy_next" class="swiper-button-prev"></div>
+</div>
+</div>
+</div>
+<!-- 使用经验结束 -->
+<!-- 通用经验 -->
+<div class="all_experience">
+    <h2 class="exptitle htab">
+        <span>通用经验</span>
+        <a  class="mores" href="/mds/123-0">MORE <strong>+</strong></a>
+    </h2>
+    <div class="pwalltab">
+        <div class="pwall" style="display:block">
+            <div id="ty" class="swiper-container experiww">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <#list tylist as fx>
+                        <#if fx_index gte 3 && fx_index lt 7>
+                        <div class="swslide">
+                            <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+                            <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+                            <div class="swione swione2">
+                                <div class="swione_name">网友</div>
+                                <div class="swione_text">${fx.member_nickname}</div>
+                                <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+                            </div>
+                        </div>
+                    </#if>
+                </#list>
+            </div>
+            <div class="swiper-slide">
+                <#list tylist as fx>
+                <#if fx_index gte 7 && fx_index lt 11>
+                <div class="swslide">
+                    <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+                    <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+                    <div class="swione swione2">
+                        <div class="swione_name">网友</div>
+                        <div class="swione_text">${fx.member_nickname}</div>
+                        <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+                    </div>
+                </div>
+            </#if>
+        </#list>
+    </div>
+    <div class="swiper-slide">
+        <#list tylist as fx>
+        <#if fx_index gte 11 && fx_index lt 15>
+        <div class="swslide">
+            <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+            <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+            <div class="swione swione2">
+                <div class="swione_name">网友</div>
+                <div class="swione_text">${fx.member_nickname}</div>
+                <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+            </div>
+        </div>
+    </#if>
+</#list>
+</div>
+<div class="swiper-slide">
+    <#list tylist as fx>
+    <#if fx_index gte 15 && fx_index lt 19>
+    <div class="swslide">
+        <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+        <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+        <div class="swione swione2">
+            <div class="swione_name">网友</div>
+            <div class="swione_text">${fx.member_nickname}</div>
+            <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+        </div>
+    </div>
+</#if>
+</#list>
+</div>
+<div class="swiper-slide">
+    <#list tylist as fx>
+    <#if fx_index gte 19 && fx_index lt 23>
+    <div class="swslide">
+        <div class="slideimg"><a href="${fx.page_url}.html"><img src="${fx.title_image}" alt="${fx.title}"></a></div>
+        <div class="slide_title"><a href="${fx.page_url}.html">${fx.title}</a></div>
+        <div class="swione swione2">
+            <div class="swione_name">网友</div>
+            <div class="swione_text">${fx.member_nickname}</div>
+            <div class="swione_num">阅读数：${fx.browse_sum_show}</div>
+        </div>
+    </div>
+</#if>
+</#list>
+</div>
+</div>
+<div id="ty_page" class="swiper-pagination"></div>
+</div>
+<div id="ty_pre" class="swiper-button-next"></div>
+<div id="ty_next" class="swiper-button-prev"></div>
+</div>
+</div>
+</div>
+<#if bbslist ??>
+<div class="forum">
+    <h2 class="exptitle htab">
+        <span>消费论坛</span>
+        <a class="mores" href="http://bbs.2ge.cn">MORE <strong>+</strong></a>
+    </h2>
+    <div class="forumlist">
+        <#list bbslist as bbs>
+        <a href="${bbs.thread_url}">
+            <div class="forum_1">
+                <#if bbs.cover?number == 1>
+                <img src="/home/images/imgimg.png"/>
+                </#if>
+                ${bbs.subject}
+            </div>
+            <div class="forum_2">${bbs.author}</div>
+            <div class="forum_3">${bbs.dateline}</div>
+        </a>
+        </#list>
+    </div>
+</div>
+</#if>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 登录 -->
+<div class="divyinss" id="modelss">
+    <div id="logins">
+        <img  src="/home/images/shazi.png" class="qu quxiao"/>
+        <div class="dl" style="padding-top: 50px;">
+            <label class="ks" style="padding-left: 45px;">快速登录</label>
+            <table width="100%;" style="margin-top:28px;">
+                <tr>
+                    <td>
+                        <a target="_self" href="/user/qqLogin.html"><img src="/home/images/qq.png" width="50px" height="50px;"></a>
+                    </td>
+                    <td>
+                        <a target="_self" href="/user/getWeChatLogin.html"><img src="/home/images/wx1.png" width="50px" height="50px;"></a>
+                    </td>
+                    <td>
+                        <a target="_self" href="/user/weiboLogin.html"><img src="/home/images/xl.png" width="50px" height="50px;"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="tub">QQ</label></td>
+                    <td><label class="tub">微信</label></td>
+                    <td><label class="tubs">新浪微博</label></td>
+                </tr>
+            </table>
+            <a class="qu quxiao" style="padding-left: 20px;padding-top: 20px;"> <strong>暂不登录</strong>，随便看看</a>
+        </div>
+        <div class="c_input">
+            <p class="c_input_header">
+                <span class="c_active"><i class="icon1"></i>账户登录</span>
+                <i class="line"></i>
+                <span><i class="icon1 icon2"></i>手机短信登录</span>
+            </p>
+            <div class="c_input_body c_input_body_zhanghu">
+                <!-- 登陆跳转路径 -->
+                <p class="c_input_body_p1">
+                    <input id="user_name" name="user_name" type="text" placeholder="请填写您注册时的手机号" />
+                </p>
+                <p id="user_name_er" class="alert"></p>
+                <p class="c_input_body_p1 c_input_body_p2" id="name_p">
+                    <input  id="password" name="password" type="password" placeholder="请输入密码" />
+                </p>
+                <p id="password_er" class="alert"></p>
+                <p class="c_input_body_p1 c_input_body_p5"  >
+                        <span>
+                            <input name="auto" type="checkbox" value="auto" id="auto" checked="checked" /><label for="auto">自动登录</label>
+                        </span>
+                    <span><a href="/member/memberaction/find.do"><label>忘记密码？</label></a></span>
+                </p>
+                <p class="c_input_body_p1 c_input_body_p3">
+                    <input id="name_login" type="submit" value="立即登录" />
+                </p>
+                <a href="/user/regist.html"><label class="zhuce">注册新账号</label></a>
+            </div>
+            <div class="c_input_body"></div>
+            <div class="c_input_body c_input_body_duanxin c_input_body_active">
+                <p class="c_input_body_p1">
+                    <input id="member_mobile" name="member_mobile"  type="text" placeholder="请填写手机号码" />
+                </p>
+                <p id="mobile_er" class="alert"></p>
+                <p class="c_input_body_p1 c_input_body_p2" id="pp">
+                    <input id="valiCode" type="text" placeholder="请输入右侧验证码" maxlength="4"/>
+                    <span class="yzm"><img style="width: 100%;height: 100%" id="img_code" src="" alt="" /></span>
+                </p>
+                <p id="valiCode_er" class="alert"></p>
+                <p class="c_input_body_p1 c_input_body_p2" id="sms_p">
+                    <input id="SMScode" name="SMScode" type="text" placeholder="请输入短信验证码" />
+                    <input id="sms_code" type="button" value="获取短信验证码"></input>
+                    <input id="sms_code_dis" style="display: none;" type="button" value="获取短信验证码"></input>
+                </p>
+                <p id="sms_er" class="alert"></p>
+                <p class="c_input_body_p1 c_input_body_p3">
+                    <input id="sms_login" type="submit" value="立即登录" />
+                </p>
+                <a href="/user/regist.html"><label class="zhuce">注册新账号</label></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--登录结束-->
+<!--#include virtual="/foots.html" -->
+<script type="text/javascript" src="/home/js/jyfx.js"></script>
+<script type="text/javascript" src="/home/js/login.js"></script>
+<script charset="utf-8" src="/home/editor/kindeditor-all.js"></script>
+<script charset="utf-8" src="/home/editor/lang/zh-CN.js"></script>
+<script type="text/javascript" src="/home/js/jyfx_goods.js"></script>
+<script type="text/javascript" src="/home/js/ztree/js/jquery.ztree.core.js"></script>
+<script type="text/javascript">
+    localStorage.topval = 102;
+    KindEditor.ready(function(K) {
+        window.editor = K.create("#comment",{
+            allowImageUpload: true,
+            allowImageRemote: false,
+            allowFileUpload:false,
+            allowMediaUpload:false,
+            allowFlashUpload:false,
+            items:['image'],
+            htmlTags:{ img : ['src', 'width', 'height', 'border', 'alt', 'title', 'align', '.width', '.height', '.border'],
+                p : [],
+            },
+            newlineTag:"p",
+            uploadJson : "/home/savekind.html",
+        });
+    });
+    $(function(){
+        $("#luru .neirong .xuanZeFenLei").click(function(){
+            showJyfxGoods(1);
+            $("input[name=jyfx]").prop("checked",false);
+            $(".divyin #luru .neirong .fenLei .fenLeiWrapOut").css("display","block");
+        });
+        $(".divyin #luru .neirong .fenLei .fenLeiOut h2 i").click(function(){
+            $(".divyin #luru .neirong .fenLei .fenLeiWrapOut").css("display","none");
+        });
+        $(".divyin #luru .neirong .fenLei .fenLeiBtn .guanBi").click(function(){
+            $(".divyin #luru .neirong .fenLei .fenLeiWrapOut").css("display","none");
+        });
+        var swiper1 = new Swiper('#gm', {
+            loop:true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            observer: true,
+            observerParents: true,
+            speed:1500,
+            pagination: {
+                el: '#gm_page',
+            },
+            navigation: {
+                nextEl: '#gm_pre',
+                prevEl: '#gm_next',
+            },
+        });
+        var swiper2 = new Swiper('#sy', {
+            loop:true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            observer: true,
+            observerParents: true,
+            speed:1500,
+            pagination: {
+                el: '#sy_page',
+            },
+            navigation: {
+                nextEl: '#sy_pre',
+                prevEl: '#sy_next',
+            },
+        });
+        var swiper3 = new Swiper('#ty', {
+            loop:true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            observer: true,
+            observerParents: true,
+            speed:1500,
+            pagination: {
+                el: '#ty_page',
+            },
+            navigation: {
+                nextEl: '#ty_pre',
+                prevEl: '#ty_next',
+            },
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>售后服务_二哥网</title>
+	<meta name="keywords" content="故障维修,售后政策及流程,二哥网" />
+	<meta name="description" content="二哥网售后服务频道是为消费者介绍售后服务相关的知识并提供服务网点查询功能，包括故障手册,温馨提示,服务流程,服务标准,服务网点,优惠活动等供消费者了解" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" id="viewport">
+   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="canonical" href=" http://www.2ge.cn/fw/">
+    <link rel="stylesheet" href="/css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/gmyj.css" />
+    <link rel="stylesheet" type="text/css" href="/css/shfwindex.css" />
+    <link rel="stylesheet" type="text/css" href="/css/model1.css" media="(min-width:375px) and (max-width:413px)" />
+    <link rel="stylesheet" type="text/css" href="/css/model2.css" media="(min-width:414px) and (max-width:540px)" />
+	 <link rel="stylesheet" type="text/css" href="/css/shscroll.css"> 
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=seCeeQ8wr2UL2fCvxEoYv93dGsVBuier"></script>
+</head>
+<style>
+.gmyj_wrap .yzpp_hysx .hysx dd.jydq{
+	width:40%;
+	float:right;}
+	.gmyj_wrap .yzpp_hysx .hysx dd.jydq span{
+		width:10%;
+		margin-top: 2px;
+	}
+.sel_Info{width:100%; position:relative;}
+.sel_Info input.txt{width: 90%;height: 27px;float: left;border:0px;background:#fff; display: block;}
+.sel_Info span.set_but{display:inline-block;position:absolute; right:18%; top:10px;}
+.sel_Info ul.ul_xz{z-index:99;width:93%;height:219px;overflow-x:hidden; background:#fff; position:absolute; left:0px; top:38px;border:1px solid #e5e7ee; border-radius:5px;display:none;}
+.sel_Info ul.ul_xz li{padding-left: 5px;width:100%; float:left; font-size:14px;  line-height:30px;border-bottom:1px dotted #ddd; text-align:left; position: relative;}
+
+	.gmyj_wrap #Hysx{
+		display:none;
+		position:fixed;
+		top:42px;
+		left:0;
+		margin-top:0;
+		background:#fff;
+		z-index:9999;
+	}
+</style>
+<body onload="load()">
+  <#include "/head.html"/>
+    <section class="gmyj_wrap foot100 gmyj_wrap1">
+      <div style="width: 100%; float: left; overflow: hidden;">
+        <section class="swiper-container">
+            <div class="swiper-wrapper active" id="gmcarousel">
+ 			 <!-- 焦点图 -->
+	        <#include "/focusimg.html"/>
+            </div>
+            <div class="swiper-pagination"></div>
+        </section>
+       </div>
+        <section class="shouye_jrjd yzpp_hysx bgt_xwzx" style="/* margin-top: 12px; */">
+            <dl class="hysx" id="hysxdl">
+             
+                <dt >行业筛选：</dt>
+                <dd class="jydq">
+                 <div class="sel_Info">
+	                 <div class="jyfxsxk" >
+						<input readonly="readonly" id="shsx" unselectable="on"  type="text"  class="txt xz" value="${columnName!}"  name="xz"/>
+					 	<i class="shuxiani"></i>
+					 </div>
+					<span class="set_but"><img src="/images/yzpp_hysx.png" alt="" style="height: auto"/></span>
+					
+					<ul class="ul_xz">
+					 <#list goodsMap as goodsMap>
+					<#if goodsMap_index gte 0>
+                  			 <li id="${goodsMap.id!}">
+                  			     <lable class="hover"  onclick="javascript:hysx('${goodsMap.id!}','${goodsMap.title!}')">${goodsMap.title!}</lable>
+                  			</li>
+                 	</#if>
+                  </#list>  
+					</ul>
+				</div>
+				 
+                </dd>
+               <a onclick="shfwlist(0,${goodsClassIds!},0,0,0)" class="lj" ></a>
+            </dl>
+        </section>
+        <section class="shouye_jrjd yzpp_hysx bgt_xwzx" id="Hysx" style="margin-top: 0px !important;">
+            <dl class="hysx" id="hysxdl">
+                 
+                    <dt>行业筛选：</dt>
+                 
+                <dd class="jydq">
+                 <div class="sel_Info">
+                 <#list goodsMap as goodsMap>
+                 <#if goodsMap_index == 0>
+	                 <div class="jyfxsxk">
+						<input readonly="readonly" id="shsxs"  type="text"  class="txt xz" value="${columnName!}"  name="xz"/>
+						<i class="shuxiani"></i>
+					 </div>	
+					 <span class="set_but"><img src="/images/yzpp_hysx.png" alt="" style="height: auto"/></span>
+				   </#if>
+				 </#list> 
+					<ul class="ul_xz">
+					 <#list goodsMap as goodsMap>
+                  			 <li id="${goodsMap.id!}s">
+                  			      <lable class="hover"   onclick="javascript:hysx('${goodsMap.id!}','${goodsMap.title!}')">${goodsMap.title!}</lable>
+                  			  </li>
+                      </#list>   
+					</ul>
+				</div>  
+                </dd>
+                <a onclick="shfwlist(0,${goodsClassIds!},0,0,0)"  class="lj">
+                </a>
+            </dl>
+        </section>
+        <input type="hidden" id="channelId" value="${channelId!}"/> 
+        <input id="pathName" type="hidden" value=""> 
+    <#list columnList as list>
+    <!-- 品牌图片数据 -->
+      <#if list.columnType=='6'>
+        <section class="shouye_jrjd gmyj_dffg" id="pip" style="margin-top: 0px ; border-top:0px !important; margin-bottom: 10px;">
+	        
+	        <div class="div1">
+				<div class="con">
+		    		<ul>
+		      		   <li class="diyi">
+		      			<#list list.columnInfoList as infolist>
+		      			  <#if infolist_index gte 0&&infolist_index lte 5>
+		      				<div id="shfwhytabel" class="shfwhytabel">
+		      				   <a href="/article-list/112-${goodsClassIds}-0-${infolist.id?c}/0-0/0">
+			      				<div class="tupiandiv" style="background: url(${infolist.image!});"></div>
+			      				<span class="tupianspan">${infolist.title!}</span>
+			      			   </a>
+		      			    </div>
+		      			    </#if>
+                         </#list>
+		      			</li>
+		      		   <li class="diyie">
+		      			<#list list.columnInfoList as infolist>
+		      			  <#if infolist_index gte 6&&infolist_index lte 11>
+		      				<div id="shfwhytabel" class="shfwhytabel">
+		      				   <a href="/article-list/112-${goodsClassIds}-0-${infolist.id?c}/0-0/0">
+			      				<div class="tupiandiv" style="background: url(${infolist.image!});"></div>
+			      				<span class="tupianspan">${infolist.title!}</span>
+			      			   </a>
+		      			    </div>
+		      			    </#if>
+                         </#list>
+		      			</li>
+		    		</ul>
+				</div>
+						<div class="zuo but"></div>
+						<div class="you but"></div>
+						<div class="nav">
+		      				<ul>
+		        				<li id="bgd" class="bg"></li>
+		        				<li id="bgde"></li>
+		      				</ul>
+						</div>
+			    </div>
+			    
+        </section>
+        </#if>
+      </#list>
+     <!-- 词条数据 -->
+      <#list columnList as list>
+      <#if list.columnType=='1'>
+        <section class="shouye_jrjd gmyj_jrjd">
+            
+            <ul class="jrjd">
+                <li>
+                    <#list list.columnInfoList as infolist>
+                    <#if infolist_index ==0>
+                    <a class="jrjd_a" href="/article-list/112-${goodsClassIds}-0-${infolist.id?c}/0-0/0">
+                         <img src="${infolist.image!}" alt=""  onerror="this.src='/images/empty.png'"/>
+                         <span>${infolist.title!}</span>
+                    </a>
+                      <#break>
+                     </#if>  
+                    </#list>  
+                
+                    <div class="iPhonds">
+                        <table width="100%">
+                         <tr>
+                        	 <#list list.columnInfoList as infolist>
+		                      <#if infolist_index gte 1&&infolist_index lte 2>
+		                      <td>
+		                     
+                         		 <a style="font-weight:bold;" href="/article-list/112-${goodsClassIds}-0-${infolist.id?c}/0-0/0">${infolist.title!}</a>
+		                     	</td>
+		                       </#if> 
+		                     </#list> 
+		                  </tr>
+                         <tr>
+                        	 <#list list.columnInfoList as infolist>
+		                      <#if infolist_index gte 3&&infolist_index lte 4>
+		                      <td>
+                         		 <a style="font-weight:bold;" href="/article-list/112-${goodsClassIds}-0-${infolist.id?c}/0-0/0">${infolist.title!}</a>
+		                     	</td>
+		                       </#if> 
+		                     </#list> 
+		                  </tr>
+                         <tr>
+                        	 <#list list.columnInfoList as infolist>
+		                      <#if infolist_index gte 5&&infolist_index lte 6>
+		                      <td>
+                         		 <a style="font-weight:bold;" href="/article-list/112-${goodsClassIds}-0-${infolist.id?c}/0-0/0">${infolist.title!}</a>
+		                     	</td>
+		                       </#if> 
+		                     </#list> 
+		                  </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <#list list.columnInfoList as infolist>
+                    <#if infolist_index ==7>
+                    <a class="jrjd_a" href="/article-list/112-${goodsClassIds}-0-${infolist.id?c}/0-0/0">
+                         <img src="${infolist.image!}" alt=""  onerror="this.src='/images/empty.png'"/>
+                         <span>${infolist.title!}</span>
+                    </a>
+                      <#break>
+                     </#if>  
+                    </#list>  
+                
+                    <div class="iPhonds">
+                        <table width="100%">
+                         <tr>
+                        	 <#list list.columnInfoList as infolist>
+		                      <#if infolist_index gte 8&&infolist_index lte 9>
+		                      <td>
+                         		 <a style="font-weight:bold;" href="/article-list/112-${goodsClassIds}-0-${infolist.id?c}/0-0/0">${infolist.title!}</a>
+		                     	</td>
+		                       </#if> 
+		                     </#list> 
+		                  </tr>
+                         <tr>
+                        	 <#list list.columnInfoList as infolist>
+		                      <#if infolist_index gte 10&&infolist_index lte 11>
+		                      <td>
+                         		 <a style="font-weight:bold;" href="/article-list/112-${goodsClassIds}-0-${infolist.id?c}/0-0/0">${infolist.title!}</a>
+                    		
+		                     	</td>
+		                       </#if> 
+		                     </#list> 
+		                  </tr>
+                         <tr>
+                        	 <#list list.columnInfoList as infolist>
+		                      <#if infolist_index gte 12&&infolist_index lte 13>
+		                      <td>
+                         		 <a style="font-weight:bold;" href="/article-list/112-${goodsClassIds}-0-${infolist.id?c}/0-0/0">${infolist.title!}</a>
+		                     	</td>
+		                       </#if> 
+		                     </#list> 
+		                  </tr>
+                        </table>
+                    </div>
+                </li>
+               
+            </ul>
+        </section>
+     </#if> 
+     </#list>
+     <!-- 故障手册栏目 -->
+      <#list columnList as list>
+     <#if list.columnType=='2'>
+        <section class="shouye_jrjd gmyj_jrjd jyfx_rmjy" style="border-top: 0px;">
+        	<h2 id="gmindexh2"><a href="/article-list/112-${goodsClassIds}-${list.columnId}-0/0-0/0">${list.columnName!}</a></h2>
+            <ul class="jrjd">
+            <#list list.columnInfoList as infolist>
+            
+                <li>
+                    <p class="left">
+                    	<a id="btga" class="bgtka" href="/article/${channelId}/0/${infolist.id?c}">${infolist.title!}</a>
+                	    <span style="margin-top: 58px;display: block;font-size:10px;color:#888;">${infolist.source}</span>
+                     </p>
+                    <a class="jrjd_a" style="float: left; margin-right: 0px;" href="/article/${channelId}/0/${infolist.id?c}">
+                        <img src="${infolist.image}" alt="" onerror="this.src='/images/empty.png'"/>
+                    </a>
+                </li> 
+             
+              </#list>
+            </ul>
+        </section>
+        </#if>
+
+    </#list>
+<!-- 服务网点 -->
+      <section id="shfw_fwwdid" class="shouye_jrjd bgt_bgqy shfw_fwwd no-arrow" style="position: relative;display: block; float: left;">
+            <h2 id="gmindexh2" style="width: 50%; float: left; display: block;">服务网点</h2>
+            <i id="zimucha">按首字母选择</i>
+           	 <!-- 服务网点按字母查询弹出框开始 -->
+  			 <div class="zimudivwd" style="z-index: 9999;">
+  				<div class="zimuru">
+  					<div class="div1">
+					     <div class="win">
+					        <div class="divul">
+					          <ul>
+					            <li class="bg" onclick="serverFind('ABCD')">ABCD</li>
+					            <li onclick="serverFind('EFGH')">EFGH</li>
+					            <li onclick="serverFind('IJKL')">IJKL</li>
+					            <li onclick="serverFind('MNOP')">MNOP</li>
+					            <li onclick="serverFind('QRSTU')">QRSTU</li>
+					            <li onclick="serverFind('VWXYZ')">VWXYZ</li>
+					            <li onclick="serverFind('')">其他</li>
+					          </ul>
+					        </div>
+					        <div class="puc">
+					        <ul>
+					            <li>
+					            	
+					            </li>
+					         
+					          </ul>
+					        </div>
+					     </div>
+					</div>
+  				</div>
+  			</div> 
+ <!-- 服务网点按字母查询弹出框结束 -->
+  		  <p class="fwwd_p">
+               
+               <span class="input" style="width: 80%; margin: 0px; margin-right: 9px; height: 30px; position: relative;">
+                   <img src="/images/shouye_fangdajing.png" alt="" />
+                   <input type="text" id="brandName" placeholder="请输入品牌名称" />
+                   <img src="/images/gsh.svg" onclick="qk()" alt="" style="width: 5.43%; position: absolute; right: 5px;"/>
+                </span>
+                <button onclick="findAfterSaleLists(2)">查找</button>
+            </p>
+            <div class="fwwd_p"> 
+            	 <label class="dq">当前城市：</label>
+            	 <div class="city">
+	            	<input readonly="readonly" unselectable="on"  type="text"  class="xzs" value="北京市"  />
+	            	
+	            	 	<span class="set_buts"><img src="/images/yzpp_hysx.png" alt="" style="height:auto;"/></span>
+		            	 	<ul class="areas">
+		            	 	</ul>
+            	 </div>  
+            	<div class="city1">
+	            	<input readonly="readonly" unselectable="on"  type="text"  class="sxq" value="市辖区"  />
+	            	 	<span class="set_buts"><img src="/images/yzpp_hysx.png" alt="" style="height:auto;"/></span>
+		            	 	<ul class="p_area">
+		            	 	</ul>
+         		 </div>
+          
+            </div>
+            <div class="fwwd_p" id="shfw_fwwdids">
+            	 <label class="dq">分类：</label>
+            	<div class="classi">
+            	<input readonly="readonly" unselectable="on"  type="text"  class="classify" value="请选择"/>
+            	 	<span class="set_buts"><img src="/images/yzpp_hysx.png" alt="" style="height:auto;"/></span>
+	            	 	<ul class="classfl" id="classlist">
+	            	    		
+	            	 	</ul>
+            	 </div>  
+            	<label class="dq">类型：</label>
+            	<div class="molds">
+            	<input readonly="readonly" unselectable="on"  type="text"  class="mold" value="请选择"  />
+            	 	<span class="set_buts"><img src="/images/yzpp_hysx.png" alt="" style="height:auto;"/></span>
+	            	 	<ul class="moldlx" id="type">
+	            	 		
+	            	    <#list strTypeValList as type>
+			            	   <#if type=='1'>
+			            	 	<li onclick ='findOnChange("",1)'>维修</li>
+			            	 	<#elseif type=='2'>
+			            	 	<li onclick ='findOnChange("",2)'>体验</li>
+			            	 	<#elseif type=='3'>
+			            	 	<li onclick ='findOnChange("",3)'>售卖</li>
+			            	 	<#elseif type=='4'>
+			            	 	<li onclick ='findOnChange("",4)'>展示</li>
+			            	 	<#elseif type=='5'>
+			            	 	<li onclick ='findOnChange("",5)'>办理</li>
+			            	 </#if>
+	            		</#list>
+	            	 	</ul>
+            	 </div>  
+            </div>
+        <div class="fwwd">
+        <div id="wrapper"  style="bottom: 0px;  background:#FFF; position: relative;" class="gmyj_wrap foot100" >
+        <div id="scroller"  class="shouye_jrjd gmyj_dffg bgt_xwzx gmyj_list scrillclass" >
+             <ul id="list">  
+              <#list areaList as alist>
+	            
+                <li>
+                	<div class='jieguo' >
+						 <a id="jieguo${alist_index}" href='#dituContent' onClick="findImg('${alist.memberDetailAddr}','${alist_index}')">
+						     <div class="shfwh3">
+						       <div class="shfwlabel">
+						        	<span id="shnum">${alist_index+1}</span>
+						        	<i style="width:auto; float: left; display: block; font-weight: bold;">${alist.aftersaleName}</i>
+						        
+							       <#list alist.typeVal?split(",") as type>
+							        <#if type=='1'>
+								        <img class="shfwh2img" src="/images/repair.png">
+							          <#elseif type=='2'>
+								        <img class="shfwh2img" src="/images/experience.png">
+							          <#elseif type=='3'>
+								        <img class="shfwh2img" src="/images/sell.png">
+							          <#elseif type=='4'>
+								        <img class="shfwh2img" src="/images/exhibition.png">
+							          <#elseif type=='5'>
+								        <img  class="shfwh2img" src="/images/handle.png">
+							        </#if>
+							       </#list>
+							       </div>
+						        </div>
+						        
+						         <p >
+						          <span class='dizhi_before'>
+						          <i><img src='/images/shfw_dizhi.png' alt='' /></i>
+						           <i>地址：</i>
+						           </span>
+						           <span class='dizhi_after'>${alist.memberDetailAddr}</span>
+						           </p>
+						           </a>
+						           <p class="shfwditu" id="spk${alist_index}">
+						           <span class='dizhi_before'>
+						             <i><img src='/images/shfw_dianhua.png' alt='' /></i>
+						               <i>电话：</i>
+						           </span>
+						           <a href="tel:${alist.telephone1}">
+						           <span class='dizhi_after'>${alist.telephone1}</span>
+						           </a>
+						            </p>
+						           </div> 
+                </li>  
+         
+                 </#list>
+            </ul>
+			<div id="pullUp">  
+			 	<span class="pullUpIcon"></span>
+            	<div class="pullUpLabel"></div>  
+            </div>
+        </div>
+    </div>
+              	<p id="wddw"></p>
+      </div>
+    </section>
+ 
+        
+      <input type="hidden" id="channelName" value="${channelName!}"/>
+    </section>
+    <section class="shouye_jrjd gmyj_dffg" style=" border-top:0px !important; margin-bottom: 10px; position: relative; display: block;">
+  		<h2 style="width: 50%; float: left; display: block;" id="gmindexh2" class="kuaisu" >快速查询 </h2> 
+  		<i class="zimucha" >按首字母选择</i>	
+  		<ul class="jrjd" id="shfwjr" style=" float: left;">
+  		</ul>
+  		
+  		<!-- 按字母查询弹出框开始 -->
+  			<div class="zimudiv" >
+  				<div class="zimuru" style="">
+  					<ul>
+  						<li onclick="quickFind('A');">A</li>
+  						<li onclick="quickFind('B');">B</li>
+  						<li onclick="quickFind('C');">C</li>
+  						<li onclick="quickFind('D');">D</li>
+  						<li onclick="quickFind('E');">E</li>
+  						<li onclick="quickFind('F');">F</li>
+  						<li onclick="quickFind('G');">G</li>
+  						<li onclick="quickFind('H');">H</li>
+  						<li onclick="quickFind('I');">I</li>
+  						<li onclick="quickFind('J');">J</li>
+  						<li onclick="quickFind('K');">K</li>
+  						<li onclick="quickFind('L');">L</li>
+  						<li onclick="quickFind('M');">M</li>
+  						<li onclick="quickFind('N');">N</li>
+  						<li onclick="quickFind('O');">O</li>
+  						<li onclick="quickFind('P');">P</li>
+  						<li onclick="quickFind('Q');">Q</li>
+  						<li onclick="quickFind('R');">R</li>
+  						<li onclick="quickFind('S');">S</li>
+  						<li onclick="quickFind('T');">T</li>
+  						<li onclick="quickFind('U');">U</li>
+  						<li onclick="quickFind('V');">V</li>
+  						<li onclick="quickFind('W');">W</li>
+  						<li onclick="quickFind('X');">X</li>
+  						<li onclick="quickFind('Y');">Y</li>
+  						<li onclick="quickFind('Z');">Z</li>
+  					</ul>
+  				</div>
+  			</div>
+  		<!-- 按字母查询弹出框开始 -->
+   </section>
+   <#include "/foot.html"/>
+<script type="text/javascript" src="/js/iscroll-probe.js"></script>
+<script src="/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="/js/TouchSlide.1.1.js" type="text/javascript"></script>
+<script src="/js/swiper-3.3.1.min.js"></script>
+<script src="/js/style.js" type="text/javascript"></script>
+<script src="/js/fenlei.js" type="text/javascript"></script>
+<script src="/js/shfwlist.js" type="text/javascript"></script>
+<script src="/js/shfwIndex.js" type="text/javascript"></script>
+<script src="/js/xiangqing.js" type="text/javascript"></script>
+<script src="/js/afterlist.js" type="text/javascript"></script>
+<script src="/js/sessionStorage.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var projectName='';
+  	function hysx(goodsClassId,goodsClassName){
+  		window.location.href="/channelPage/112/"+goodsClassId;
+  	}
+  //点击小按扭，出现下拉选项
+	 var mark=1;
+	$(".sel_Info").click(function(e){
+			e.stopPropagation();//阻止冒泡事件
+		if(mark==1){
+			$(".sel_Info ul.ul_xz").slideDown();
+			mark=2;
+			//下拉后，选中的项应该和输入框里面对应的内容项是一样的
+			var obj=$(".sel_Info ul.ul_xz li lable");
+			var len=obj.length;
+		}else{
+		/* 	$(".sel_Info ul.ul_xz").slideUp(); */
+			mark=1;
+		}
+	}); 
+	//下拉内容鼠标移动上面显示效果
+	$(".sel_Info ul.ul_xz li").mouseover(function(){
+		$(this).addClass("hover").siblings("li").removeClass("hover");
+	});
+	//下拉内容点击后要赋值给 input 输入框
+	$(".sel_Info ul.ul_xz li").click(function(){
+		$(".sel_Info input.xz").val($(this).html());// 把获取到的值赋给输入框 
+	});
+	
+	//浏览器窗口的点击事件
+	$(document).click(function(){
+		$(this).css({"background-image":"url(images/select1.png)"});
+		$(".sel_Info ul.ul_xz").slideUp();
+		mark=1;
+	});
+     $(document).ready(function(){
+        var mySwiper = new Swiper('.swiper-container',{
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 5000,
+            autoplayDisableOnInteraction: false,
+            onlyExternal : true
+        }); 
+        var swiper = new Swiper('.gmyj_nav', {
+            slidesPerView: 3.5,
+        });
+
+    });  
+    $(function(){
+        //12频道页导航
+        var wW=$(window).width();
+        var sW=$('.gmyj_nav .swiper-wrapper a').width()/*/3.5*/;
+        var sindex=$('.gmyj_nav .swiper-wrapper .currentN').index();
+        console.log(wW)
+        console.log(sW);
+        //筛选样式
+        $('.gmyj_nav .swiper-wrapper').css({
+            "webkitTransitionDuration": 0,
+            "transitionDuration": 0,
+            "transform": "translate3d("+-sW*8.5+"px, 0, 0)",
+            "webkitTransform": "translate3d("+-sW*8.5+"px, 0, 0)"
+        });
+         $(".bgt_xwzx .hysx dd a").click(function(){
+        	
+        	$(this).css("color", "#0fd33d").siblings().css("color","#"+666);
+        	$(".bgt_xwzx .hysx_more a").css("color","#"+666);
+        }); 
+        $(".bgt_xwzx .hysx_more a").click(function(){
+        	
+        	$(this).css("color", "#0fd33d").siblings().css("color","#"+666);
+        	 $(".bgt_xwzx .hysx dd a").css("color","#"+666);
+        });  
+      findArea();
+      //快速查询
+      quickFind("A");
+      //服务网点品牌查询
+      serverFind("ABCD");
+    });
+	function qk(){
+		$("#brandName").val("");
+	}
+	
+	
+</script>
+</body>
+</html>

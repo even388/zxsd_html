@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>话题集锦——${talkinfo.title}</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" type="text/css" href="css/talkstyle.css">
+<script src="js/tongji.js" type="text/javascript"></script>
+<script type="text/javascript">
+document.documentElement.style.fontSize = document.documentElement.clientWidth / 750*100 + 'px';
+</script>
+</head>
+<body>
+	<div class="minback" onclick="closeshare()"></div>
+	<img class="shffff" src="image/fxImgfen_01.png">
+	<img onclick="share()" src="image/sharefx.png" class="sharefx">
+	<div class="t-zjcontent">
+		<div class="t-banner"><img src="${talkinfo.wap_image}"></div>
+		<#list columnList as talk>
+		<#if talk_index == 0>
+		<#list talk.list as temp>
+		<#if temp.type?number == 1 && temp.order_num?number == 1>
+		<div class="bigky" style="margin-top:-0.6rem;">
+			<p class="bigtitle">${talk.column_title}</p>
+			<a href="${temp.wap_url}" class="oney">
+				<img class="onbigi" src="${temp.wap_image_url}">
+				<p class="bttext">${temp.title}</p>
+			</a>
+		</div>
+		</#if>
+		</#list>
+		<div class="wone">
+			<#list talk.list as temp>
+			<#if temp.type?number == 1 && temp.order_num?number gt 1>
+			<a href="${temp.wap_url}" class="wone-one">${temp.title}</a>
+			</#if>
+			</#list>
+		</div>
+		<#break>
+		</#if>
+		</#list>
+		<div class="list"></div>
+	</div>
+	<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+	<script src="/js/newwap/common/asyncdataparameter.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	var projectName='';
+	var talkId='${talkinfo.id}';
+
+	/*分享*/
+	function share(){
+	   $('.minback').show();
+	   $('.shffff').show();
+	}
+	/*关闭分享*/
+	function closeshare(){
+	   $('.minback').hide();
+	   $('.shffff').hide();
+	}
+	</script>
+</body>
+</html>

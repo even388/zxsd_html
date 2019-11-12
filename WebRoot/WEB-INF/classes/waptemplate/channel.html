@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>${channelName}_二哥网</title>
+    <meta name="keywords" content="手机数码,电脑办公,家电,二哥网" />
+   	<meta name="description" content="包括手机电脑,家居家电,美妆护理,服饰鞋包,母婴,户外旅游,汽车用品,食品生鲜,营养医药,金融,教育,房地产等${channelName}，让购物消费更专业·更贴心" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" id="viewport">
+    <link rel="canonical" href=" http://www.2ge.cn/${templateName}/">
+    <link rel="stylesheet" href="/css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gmindex.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gmyj.css" />
+    <link rel="stylesheet" type="text/css" href="/css/model1.css" media="(min-width:375px) and (max-width:413px)" />
+    <link rel="stylesheet" type="text/css" href="/css/model2.css" media="(min-width:414px) and (max-width:540px)" />
+</head>
+<body>
+<#include "/head.html">
+	
+    <section class="gmyj_wrap foot100">
+ 	<div style="width: 100%; float: left; overflow: hidden;">
+     <section class="swiper-container">
+        <div class="swiper-wrapper active" id="gmcarousel" >
+         	<!-- 焦点图 -->
+	        <#include "/focusimg.html"/>
+       </div>
+        <div class="swiper-pagination"></div>
+    </section>
+    </div>
+        <section class="gmyj_channel">
+            <ul class="channel">
+            <#list columnList as list>
+            <#if list.pageModel==3> 
+                <li>
+                    <a href="#maodian${list.columnId}">
+                        <span class="channel_span2">${list.columnName}</span>
+                    </a>
+                </li>
+             </#if>    
+            </#list>
+            </ul>
+        </section>
+        <#list columnList as list>
+        <input type="hidden" id="columnInfoType" value="${list.columnType}"/>
+        <input type="hidden" id="columnId" value="${list.columnId}"/>
+        <input type="hidden" id="channelId" value="${channelId}"/>
+        <input id="pathName" type="hidden" value="">
+     <!--    购买依据   有依有据开始 2017年3月20日  李一鹏 -->
+     <#if list.columnName=='有依有据'>
+        <section  class="shouye_jrjd gmyj_jrjd ">
+        	<h2 id="gmh2"><a href="/article-list/${list.channelId}-0-${list.columnId}-0/0-0/0">有依有据</a></h2>
+        	<ul class="jrjd" id="yyul">
+        		<li id="yyimg">
+        			<div style="width: 47%;float: left;">
+        				<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 0>
+	                    <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    	<img src="${infolist.image}" alt="" class="gmyijus"/>
+	                   		 <#if infolist.isBold =='0'>
+	                   		 	<label class="youyia" style="font-weight:bold;">${infolist.title!}</label>
+	                   			<#else>
+            					<label class="youyia">${infolist.title!}</label>
+            				</#if>
+	                   	</a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+        			</div>
+        			<div style="width: 47%;float: right;">
+        				<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 1>
+	                     <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    	<img src="${infolist.image}" alt="" class="gmyijus"/>
+	                    	 <#if infolist.isBold =='0'>
+	                   		 	<label class="youyia" style="font-weight:bold;">${infolist.title!}</label>
+	                   			<#else>
+            					<label class="youyia">${infolist.title!}</label>
+            				</#if>
+	                   	</a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+        			</div>
+        			
+        			<div style="width: 47%;float: left; margin-top: 21px">
+        				<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 2>
+	                   <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    	<img src="${infolist.image}" alt="" class="gmyijus"/>
+	                    	 <#if infolist.isBold =='0'>
+	                   		 	<label class="youyia" style="font-weight:bold;">${infolist.title!}</label>
+	                   			<#else>
+            					<label class="youyia">${infolist.title!}</label>
+            				</#if>
+	                   	</a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+        			</div>
+        			
+        			<div style="width: 47%;float: right; margin-top: 21px">
+        				<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 3>
+	                    <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    	<img src="${infolist.image}" alt="" class="gmyijus"/>
+	                    	 <#if infolist.isBold =='0'>
+	                   		 	<label class="youyia" style="font-weight:bold;">${infolist.title!}</label>
+	                   			<#else>
+            					<label class="youyia">${infolist.title!}</label>
+            				</#if>
+	                    </a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+        			</div>
+        		</li>
+        		<#list list.columnInfoList as infolist>
+        		<#if infolist.image??>
+        		<#else>
+        		<li class="gyjindex">
+        		<a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+        		 <#if infolist.isBold =='0'>
+	                   <label id="gmyh" class="xqwen" style="font-weight:bold;">${infolist.title!}</label>
+	                   <#else>
+            			<label id="gmyh" class="xqwen">${infolist.title!}</label>
+            	</#if>
+               	</a>
+                </li>
+                </#if>
+                </#list>
+                
+        	</ul>
+        </section> 
+        </#if>
+        <!-- 购买依据   有依有据结束 2017年3月20日  李一鹏-->
+        
+        <!-- 购买陷阱  小心陷阱开始 2017年3月20日  李一鹏-->
+      <#if list.columnName=='小心陷阱'>
+      <section class="shouye_jrjd gmyj_jrjd ">
+      <h2 id="gmindexh2"><a href="/article-list/${list.channelId}-0-${list.columnId}-0/0-0/0">小心陷阱</a></h2>
+        	<ul class="jrjd" id="xianjingid">
+        		<li id="xianjingk">
+        			<div class="byhuli" style=" float: left; width: 100%;">
+        			<#list list.columnInfoList as infolist>
+        				<#if infolist_index == 0>
+        				<#if infolist.isBold =='0'>
+                    		<label class="byhlab" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    		<#else>
+                    		<label class="byhlab"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    	</#if>
+                    	</#if> 
+                    </#list>
+                   	</div>
+                	
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 0>
+	                    	<!-- <img id="xxjimg" src="${infolist.image}" onclick="JrjdXq(${infolist.id?c},${infolist.columnInfoType!})" alt="" class="gmxian" /> -->
+	                    	<a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" ><div class="xxjimg" style=" width: 100%;float: left;background: url(${infolist.image});background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;" class="jrjd_a"  href="#" id="gmxjig"></div></a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    
+                </li>
+        		<li id="xianjingk">
+        			<div class="byhuli" style=" float: left; width: 100%;">
+        			<#list list.columnInfoList as infolist>
+        			<#if infolist_index == 1>
+        			<#if infolist.isBold =='0'>
+                    	<label class="byhlab" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                   		<#else>
+                   		<label class="byhlab"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                   </#if>
+                    </#if>
+                    </#list>
+                   	</div>
+                	
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 1>
+	                    	<!-- <img id="xxjimg" src="${infolist.image}" onclick="JrjdXq(${infolist.id?c},${infolist.columnInfoType!})" alt="" class="gmxian"/> -->
+		                    <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+		                    	<div class="xxjimg" style=" width: 100%; float: left;background: url(${infolist.image});background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;" class="jrjd_a"  href="#" id="gmxjig"></div>
+		                    </a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    
+                </li>
+        		<li id="xianjingk">
+        			<div class="byhuli" style=" float: left; width: 100%;">
+        			<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 2>
+	                    <#if infolist.isBold =='0'>
+                    		<label class="byhlab" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    	<#else>
+                    		<label class="byhlab"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    	</#if>
+                    	</#if>
+                    </#list>
+                   	</div>
+                	
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 2>
+	                    	<!-- <img id="xxjimg" src="${infolist.image}" onclick="JrjdXq(${infolist.id?c},${infolist.columnInfoType!})" alt="" class="gmxian"/> -->
+	                    	<a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    		<div class="xxjimg" style=" width: 100%; float: left;background: url(${infolist.image});background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;" class="jrjd_a"  href="#" id="gmxjig"></div>
+	                    	</a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    
+                </li>
+        		<li id="xianjingk">
+        			<div class="byhuli" style=" float: left; width: 100%;">
+        			<#list list.columnInfoList as infolist>
+        			<#if infolist_index == 3>
+        			<#if infolist.isBold =='0'>
+                    	<label class="byhlab" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                   	<#else>
+                   		<label class="byhlab"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                   	</#if>
+                   	</#if>
+                    </#list>
+                   	</div>
+                	
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 3>
+	                   
+	                    	<!-- <img id="xxjimg" src="${infolist.image}" onclick="JrjdXq(${infolist.id?c},${infolist.columnInfoType!})" alt="" class="gmxian"/> -->
+	                   <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    <div class="xxjimg" style=" width: 100%; float: left;background: url(${infolist.image});background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;" class="jrjd_a"  href="#" id="gmxjig"></div>
+	                   </a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                </li>
+               
+            </ul>
+        </section>
+        </#if>
+        <!-- 购买误区  小心陷阱结束 2017年3月20日  李一鹏-->
+        
+        <!-- 购买误区  常见误区开始 2017年3月20日  李一鹏-->
+        <#if list.columnName=='常见误区'>
+     	<section class="shouye_jrjd gmyj_jrjd">
+     	<h2 id="gmindexh2"><a href="/article-list/${list.channelId}-0-${list.columnId}-0/0-0/0">常见误区</a></h2>
+        	<ul class="jrjd">
+                <li>
+                	<div id="changjian" class="jrjd_a" href="#" style=" float: left;margin-right: 0%;">
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 0>
+	                    <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    	<img src="${infolist.image}" alt="" />
+	                   	</a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    </div>
+                    
+                    	<div id="gmcjwq" class="byhuli" style="float: right;">
+                    	<#list list.columnInfoList as infolist>
+	                    	<#if infolist_index == 0>
+	                    	<#if infolist.isBold =='0'>
+                    			<label class="byhlab" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    			<#else>
+                    			<label class="byhlab"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}">${infolist.title!}</a></label>
+                    		 </#if>  
+                    		 </#if>  
+	                    </#list>
+                    	</div>
+                </li>
+                <li>
+                    <div id="gmcjwq" class="byhuli" style="float: left;">
+                    		<#list list.columnInfoList as infolist>
+	                    	<#if infolist_index == 1>
+                    		<#if infolist.isBold =='0'>
+                    			<label class="byhlab" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    			<#else>
+                    			<label class="byhlab"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    		 </#if>  
+                    		 </#if>  
+	                    </#list>
+                    </div>
+                    <div class="jrjd_a" href="#" style=" float:right;margin-right: 0%;">
+	                		<#list list.columnInfoList as infolist>
+	                    	<#if infolist_index == 1>
+	                    	<a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    		<img src="${infolist.image}" alt="" />
+	                    	</a>
+	                    	<#break>
+	                    	 </#if>  
+	                    	</#list>
+                    </div>
+                </li>
+                <#list list.columnInfoList as infolist>
+                <#if infolist.image??>
+                <#else>
+                <li>
+                <#if infolist.isBold =='0'>
+                	<label id="gmcjwqlabe" class="xqwen" style="font-weight:bold;">
+                	  <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+                		${infolist.title!}
+                	  </a>
+                	</label>
+                	<#else>
+                	<label id="gmcjwqlabe" class="xqwen">
+                	  <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+                		${infolist.title!}
+                	  </a>
+                	</label>
+                
+                </#if>
+                </li>
+                </#if>
+               </#list>
+            </ul>
+         </section>
+         </#if>
+        <!-- 购买误区  常见误区结束  2017年3月20日  李一鹏-->
+        
+        
+        <!-- 购买提示  买前必读开始 2017年3月20日  李一鹏-->
+      <#if list.columnName=='买前必读'>
+      <section class="shouye_jrjd gmyj_jrjd ">
+           	<h2 id="gmindexh2"><a href="/article-list/${list.channelId}-0-${list.columnId}-0/0-0/0">买前必读</a></h2>
+        	<ul class="jrjd">
+                <li>
+                	<div id="gmmaidiv" class="jrjd_a" style=" float: left;margin-right: 0%;">
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 0>
+	                    <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    	<img src="${infolist.image}" alt="" />
+	                   	</a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    </div>
+                    
+                    	<div id="gmmaiqian" class="byhuli" style="float: right;">
+                    		<#list list.columnInfoList as infolist>
+	                    	<#if infolist_index == 0>
+	                    	<#if infolist.isBold =='0'>
+                    			<label class="byhlab" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}">${infolist.title!}</a></label>
+                    			<#else>
+                    			<label class="byhlab"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    		 </#if> 
+                    		</#if>  
+	                   		</#list>
+                    	</div>
+                </li>
+                <li>
+                	<div id="gmmaidiv" class="jrjd_a" style=" float: left;margin-right: 0%;">
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 1>
+	                    <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    	<img src="${infolist.image}" alt="" />
+	                    </a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    </div>
+                    
+                    	<div id="gmmaiqian" class="byhuli" style="float: right;">
+                    		<#list list.columnInfoList as infolist>
+	                    	<#if infolist_index == 1>
+	                    	<#if infolist.isBold =='0'>
+                    			<label class="byhlab" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    			<#else>
+                    			<label class="byhlab"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    		 </#if> 
+                    		</#if>  
+	                   		</#list>
+                    	</div>
+                </li>
+                
+                <#list list.columnInfoList as infolist>
+                <#if infolist.image??>
+                <#else>
+                <li>
+                 <#if infolist.isBold =='0'>
+                	<label class="xqwen" style="font-weight:bold;">
+                		<a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+                			${infolist.title!}
+                		</a>
+                	</label>
+                	<#else>
+                	<label class="xqwen">
+                	<a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+                		${infolist.title!}
+                	</a>
+                	</label>
+                
+                </#if>
+                </li>
+                </#if>
+                </#list>
+            </ul>
+        </section> 
+        </#if>
+        <!-- 购买提示  买前必读结束 2017年3月20日  李一鹏-->
+        
+        
+        <!-- 购买技巧  购物小窍门开始 2017年3月20日  李一鹏-->
+         <#if list.columnName=='购物小窍门'>
+        <section class="shouye_jrjd gmyj_jrjd">
+        <h2 id="gmh2"><a href="/article-list/${list.channelId}-0-${list.columnId}-0/0-0/0">购物小窍门</a></h2>
+        	<ul class="jrjd">
+                <li>
+                	<div class="jrjd_a" style=" float: right;margin-right: 1%;">
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 0>
+	                     <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    	<img src="${infolist.image}" alt="" />
+	                   	 </a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    </div>
+                     <div class="byhuli" id="gmxqm" style="float: left;">
+                     <#list list.columnInfoList as infolist>
+                     		<#if infolist_index == 0>
+                    			<#if infolist.isBold =='0'>
+                    			<label id="jqindex" class="byhlab" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    			<#else>
+                    			<label id="jqindex" class="byhlab"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    		 </#if> 
+                    		</#if>
+                    	</#list>
+                    </div>
+                    
+                </li>
+                <li>
+                	<div class="jrjd_a" href="#" style=" float: right;;margin-right: 1%;">
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 1>
+	                    <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    	<img src="${infolist.image}" alt="" />
+	                    </a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    </div>
+                    
+                    	<div class="byhuli" id="gmxqm" style="float: left;">
+                    	<#list list.columnInfoList as infolist>
+                     		<#if infolist_index == 1>
+                     		<#if infolist.isBold =='0'>
+                    			<label id="jqindex" class="byhlab" style="font-weight:bold;"> <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    			<#else>
+                    			<label id="jqindex" class="byhlab"> <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    		 </#if> 
+                    		</#if>
+                    	</#list>
+                    	</div>
+                </li>
+                <li>
+                	<div class="jrjd_a" href="#" style=" float: right;margin-right: 1%;">
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 2>
+	                     <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    	<img src="${infolist.image}" alt="" />
+	                     </a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    </div>
+                    
+                    	<div class="byhuli" id="gmxqm" style="float: left;">
+                    	<#list list.columnInfoList as infolist>
+                     		<#if infolist_index == 2>
+                     		<#if infolist.isBold =='0'>
+                    			<label id="jqindex" class="byhlab" style="font-weight:bold;"> <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    			<#else>
+                    			<label id="jqindex" class="byhlab"> <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    		 </#if> 
+                    		</#if>
+                    		</#list>
+                    	</div>
+                </li>
+                <li>
+                	<div class="jrjd_a" href="#" style=" float: right;margin-right: 1%;">
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 3>
+	                     <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    	<img src="${infolist.image}"  alt="" />
+	                   	 </a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    </div>
+                    
+                    	<div class="byhuli" id="gmxqm" style="float: left;">
+                    		<#list list.columnInfoList as infolist>
+                     		<#if infolist_index == 3>
+                     		<#if infolist.isBold =='0'>
+                    			<label id="jqindex" class="byhlab" style="font-weight:bold;"> <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    			<#else>
+                    			<label id="jqindex" class="byhlab"> <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    		 </#if> 
+                    		</#if>
+                    		</#list>
+                    	</div>
+                </li>
+                <li>
+                	<div class="jrjd_a" href="#" style=" float: right;margin-right: 1%;">
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 4>
+	                     <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    	<img src="${infolist.image}" alt="" />
+	                     </a>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    </div>
+                    
+                    	<div class="byhuli" id="gmxqm" style="float: left;">
+                    		<#list list.columnInfoList as infolist>
+                     		<#if infolist_index == 4>
+                     		<#if infolist.isBold =='0'>
+                    			<label id="jqindex" class="byhlab" style="font-weight:bold;"> <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}">${infolist.title!}</a></label>
+                    			<#else>
+                    			<label id="jqindex" class="byhlab"> <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    		 </#if> 
+                    		</#if>
+                    		</#list>
+                    	</div>
+                </li>
+                <#list list.columnInfoList as infolist>
+               		<#if infolist.image??>
+               		<#else>
+               	<li>
+                	 <#if infolist.isBold =='0'>
+                	<label id="jqwen" class="xqwen" style="font-weight:bold;">
+                	   <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+                		${infolist.title!}
+                	  </a>
+                	</label>
+                	<#else>
+                	<label id="jqwen" class="xqwen">
+                	  <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+                		${infolist.title!}
+                	  </a>
+                	</label>
+                </#if>
+                </li>
+                	</#if>
+                </#list>
+                
+	     
+            </ul>
+        </section>
+        </#if>
+        <!-- 购买技巧   购物小窍门结束 2017年3月20日  李一鹏-->
+        
+        <!-- 保养护理 养护小常识开始 2017年3月20日  李一鹏-->
+          <#if list.columnName=='养护小常识'>
+         <section class="shouye_jrjd gmyj_jrjd">
+          <h2 id="gmindexh2"><a href="/article-list/${list.channelId}-0-${list.columnId}-0/0-0/0">养护小常识</a></h2>
+        	<ul class="jrjd">
+                <li>
+                	<div id="byhulitu" class="byhuli or" style="float:left;width:100%;">
+                	<#list list.columnInfoList as infolist>
+                	 <#if infolist_index == 0>
+                    	<#if infolist.isBold =='0'>
+                    			<label class="byhlab" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    	<#else>
+                    			<label class="byhlab"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    	</#if> 
+                   	</#if> 
+                    </#list>
+                   	</div>
+                	<div class="jrjd_a oja">
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 0>
+	                      <#list infolist.image?split(",") as image>
+	                      <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    	<img id="myhlindx" src="${image}" alt="" />
+	                      </a>
+	                    	</#list>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    </div>
+                </li>
+                <li>
+                	<div class="byhuli or" style="float:left;width:100%;">
+                    <#list list.columnInfoList as infolist>
+                	 <#if infolist_index == 1>
+                    	<#if infolist.isBold =='0'>
+                    			<label class="byhlab" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    	<#else>
+                    			<label class="byhlab"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                    	</#if> 
+                   	</#if> 
+                    </#list>
+                    </div>
+                	<div class="jrjd_a oja" >
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 1>
+	                    	 <#list infolist.image?split(",") as image>
+	                    	 <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    		<img id="myhlindx" src="${image}" alt="" />
+	                    	 </a>
+	                    	</#list>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    </div>
+                    
+                    	
+                </li>
+                <li>
+                	<div class="byhuli or" style="float:left;width:100%;">
+                    <#list list.columnInfoList as infolist>
+                	 <#if infolist_index == 2>
+                	 <#if infolist.isBold =='0'>
+                    		<label class="byhlab" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                     <#else>
+                    		<label class="byhlab"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}">${infolist.title!}</a></label>
+                    </#if> 
+                   	</#if> 
+                    </#list>
+                    </div>
+                	<div class="jrjd_a oja">
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 2>
+	                    	<#list infolist.image?split(",") as image>
+	                    	<a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    		<img id="myhlindx" src="${image}" alt="" />
+	                    	</a>
+	                    	</#list>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    </div>
+                    	
+                </li>
+                <li>
+                	<div class="byhuli or" style="float:left;width:100%;">
+                    <#list list.columnInfoList as infolist>
+                	 <#if infolist_index == 3>
+                	 <#if infolist.isBold =='0'>
+                    	  <label class="byhlab" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                     <#else>
+                    	  <label class="byhlab"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >${infolist.title!}</a></label>
+                     </#if> 
+                   	</#if> 
+                    </#list>
+                    </div>
+                	<div class="jrjd_a oja">
+	                	<#list list.columnInfoList as infolist>
+	                    <#if infolist_index == 3>
+	                    	<#list infolist.image?split(",") as image>
+	                    	 <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                    		<img id="myhlindx" src="${image}" alt="" />
+	                    	 </a>
+	                    	</#list>
+	                    <#break>
+	                     </#if>  
+	                    </#list>
+                    </div>
+                    	
+                </li>
+             </ul>
+        </section>
+        </#if>
+        <!-- 保养护理 养护小常识结束 2017年3月20日  李一鹏-->
+        <!-- 词条属性 -->
+        <#if list.pageModel==3>
+        <section id="gmindek" class="shouye_jrjd gmyj_jrjd">
+            <a name="maodian${list.columnId}" href="/word-attr-list/${channelId}-0-${list.columnId}/0-${list.id}/0">
+            	<h2 id="gmindexh2">${list.columnName}</h2>
+            </a>
+            <ul class="jrjd shouye_ct">
+                <li>
+                    <div id="gmjrjd" class="jrjd_a" href="#">
+                    <#list list.columnInfoList as infolist>
+                    <#if infolist_index == 30>
+                      <a href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">
+                        <img src="${infolist.image}" alt="" onerror="this.src='/images/empty.png'"/>
+                      </a>
+                        <#if infolist.isBold =='0'>
+                         		<span id="dop" style="font-weight:bold;"><a href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a></span>
+                    	<#else>
+                    			 <span id="dop"><a href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a></span>
+                    	</#if> 
+                       
+                        <#break>
+                     </#if>  
+                    </#list>    
+                    </div>
+                 
+                   	<div class="iPhond">
+                   	 <table class="shujus">
+	                   		<tr>
+		                    <#list list.columnInfoList as infolist>
+		                      <#if infolist_index gte 0&&infolist_index lte 4>
+		                      <#if infolist.title??>
+		                      <td>
+		                       <#if infolist.isBold =='0'>
+		                           <a style="font-weight:bold;" href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a>
+		                       <#else>
+		                    	   <a href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a>
+		                     	</#if> 
+		                     	</td>
+		                     	</#if> 
+		                       </#if> 
+		                     </#list> 
+		                      </tr>
+		                </table>
+                    </div>
+                   <div class="iPhond">
+                   	<table class="shujus">
+	                  <tr>
+	                    <#list list.columnInfoList as infolist>
+	                   
+	                    
+	                      <#if infolist_index gt 4&&infolist_index lte 9>
+	                         <#if infolist.title??>
+	                         <td>
+		                       <#if infolist.isBold =='0'>
+	                         		 <a style="font-weight:bold;" href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a>
+		                    	<#else> 
+	                    			 <a href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a>
+		                     	
+		                     	</#if> 
+	                     	</td>
+	                     	</#if> 
+	                       </#if> 
+	                     </#list> 
+                     
+                     	</tr>
+                     </table>
+                    </div>
+                  
+                
+                   <div class="iPhond">
+                   	<table class="shujus">
+	                  <tr>
+                    <#list list.columnInfoList as infolist>
+                      <#if infolist_index gt 9&&infolist_index lte 14>
+                         <#if infolist.title??>
+                         <td>
+	                       <#if infolist.isBold =='0'>
+	                         	<a style="font-weight:bold;" href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a>
+	                       <#else>
+	                    	    <a href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a>
+	                     	</#if> 
+                     	</td>
+                     	</#if> 
+                       </#if> 
+                     </#list> 
+                     </tr>
+                     </table>
+                    </div>
+                  
+                </li>
+                <li>
+                    <div id="gmjrjd" class="jrjd_a" href="#">
+                     <#list list.columnInfoList as infolist>
+                    	<#if infolist_index == 31>
+                    	<a href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">
+                        	<img src="${infolist.image!}" alt="" onerror="this.src='/images/empty.png'"/>
+                        </a>
+                         <#if infolist.isBold =='0'>
+                         		<span id="dop" style="font-weight:bold;"><a href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a></span>
+                    	 <#else>
+                    			 <span id="dop "><a href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a></span>
+                    	 </#if> 
+                    	 <#break>
+                    	
+                     	</#if>  
+                    </#list> 
+                    </div>
+                    <div class="iPhond">
+                   	<table class="shujus">
+	                  <tr>
+	                    <#list list.columnInfoList as infolist>
+	                      <#if infolist_index gt 14&&infolist_index lte 19>
+	                       <#if infolist.title??>
+	                       <td>
+	                        <#if infolist.isBold =='0'>
+	                         	<a style="font-weight:bold;" href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a>
+	                    	<#else>
+	                    		<a href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a>
+	                     	</#if> 
+	                     	</td>
+	                        </#if> 
+	                        </#if> 
+	                     </#list>
+	                   </tr>
+                     </table>
+                    </div>
+                   <div class="iPhond">
+                   	<table class="shujus">
+	                  <tr>
+	                    <#list list.columnInfoList as infolist>
+	                      <#if infolist_index gt 19&&infolist_index lte 24>
+	                         <#if infolist.title??>
+	                         <td>
+		                        <#if infolist.isBold =='0'>
+		                        	 <a style="font-weight:bold;" href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a>
+		                    	<#else>
+		                    		 <a href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a>
+		                     	</#if> 
+	                     	</td>
+	                        </#if> 
+	                        </#if> 
+	                     </#list> 
+                     </tr>
+                     </table>
+                    </div>
+                    <div class="iPhond">
+                   	<table class="shujus">
+	                  <tr>
+                    <#list list.columnInfoList as infolist>
+                      <#if infolist_index gt 24&&infolist_index lte 29>
+                         <#if infolist.title??>
+                         <td>
+                        <#if infolist.isBold =='0'>
+                         		 <a style="font-weight:bold;" href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a>
+                    	<#else>
+                    			 <a href="/word_attr/${channelId}/0/${infolist.id?c}/${infolist.columnInfoType!}">${infolist.title!}</a>
+                     	</#if> 
+                     	</td>
+                        </#if> 
+                        </#if> 
+                     </#list> 
+                     </tr>
+                     </table>
+                    </div>
+                </li>                
+            </ul>
+        </section>
+         </#if> 
+  <!-- 企业采购流程、政策法规、案例解析 --> 
+  <#if list.pageModel==1>  
+   <section class="shouye_jrjd gmlc_dffg">
+            <a href="/article-list/${list.channelId}-0-${list.columnId}-0/0-0/0" ><h2 id="gmindexh2">${list.columnName}</h2></a>
+            <ul class="jrjd ly">
+            <#list list.columnInfoList as infolist>
+                <li class="dffgli">
+                    <a class="jrjd_a" href="/article/${channelId}/${list.columnId}/${infolist.id?c}">
+                        <img src="${infolist.image!}" alt="" onerror="this.src='/images/empty.png'"/>
+                    </a>
+                <#if (infolist.isBold)?? &&  infolist.isBold== '0' >
+                    <p class="right">
+                    	<a style="font-weight:bold; height: auto"  href="/article/${channelId}/${list.columnId}/${infolist.id?c}">
+	                   		<#if (infolist.deputyTitle)??>
+	                   			${infolist.deputyTitle}
+	                   		<#else>
+	                   			${infolist.title}
+	                    	</#if>
+                       </a>
+                    	
+                    </p>
+                   	   <#if infolist.source ??&&(infolist.source)!="">
+                	    	<label class="laspan">${infolist.source}</label>
+                	    </#if>
+                <#else>
+                    <p class="right">
+                    	<a id="dffgzs" class="gjbzsa" style="height: auto" href="/article/${channelId}/${list.columnId}/${infolist.id?c}">
+                    	    <#if (infolist.deputyTitle)??>
+	                   			${infolist.deputyTitle}
+	                   		<#else>
+	                   			${infolist.title}
+	                    	</#if>
+                    	</a>
+                     
+                   </p>
+                      <#if infolist.source ??&&(infolist.source)!="">
+                	     <#if list.columnName=='案例解析'>
+                	    	<label class="casestudy">${infolist.source}</label>
+                	    	<#else>
+                	    	<label class="laspandffg">${infolist.source}</label>
+	               	  	</#if>
+                	  </#if>
+                </#if>
+                </li>
+             </#list> 
+            </ul>
+        </section>
+          </#if> 
+          <!-- 个人购买流程 -->
+          <#if list.pageModel==4>  
+            <section  class="shouye_jrjd gmlc_gjzc gmyj_jrjd">
+            <a href="/article-list/${list.channelId}-0-${list.columnId}-0/0-0/0"><h2 id="gmindexh2">${list.columnName}</h2></a>
+            <ul class="jrjd" id="gmlcgjzcddf">
+                <li>
+                 <#list list.columnInfoList as infolist>
+                 <#if infolist_index gte 0&&infolist_index lte 1>
+                    <div class="jrjd_a">
+                        <!-- <img id="gjzc" src="${infolist.image}" onerror="this.src='/images/empty.png'"  onclick="JrjdXq(${infolist.id?c},${infolist.columnInfoType!});"> -->
+                        <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+                        	<div id="gjzc" style=" width: 100%;float: left;background: url(${infolist.image});background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;" class="jrjd_a"></div>
+                        </a>
+                         <#if infolist.isBold =='0'>
+                         		<span id="gjzcspans" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}">${infolist.title!}</a></span>
+                    			<#else>
+                    			 <span id="gjzcspans"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}">${infolist.title!}</a></span>
+                    	</#if> 
+                    </div>
+                  </#if>  
+                 </#list>
+                </li>
+                <li>
+                  <#list list.columnInfoList as infolist>
+                	 <#if infolist_index gte 2&&infolist_index lte 3>
+                    <div class="jrjd_a">
+                        <!-- <img id="gjzc" src="${infolist.image}" onerror="this.src='/images/empty.png'" style="height: 110px;"  onclick="JrjdXq(${infolist.id?c},${infolist.columnInfoType!});"> -->
+                       <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+                        <div id="gjzc" style=" width: 100%;float: left;background: url(${infolist.image});background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;" class="jrjd_a"></div> 
+                       </a>
+                          <#if infolist.isBold =='0'>
+                         		<span id="gjzcspans" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}">${infolist.title!}</a></span>
+                    	  <#else>
+                    			<span id="gjzcspans"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}">${infolist.title!}</a></span>
+                          </#if> 
+                    </div>
+                  </#if>  
+                 </#list>
+                </li>
+                <li>
+                    <#list list.columnInfoList as infolist>
+                	 <#if infolist_index gte 4&&infolist_index lte 5>
+                    <div class="jrjd_a">
+                        <!-- <img id="gjzc" src="${infolist.image}" onerror="this.src='/images/empty.png'" style="height: 110px;"  onclick="JrjdXq(${infolist.id?c},${infolist.columnInfoType!});"> -->
+                       <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+                        <div id="gjzc" style=" width: 100%;float: left;background: url(${infolist.image});background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;" class="jrjd_a"></div>   
+                       </a>
+                          <#if infolist.isBold =='0'>
+                         		<span id="gjzcspans" style="font-weight:bold;"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}">${infolist.title!}</a></span>
+                    			<#else>
+                    			<span id="gjzcspans"><a href="/article/${channelId}/${list.columnId}/${infolist.id?c}">${infolist.title!}</a></span>
+                    	</#if> 
+                    </div>
+                  </#if>  
+                 </#list>
+                </li>
+            </ul>
+        </section>
+        </#if> 
+       <!-- 个人购买流程 End-->
+      <!--  <#if list.pageModel==5>  
+           <section class="shouye_jrjd bgt_bgqy">
+            <h2 id="gmindexh2">${list.columnName}</h2>
+          <ul class="jrjd">
+                <li>
+                  <#list list.columnInfoList as infolist>
+                 <#if infolist_index gte 0&&infolist_index lte 4>
+                    <div class="jrjd_a">
+                        <img src="${infolist.image}" alt="" onerror="this.src='/images/empty.png'" onclick="JrjdXq(${infolist.id?c},${infolist.columnInfoType!});"> 
+                        <#if infolist.isBold =='0'>
+                         		<span style="font-weight:bold;"><a onclick="JrjdXq(${infolist.id?c},${infolist.columnInfoType!});">${infolist.title!}</a></span>
+                    			<#else>
+                    			 <span><a onclick="JrjdXq(${infolist.id?c},${infolist.columnInfoType!});">${infolist.title!}</a></span>
+                    	</#if> 
+                    </div>
+                    </#if>
+                   </#list> 
+                </li>
+                <li>
+                <#list list.columnInfoList as infolist>
+                <#if infolist_index gte 5&&infolist_index lte 9>
+                    <div class="jrjd_a">
+                        <img src="${infolist.image}" alt="" onerror="this.src='/images/empty.png'" onclick="JrjdXq(${infolist.id?c},${infolist.columnInfoType!});">
+                          <#if infolist.isBold =='0'>
+                         		<span style="font-weight:bold;"><a onclick="JrjdXq(${infolist.id?c},${infolist.columnInfoType!});">${infolist.title!}</a></span>
+                    			<#else>
+                    			 <span><a onclick="JrjdXq(${infolist.id?c},${infolist.columnInfoType!});">${infolist.title!}</a></span>
+                    	</#if> 
+                    </div>
+                      </#if>
+                  </#list>  
+                </li>               
+            </ul>
+        </section>
+        </#if>  
+         <#if list.pageModel==7>
+         <section class="shouye_jrjd gmyj_dffg gmyj_list tongyong_list zxbg">
+            <h2><a href="#">最新曝光线索</a></h2>
+            <ul class="jrjd bgxs">
+                <a class="button" onclick="fabu()">
+                    <span><img src="/images/bgt_button.png" alt="" onclick="fabu()"></span>
+                    <span>我要提供曝光线索</span>
+                </a>
+                 <#list list.columnInfoList as infolist>
+                <li>
+                 
+                    <dl class="list_dl">
+                      <#if infolist.isBold =='0'>
+                         	<dt><a style="font-weight:bold;">${infolist.title!}</a></dt>	
+                    			<#else>
+                    		<dt><a>${infolist.title!}</a></dt>	
+                    	</#if> 
+                        <dd><i><img src="/images/bgt_bgxs_dd.png" /></i><s>${infolist.userTrueName}</s></dd>
+                    </dl>
+                </li>
+               </#list>
+            </ul>
+        </section>
+        </#if>  -->
+         </#list>
+         
+         <input type="hidden" id="channelName" value="${channelName}"/>
+    </section>
+     <#include "/foot.html"/>
+
+<script src="/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="/js/TouchSlide.1.1.js" type="text/javascript"></script>
+<script src="/js/swiper-3.3.1.min.js"></script>
+<script src="/js/loginhtml.js" type="text/javascript"></script>
+<script src="/js/style.js" type="text/javascript"></script>
+<script src="/js/xiangqing.js" type="text/javascript"></script>
+<script src="/js/divselect.js" type="text/javascript"></script>
+<script src="/js/sessionStorage.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var mySwiper = new Swiper('.swiper-container',{
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 5000,
+            autoplayDisableOnInteraction: false,
+        }); 
+        var swiper = new Swiper('.gmyj_nav', {
+            slidesPerView: 3.5,
+        });
+    }); 
+    function fabu(){
+    	window.location.href="/memberContent/fabu.do?type=2";
+    }
+</script>
+</body>
+</html>

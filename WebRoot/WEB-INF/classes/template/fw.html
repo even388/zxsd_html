@@ -1,0 +1,1988 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="applicable-device" content="pc">
+	<meta http-equiv="Cache-Control" content="no-siteapp"/>
+	<meta http-equiv="Cache-Control" content="no-transform"/>
+	<meta name="keywords" content="故障维修,售后政策及流程,二哥网" />
+	<meta name="description" content="二哥网售后服务频道是为消费者介绍售后服务相关的知识并提供服务网点查询功能，包括故障手册,温馨提示,服务流程,服务标准,服务网点,优惠活动等供消费者了解" />
+	<meta http-equiv="mobile-agent"content="format=html5;url=http://m.2ge.cn/fw/" />
+	<title>售后服务_二哥网</title>
+	<link href="/home/images/favicon.ico" rel="shortcut icon">
+	<link rel="stylesheet" type="text/css" href="/home/css/yijuNew.css" />
+	<link rel="stylesheet" type="text/css" href="/home/css/shfwNew.css" />
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=seCeeQ8wr2UL2fCvxEoYv93dGsVBuier"></script>
+	<base target="_blank">
+	<style>
+		.exptitle{border-top:none;}
+/* 		.flliimg img{width:auto !important;max-width:90%;max-height:90%;} */
+		.titleline {border-top: 1px solid #c4c5c9 !important;}
+		.wrap2{overflow:inherit;}
+		.wrap-inner{overflow:inherit;}
+	</style>
+</head>
+<body class="backcolor">
+<!--#include virtual="/tops.html" -->
+<!--轮播图开始-->
+<div class="outer">
+	<div class="banner">
+		<ul class="ban-yiju">
+			<#list imagelist as image>
+			<#if image_index == 0>
+			<li style="z-index:1;background-image:url(${image.image_path});"><a href="${image.link_url}"></a></li>
+			<#break>
+		</#if>
+	</#list>
+	<#list imagelist as image>
+	<#if image_index gt 0 && image_index lte 5>
+	<li style="background-image:url(${image.image_path});"><a href="${image.link_url}"></a></li>
+</#if>
+</#list>
+</ul>
+<ol>
+	<li class="current-yiju"></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ol>
+<span class="left"></span>
+<span class="right"></span>
+</div>
+</div>
+<!--轮播图结束-->
+<!--中间开始-->
+<div class="wrap2">
+	<!--行业筛选开始-->
+	<div id="industry" class="wrap-inner">
+		<!-- <h1 class="exptitle titleline"> 行业筛选左面-->
+		<h1 class="exptitle" style="padding-top:10px;position:relative;border-top:1px solid #c4c5c9"><span>行业筛选</span><a class=" mores" href="/home/after-list/0-0/0/0">MORE <strong>+</strong></a></h1>
+		<ul class="bandclass" id="after_ppul">
+			<li onmouseover="bandclick(this)" value="101" class="bandclassed">家用电器</li>
+			<li onmouseover="bandclick(this)" value="105">数码手机</li>
+			<li onmouseover="bandclick(this)" value="106">电脑办公</li>
+			<li onmouseover="bandclick(this)" value="104">美妆个护</li>
+			<li onmouseover="bandclick(this)" value="107">母婴玩具</li>
+			<li onmouseover="bandclick(this)" value="109">医药保健</li>
+			<li onmouseover="bandclick(this)" value="102">服装内衣</li>
+			<li onmouseover="bandclick(this)" value="113">鞋靴饰品</li>
+			<li onmouseover="bandclick(this)" value="115">汽车房产</li>
+			<li onmouseover="bandclick(this)" value="108">食品生鲜</li>
+			<li onmouseover="bandclick(this)" value="112">家居家装</li>
+		</ul>
+		<div class="cont">
+			<div class="conttabw">
+				<!-- 家用电器开始 -->
+				<div class="conttab" style="display:block">
+					<div class="flul">
+						<#list exlist as exhib>
+						<#if exhib.goods_class_id == '101' && exhib.exhibition_type?number == 2 && exhib.seq_num?number lte 10>
+						<div class="flli">
+							<a class="flliimg" href="/home${exhib.link}"><img src="${exhib.image!}" alt="${exhib.word_name_show!}"></a>
+							<a class="fllitext" href="/home${exhib.link}"><span></span>${exhib.word_name_show!}<span></span></a>
+						</div>
+					</#if>
+				</#list>
+				<div class="clear"></div>
+			</div>
+			<div class="imgtext1">
+				<div class="imgtextli1">
+					<#list exlist as exhib>
+					<#if exhib.goods_class_id == '101' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+					&& exhib.seq_num?number == 1>
+					<a class="imte" href="/home${exhib.link}">
+						<img src="${exhib.image!}" alt="${exhib.word_name_show!}">
+						<p>${exhib.word_name_show!}</p>
+					</a>
+				</#if>
+			</#list>
+			<div class="textli">
+				<#list exlist as exhib>
+				<#if exhib.goods_class_id == '101' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+				&& exhib.seq_num?number gt 1 >
+				<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+			</#if>
+		</#list>
+	</div>
+</div>
+<div class="imgtextli1">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '101' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number == 1>
+	<a class="imte" href="/home${exhib.link}">
+		<img src="${exhib.image!}">
+		<p>${exhib.word_name_show!}</p>
+	</a>
+</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '101' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+<!-- 家用电器结束 -->
+<!-- 电脑数码开始 -->
+<div class="conttab">
+	<div class="flul">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '105' && exhib.exhibition_type?number == 2 && exhib.seq_num?number lte 10>
+		<div class="flli">
+			<a class="flliimg" href="/home${exhib.link}"><img src="${exhib.image!}" alt="${exhib.word_name_show!}"></a>
+			<a class="fllitext" href="/home${exhib.link}"><span></span>${exhib.word_name_show!}<span></span></a>
+		</div>
+	</#if>
+</#list>
+<div class="clear"></div>
+</div>
+<div class="imgtext1">
+	<div class="imgtextli1">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '105' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+		&& exhib.seq_num?number == 1>
+		<a class="imte" href="/home${exhib.link}">
+			<img src="${exhib.image!}" alt="${exhib.word_name_show!}">
+			<p>${exhib.word_name_show!}</p>
+		</a>
+	</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '105' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+<div class="imgtextli1">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '105' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number == 1>
+	<a class="imte" href="/home${exhib.link}">
+		<img src="${exhib.image!}">
+		<p>${exhib.word_name_show!}</p>
+	</a>
+</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '105' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+<!-- 电脑办公 -->
+<div class="conttab">
+	<div class="flul">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '106' && exhib.exhibition_type?number == 2 && exhib.seq_num?number lte 10>
+		<div class="flli">
+			<a class="flliimg" href="/home${exhib.link}"><img src="${exhib.image!}" alt="${exhib.word_name_show!}"></a>
+			<a class="fllitext" href="/home${exhib.link}"><span></span>${exhib.word_name_show!}<span></span></a>
+		</div>
+	</#if>
+</#list>
+<div class="clear"></div>
+</div>
+<div class="imgtext1">
+	<div class="imgtextli1">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '106' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+		&& exhib.seq_num?number == 1>
+		<a class="imte" href="/home${exhib.link}">
+			<img src="${exhib.image!}" alt="${exhib.word_name_show!}">
+			<p>${exhib.word_name_show!}</p>
+		</a>
+	</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '106' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+<div class="imgtextli1">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '106' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number == 1>
+	<a class="imte" href="/home${exhib.link}">
+		<img src="${exhib.image!}">
+		<p>${exhib.word_name_show!}</p>
+	</a>
+</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '106' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+<!-- 美妆个护 -->
+<div class="conttab">
+	<div class="flul">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '104' && exhib.exhibition_type?number == 2 && exhib.seq_num?number lte 10>
+		<div class="flli">
+			<a class="flliimg" href="/home${exhib.link}"><img src="${exhib.image!}" alt="${exhib.word_name_show!}"></a>
+			<a class="fllitext" href="/home${exhib.link}"><span></span>${exhib.word_name_show!}<span></span></a>
+		</div>
+	</#if>
+</#list>
+<div class="clear"></div>
+</div>
+<div class="imgtext1">
+	<div class="imgtextli1">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '104' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+		&& exhib.seq_num?number == 1>
+		<a class="imte" href="/home${exhib.link}">
+			<img src="${exhib.image!}" alt="${exhib.word_name_show!}">
+			<p>${exhib.word_name_show!}</p>
+		</a>
+	</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '104' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+<div class="imgtextli1">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '104' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number == 1>
+	<a class="imte" href="/home${exhib.link}">
+		<img src="${exhib.image!}">
+		<p>${exhib.word_name_show!}</p>
+	</a>
+</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '104' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+<!-- 母婴玩具 -->
+<div class="conttab">
+	<div class="flul">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '107' && exhib.exhibition_type?number == 2 && exhib.seq_num?number lte 10>
+		<div class="flli">
+			<a class="flliimg" href="/home${exhib.link}"><img src="${exhib.image!}" alt="${exhib.word_name_show!}"></a>
+			<a class="fllitext" href="/home${exhib.link}"><span></span>${exhib.word_name_show!}<span></span></a>
+		</div>
+	</#if>
+</#list>
+<div class="clear"></div>
+</div>
+<div class="imgtext1">
+	<div class="imgtextli1">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '107' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+		&& exhib.seq_num?number == 1>
+		<a class="imte" href="/home${exhib.link}">
+			<img src="${exhib.image!}" alt="${exhib.word_name_show!}">
+			<p>${exhib.word_name_show!}</p>
+		</a>
+	</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '107' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+<div class="imgtextli1">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '107' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number == 1>
+	<a class="imte" href="/home${exhib.link}">
+		<img src="${exhib.image!}">
+		<p>${exhib.word_name_show!}</p>
+	</a>
+</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '107' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+<!-- 医药保健 -->
+<div class="conttab">
+	<div class="flul">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '109' && exhib.exhibition_type?number == 2 && exhib.seq_num?number lte 10>
+		<div class="flli">
+			<a class="flliimg" href="/home${exhib.link}"><img src="${exhib.image!}" alt="${exhib.word_name_show!}"></a>
+			<a class="fllitext" href="/home${exhib.link}"><span></span>${exhib.word_name_show!}<span></span></a>
+		</div>
+	</#if>
+</#list>
+<div class="clear"></div>
+</div>
+<div class="imgtext1">
+	<div class="imgtextli1">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '109' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+		&& exhib.seq_num?number == 1>
+		<a class="imte" href="/home${exhib.link}">
+			<img src="${exhib.image!}" alt="${exhib.word_name_show!}">
+			<p>${exhib.word_name_show!}</p>
+		</a>
+	</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '109' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+<div class="imgtextli1">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '109' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number == 1>
+	<a class="imte" href="/home${exhib.link}">
+		<img src="${exhib.image!}">
+		<p>${exhib.word_name_show!}</p>
+	</a>
+</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '109' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+<!-- 服装内衣 -->
+<div class="conttab">
+	<div class="flul">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '102' && exhib.exhibition_type?number == 2 && exhib.seq_num?number lte 10>
+		<div class="flli">
+			<a class="flliimg" href="/home${exhib.link}"><img src="${exhib.image!}" alt="${exhib.word_name_show!}"></a>
+			<a class="fllitext" href="/home${exhib.link}"><span></span>${exhib.word_name_show!}<span></span></a>
+		</div>
+	</#if>
+</#list>
+<div class="clear"></div>
+</div>
+<div class="imgtext1">
+	<div class="imgtextli1">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '102' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+		&& exhib.seq_num?number == 1>
+		<a class="imte" href="/home${exhib.link}">
+			<img src="${exhib.image!}" alt="${exhib.word_name_show!}">
+			<p>${exhib.word_name_show!}</p>
+		</a>
+	</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '102' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+<div class="imgtextli1">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '102' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number == 1>
+	<a class="imte" href="/home${exhib.link}">
+		<img src="${exhib.image!}">
+		<p>${exhib.word_name_show!}</p>
+	</a>
+</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '102' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+<!-- 鞋靴饰品 -->
+<div class="conttab">
+	<div class="flul">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '113' && exhib.exhibition_type?number == 2 && exhib.seq_num?number lte 10>
+		<div class="flli">
+			<a class="flliimg" href="/home${exhib.link}"><img src="${exhib.image!}" alt="${exhib.word_name_show!}"></a>
+			<a class="fllitext" href="/home${exhib.link}"><span></span>${exhib.word_name_show!}<span></span></a>
+		</div>
+	</#if>
+</#list>
+<div class="clear"></div>
+</div>
+<div class="imgtext1">
+	<div class="imgtextli1">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '113' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+		&& exhib.seq_num?number == 1>
+		<a class="imte" href="/home${exhib.link}">
+			<img src="${exhib.image!}" alt="${exhib.word_name_show!}">
+			<p>${exhib.word_name_show!}</p>
+		</a>
+	</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '113' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+<div class="imgtextli1">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '113' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number == 1>
+	<a class="imte" href="/home${exhib.link}">
+		<img src="${exhib.image!}">
+		<p>${exhib.word_name_show!}</p>
+	</a>
+</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '113' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+<!-- 汽车房产-->
+<div class="conttab">
+	<div class="flul">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '115' && exhib.exhibition_type?number == 2 && exhib.seq_num?number lte 10>
+		<div class="flli">
+			<a class="flliimg" href="/home${exhib.link}"><img src="${exhib.image!}" alt="${exhib.word_name_show!}"></a>
+			<a class="fllitext" href="/home${exhib.link}"><span></span>${exhib.word_name_show!}<span></span></a>
+		</div>
+	</#if>
+</#list>
+<div class="clear"></div>
+</div>
+<div class="imgtext1">
+	<div class="imgtextli1">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '115' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+		&& exhib.seq_num?number == 1>
+		<a class="imte" href="/home${exhib.link}">
+			<img src="${exhib.image!}" alt="${exhib.word_name_show!}">
+			<p>${exhib.word_name_show!}</p>
+		</a>
+	</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '115' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+<div class="imgtextli1">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '115' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number == 1>
+	<a class="imte" href="/home${exhib.link}">
+		<img src="${exhib.image!}">
+		<p>${exhib.word_name_show!}</p>
+	</a>
+</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '115' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+<!-- 食品生鲜-->
+<div class="conttab">
+	<div class="flul">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '108' && exhib.exhibition_type?number == 2 && exhib.seq_num?number lte 10>
+		<div class="flli">
+			<a class="flliimg" href="/home${exhib.link}"><img src="${exhib.image!}" alt="${exhib.word_name_show!}"></a>
+			<a class="fllitext" href="/home${exhib.link}"><span></span>${exhib.word_name_show!}<span></span></a>
+		</div>
+	</#if>
+</#list>
+<div class="clear"></div>
+</div>
+<div class="imgtext1">
+	<div class="imgtextli1">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '108' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+		&& exhib.seq_num?number == 1>
+		<a class="imte" href="/home${exhib.link}">
+			<img src="${exhib.image!}" alt="${exhib.word_name_show!}">
+			<p>${exhib.word_name_show!}</p>
+		</a>
+	</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '108' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+<div class="imgtextli1">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '108' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number == 1>
+	<a class="imte" href="/home${exhib.link}">
+		<img src="${exhib.image!}">
+		<p>${exhib.word_name_show!}</p>
+	</a>
+</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '108' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+<!-- 家居家装 -->
+<div class="conttab">
+	<div class="flul">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '112' && exhib.exhibition_type?number == 2 && exhib.seq_num?number lte 10>
+		<div class="flli">
+			<a class="flliimg" href="/home${exhib.link}"><img src="${exhib.image!}" alt="${exhib.word_name_show!}"></a>
+			<a class="fllitext" href="/home${exhib.link}"><span></span>${exhib.word_name_show!}<span></span></a>
+		</div>
+	</#if>
+</#list>
+<div class="clear"></div>
+</div>
+<div class="imgtext1">
+	<div class="imgtextli1">
+		<#list exlist as exhib>
+		<#if exhib.goods_class_id == '112' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+		&& exhib.seq_num?number == 1>
+		<a class="imte" href="/home${exhib.link}">
+			<img src="${exhib.image!}" alt="${exhib.word_name_show!}">
+			<p>${exhib.word_name_show!}</p>
+		</a>
+	</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '112' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 1
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+<div class="imgtextli1">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '112' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number == 1>
+	<a class="imte" href="/home${exhib.link}">
+		<img src="${exhib.image!}">
+		<p>${exhib.word_name_show!}</p>
+	</a>
+</#if>
+</#list>
+<div class="textli">
+	<#list exlist as exhib>
+	<#if exhib.goods_class_id == '112' && exhib.exhibition_type?number == 1 && exhib.block_num?number == 2
+	&& exhib.seq_num?number gt 1 >
+	<a href="/home${exhib.link}">${exhib.word_name_show!}</a>
+</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ctionw">
+	<!-- 故障维修手册 -->
+	<div class="ction">
+		<h2 class="exptitle"><span>故障维修手册</span><a href="/home/after-list/116-0/0/0">MORE <strong>+</strong></a></h2>
+		<div class="ction_top">
+			<#list gzwxlist as article>
+			<#if article_index == 0>
+			<a class="ction_topl" href="${article.page_url}.html"><img src="${article.title_image!}" alt="${article.title}"></a>
+			<div class="ction_topr">
+				<a href="${article.page_url}.html">${article.title}</a>
+				<p class="trtext">
+                    <#if article.content_intro?length gt 68>${article.content_intro?substring(0,68)}<#else>${article.content_intro}</#if>...
+				</p>
+			</div>
+		</#if>
+	</#list>
+</div>
+<div class="ction_bottom">
+	<#list gzwxlist as article>
+	<#if article_index gt 0>
+	<div class="ctionone">
+		<a class="ctiononel" href="${article.page_url}.html">${article.title}</a>
+		<div class="ctiononer">${article.source!}</div>
+	</div>
+</#if>
+</#list>
+</div>
+</div>
+<!-- 温馨提示与使用技巧 -->
+<div class="ction">
+	<h2 class="exptitle"><span>温馨提示与使用技巧</span><a href="/home/after-list/117-0/0/0">MORE <strong>+</strong></a></h2>
+	<div class="ction_top">
+		<#list wxtslist as article>
+		<#if article_index == 0>
+		<a class="ction_topl" href="${article.page_url}.html"><img src="${article.title_image!}" alt="${article.title}"></a>
+		<div class="ction_topr">
+			<a href="${article.page_url}.html">${article.title}</a>
+			<p class="trtext">
+                <#if article.content_intro?length gt 68>${article.content_intro?substring(0,68)}<#else>${article.content_intro}</#if>...
+			</p>
+		</div>
+	</#if>
+</#list>
+</div>
+<div class="ction_bottom">
+	<#list wxtslist as article>
+	<#if article_index gt 0>
+	<div class="ctionone">
+		<a class="ctiononel" href="${article.page_url}.html">${article.title}</a>
+		<div class="ctiononer">${article.source!}</div>
+	</div>
+</#if>
+</#list>
+</div>
+</div>
+<!-- 售后政策及流程 -->
+<div class="ction">
+	<h2 class="exptitle"><span>售后政策及流程</span><a href="/home/after-list/118-0/0/0">MORE <strong>+</strong></a></h2>
+	<div class="ction_top">
+		<#list fwlclist as article>
+		<#if article_index == 0>
+		<a class="ction_topl" href="${article.page_url}.html"><img src="${article.title_image!}" alt="${article.title}"></a>
+		<div class="ction_topr">
+			<a href="${article.page_url}.html">${article.title}</a>
+			<p class="trtext">
+                <#if article.content_intro?length gt 68>${article.content_intro?substring(0,68)}<#else>${article.content_intro}</#if>...
+			</p>
+		</div>
+	</#if>
+</#list>
+</div>
+<div class="ction_bottom">
+	<#list fwlclist as article>
+	<#if article_index gt 0>
+	<div class="ctionone">
+		<a class="ctiononel" href="${article.page_url}.html">${article.title}</a>
+		<div class="ctiononer">${article.source!}</div>
+	</div>
+</#if>
+</#list>
+</div>
+</div>
+<!-- 说明书/电子资料下载 -->
+<div class="ction">
+	<h2 class="exptitle"><span>说明书/电子资料下载</span><a href="/home/after-list/136-0/0/0">MORE <strong>+</strong></a></h2>
+	<div class="ction_top">
+		<#list dzzllist as article>
+		<#if article_index == 0>
+		<a class="ction_topl" href="${article.page_url}.html"><img src="${article.title_image!}" alt="${article.title}"></a>
+		<div class="ction_topr">
+			<a href="${article.page_url}.html">${article.title}</a>
+			<p class="trtext">
+                <#if article.content_intro?length gt 68>${article.content_intro?substring(0,68)}<#else>${article.content_intro}</#if>...
+			</p>
+		</div>
+	</#if>
+</#list>
+</div>
+<div class="ction_bottom">
+	<#list dzzllist as article>
+	<#if article_index gt 0>
+	<div class="ctionone">
+		<a class="ctiononel" href="${article.page_url}.html">${article.title}</a>
+		<div class="ctiononer">${article.source!}</div>
+	</div>
+</#if>
+</#list>
+</div>
+</div>
+
+<!-- 医疗器械使用方法 -->
+<div class="ction">
+	<h2 class="exptitle"><span>医疗器械使用方法</span><a href="/home/after-list/138-0/0/0">MORE <strong>+</strong></a></h2>
+	<div class="ction_top">
+		<#list ylqqlist as article>
+		<#if article_index == 0>
+		<a class="ction_topl" href="${article.page_url}.html"><img src="${article.title_image!}" alt="${article.title}"></a>
+		<div class="ction_topr">
+			<a href="${article.page_url}.html">${article.title}</a>
+			<p class="trtext">
+                <#if article.content_intro?length gt 68>${article.content_intro?substring(0,68)}<#else>${article.content_intro}</#if>...
+			</p>
+		</div>
+	</#if>
+</#list>
+</div>
+<div class="ction_bottom">
+	<#list ylqqlist as article>
+	<#if article_index gt 0>
+	<div class="ctionone">
+		<a class="ctiononel" href="${article.page_url}.html">${article.title}</a>
+		<div class="ctiononer">${article.source!}</div>
+	</div>
+</#if>
+</#list>
+</div>
+</div>
+
+<!-- 家装/家具/家居维护说明 -->
+<div class="ction">
+	<h2 class="exptitle"><span>家装/家具/家居维护说明</span><a href="/home/after-list/139-0/0/0">MORE <strong>+</strong></a></h2>
+	<div class="ction_top">
+		<#list jjwhlist as article>
+		<#if article_index == 0>
+		<a class="ction_topl" href="${article.page_url}.html"><img src="${article.title_image!}" alt="${article.title}"></a>
+		<div class="ction_topr">
+			<a href="${article.page_url}.html">${article.title}</a>
+			<p class="trtext">
+                <#if article.content_intro?length gt 68>${article.content_intro?substring(0,68)}<#else>${article.content_intro}</#if>...
+			</p>
+		</div>
+	</#if>
+</#list>
+</div>
+<div class="ction_bottom">
+	<#list jjwhlist as article>
+	<#if article_index gt 0>
+	<div class="ctionone">
+		<a class="ctiononel" href="${article.page_url}.html">${article.title}</a>
+		<div class="ctiononer">${article.source!}</div>
+	</div>
+</#if>
+</#list>
+</div>
+</div>
+
+<!-- 服装鞋包饰品搭配指南 -->
+<div class="ction">
+	<h2 class="exptitle"><span>服装鞋包饰品搭配指南</span><a href="/home/after-list/140-0/0/0">MORE <strong>+</strong></a></h2>
+	<div class="ction_top">
+		<#list fzxmlist as article>
+		<#if article_index == 0>
+		<a class="ction_topl" href="${article.page_url}.html"><img src="${article.title_image!}" alt="${article.title}"></a>
+		<div class="ction_topr">
+			<a href="${article.page_url}.html">${article.title}</a>
+			<p class="trtext">
+                <#if article.content_intro?length gt 68>${article.content_intro?substring(0,68)}<#else>${article.content_intro}</#if>...
+			</p>
+		</div>
+	</#if>
+</#list>
+</div>
+<div class="ction_bottom">
+	<#list fzxmlist as article>
+	<#if article_index gt 0>
+	<div class="ctionone">
+		<a class="ctiononel" href="${article.page_url}.html">${article.title}</a>
+		<div class="ctiononer">${article.source!}</div>
+	</div>
+</#if>
+</#list>
+</div>
+</div>
+
+<!-- 用户手册/尺码对照表 -->
+<div class="ction">
+	<h2 class="exptitle"><span>用户手册/尺码对照表</span><a href="/home/after-list/141-0/0/0">MORE <strong>+</strong></a></h2>
+	<div class="ction_top">
+		<#list yhsclist as article>
+		<#if article_index == 0>
+		<a class="ction_topl" href="${article.page_url}.html"><img src="${article.title_image!}" alt="${article.title}"></a>
+		<div class="ction_topr">
+			<a href="${article.page_url}.html">${article.title}</a>
+			<p class="trtext">
+                <#if article.content_intro?length gt 68>${article.content_intro?substring(0,68)}<#else>${article.content_intro}</#if>...
+			</p>
+		</div>
+	</#if>
+</#list>
+</div>
+<div class="ction_bottom">
+	<#list yhsclist as article>
+	<#if article_index gt 0>
+	<div class="ctionone">
+		<a class="ctiononel" href="${article.page_url}.html">${article.title}</a>
+		<div class="ctiononer">${article.source!}</div>
+	</div>
+</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--行业筛选结束-->
+<!--服务网点开始-->
+<div class="yhhd">
+	<h2 class="exptitle titleline"><span>服务网点</span></h2>
+	<!--查找开始-->
+	<div class="sousou">
+		<div class="inpg">
+			<i class="iconfont">&#xe6a4;</i> <input type="text" id="aftersale_name"
+													placeholder="请输入品牌名称搜索"  onclick="key_findAfterSale()" ></input>
+			<div class="tan" id="search" style="display:none;">
+				<span class="cha"><img onclick="closeSearch()" src="/home/images/close.png" /></span>
+				<div class="inner">
+					<ul class="pinyintop">
+						<li class="tblock" style="cursor:pointer;">ABCD</li>
+						<li style="cursor:pointer;">EFGH</li>
+						<li style="cursor:pointer;">IJKL</li>
+						<li style="cursor:pointer;">MNOP</li>
+						<li style="cursor:pointer;">QRSTU</li>
+						<li style="cursor:pointer;">VWXYZ</li>
+						<li style="cursor:pointer;">其他</li>
+					</ul>
+					<ul class="bottom">
+						<li class="bblock">
+							<#list pinyin?keys as mKey>
+							<#if mKey=='a'>
+							<div class="aabb">
+								<span class="title">A</span>
+								<#assign item = pinyin[mKey]>
+								<p class="title_ppp">
+									<#if  item?? && (item?size > 0)>
+									<#list item as a>
+									<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+								</#list>
+								<#else>
+								<span>暂无数据</span>
+							</#if>
+							</p>
+				</div>
+				<#break>
+			</#if>
+		</#list>
+		<#list pinyin?keys as mKey>
+		<#if mKey=='b'>
+		<div class="aabb">
+			<span class="title">B</span>
+			<#assign item = pinyin[mKey]>
+			<p class="title_ppp">
+				<#if  item?? && (item?size > 0)>
+				<#list item as a>
+				<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+			</#list>
+			<#else>
+			<span>暂无数据</span>
+		</#if>
+		</p>
+	</div>
+	<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='c'>
+<div class="aabb">
+	<span class="title">C</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='d'>
+<div class="aabb">
+	<span class="title">D</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+</li>
+<li>
+	<#list pinyin?keys as mKey>
+	<#if mKey=='e'>
+	<div class="aabb">
+		<span class="title">E</span>
+		<#assign item = pinyin[mKey]>
+		<p class="title_ppp">
+			<#if  item?? && (item?size > 0)>
+			<#list item as a>
+			<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+		</#list>
+		<#else>
+		<span>暂无数据</span>
+	</#if>
+	</p>
+	</div>
+	<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='f'>
+<div class="aabb">
+	<span class="title">F</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='g'>
+<div class="aabb">
+	<span class="title">G</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='h'>
+<div class="aabb">
+	<span class="title">H</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+</li>
+<li>
+	<#list pinyin?keys as mKey>
+	<#if mKey=='i'>
+	<div class="aabb">
+		<span class="title">I</span>
+		<#assign item = pinyin[mKey]>
+		<p class="title_ppp">
+			<#if  item?? && (item?size > 0)>
+			<#list item as a>
+			<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+		</#list>
+		<#else>
+		<span>暂无数据</span>
+	</#if>
+	</p>
+	</div>
+	<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='j'>
+<div class="aabb">
+	<span class="title">J</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='k'>
+<div class="aabb">
+	<span class="title">K</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='l'>
+<div class="aabb">
+	<span class="title">L</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+</li>
+
+<li>
+	<#list pinyin?keys as mKey>
+	<#if mKey=='m'>
+	<div class="aabb">
+		<span class="title">M</span>
+		<#assign item = pinyin[mKey]>
+		<p class="title_ppp">
+			<#if  item?? && (item?size > 0)>
+			<#list item as a>
+			<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+		</#list>
+		<#else>
+		<span>暂无数据</span>
+	</#if>
+	</p>
+	</div>
+	<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='n'>
+<div class="aabb">
+	<span class="title">N</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='o'>
+<div class="aabb">
+	<span class="title">O</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='p'>
+<div class="aabb">
+	<span class="title">P</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+</li>
+
+<li>
+	<#list pinyin?keys as mKey>
+	<#if mKey=='q'>
+	<div class="aabb">
+		<span class="title">Q</span>
+		<#assign item = pinyin[mKey]>
+		<p class="title_ppp">
+			<#if  item?? && (item?size > 0)>
+			<#list item as a>
+			<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+		</#list>
+		<#else>
+		<span>暂无数据</span>
+	</#if>
+	</p>
+	</div>
+	<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='r'>
+<div class="aabb">
+	<span class="title">R</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='s'>
+<div class="aabb">
+	<span class="title">S</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='t'>
+<div class="aabb">
+	<span class="title">T</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='u'>
+<div class="aabb">
+	<span class="title">U</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+</li>
+<li>
+	<#list pinyin?keys as mKey>
+	<#if mKey=='v'>
+	<div class="aabb">
+		<span class="title">V</span>
+		<#assign item = pinyin[mKey]>
+		<p class="title_ppp">
+			<#if  item?? && (item?size > 0)>
+			<#list item as a>
+			<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+		</#list>
+		<#else>
+		<span>暂无数据</span>
+	</#if>
+	</p>
+	</div>
+	<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='w'>
+<div class="aabb">
+	<span class="title">W</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='x'>
+<div class="aabb">
+	<span class="title">X</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='y'>
+<div class="aabb">
+	<span class="title">Y</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+<#list pinyin?keys as mKey>
+<#if mKey=='z'>
+<div class="aabb">
+	<span class="title">Z</span>
+	<#assign item = pinyin[mKey]>
+	<p class="title_ppp">
+		<#if  item?? && (item?size > 0)>
+		<#list item as a>
+		<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+	</#list>
+	<#else>
+	<span>暂无数据</span>
+</#if>
+</p>
+</div>
+<#break>
+</#if>
+</#list>
+</li>
+<li>
+	<#list pinyin?keys as mKey>
+	<#if mKey=='qita'>
+	<div class="aabb">
+		<span class="title">其他</span>
+		<#assign item = pinyin[mKey]>
+		<p class="title_ppp">
+			<#if  item?? && (item?size > 0)>
+			<#list item as a>
+			<a  onclick="giveThisVal(this)"><span>${a.brandName}</span></a>
+		</#list>
+		<#else>
+		<span>暂无数据</span>
+	</#if>
+	</p>
+	</div>
+	<#break>
+</#if>
+</#list>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="hangFen">
+	<span>行业分类：</span>
+	<select name="" id="classlist" >
+		<option value ="">请选择</option>
+	</select>
+</div>
+<div class="hangFen">
+	<span>服务类型：</span>
+	<select name="" id="service_type" >
+		<option value ="">请选择</option>
+	</select>
+</div>
+<div class="diZhi">
+	<select name="" id="citylist" onChange='findCountryChange()'>
+		<#list provelist as prove>
+		<option value="${prove.address}">${prove.address}</option>
+	</#list>
+	</select>
+	<select name="" id="countrylist" >
+	</select>
+</div>
+<div class="buo">
+	<button onClick='searchAfterSale()'>查找</button>
+</div>
+</div>
+<!--查找结束-->
+<!--城市定位开始-->
+<div class="baidu" id="dituContent" name="dituContent">
+</div>
+<div class="cs">
+	<div class="dqcs">
+		<div class="dqo">
+			<label><b id="wz_prov">北京市</b>, 共找到 <i style="color:#2cbe1d; font-style:normal; font-weight:bold;" id="totalNum"></i> 条服务网点信息</label>
+		</div>
+
+	</div>
+	<div class="weizhis">
+		<div class="dizhi" >
+			<ul id="dizhi">
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+<!--快捷查询开始-->
+<div class="yzpp query kuaiJie" style="height:auto;overflow:hidden;position:relative">
+	<img class="queryimg" src="/home/images/queryback.png">
+	<div class="left youzhipinpai">
+		<h1 class="exptitle titleline">
+			<span>快捷查询</span>
+			<ul class="ppul">
+				<li class="activezm">A</li>
+				<li>B</li>
+				<li>C</li>
+				<li>D</li>
+				<li>E</li>
+				<li>F</li>
+				<li>G</li>
+				<li>H</li>
+				<li>I</li>
+				<li>J</li>
+				<li>K</li>
+				<li>L</li>
+				<li>M</li>
+				<li>N</li>
+				<li>O</li>
+				<li>P</li>
+				<li>Q</li>
+				<li>R</li>
+				<li>S</li>
+				<li>T</li>
+				<li>U</li>
+				<li>V</li>
+				<li>W</li>
+				<li>X</li>
+				<li>Y</li>
+				<li>Z</li>
+			</ul>
+		</h1>
+
+		<div class="cont" style="width:100%;height:auto;">
+			<ul class="contUl contUlActive" style="width:100%;">
+				<#list cuslist as custom>
+				<#if custom.custom_initial == 'A'>
+				<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+					<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+				</li>
+			</#if>
+		</#list>
+		</ul>
+		<ul class="contUl">
+			<#list cuslist as custom>
+			<#if custom.custom_initial == 'B'>
+			<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+				<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+			</li>
+		</#if>
+	</#list>
+	</ul>
+	<ul class="contUl">
+		<#list cuslist as custom>
+		<#if custom.custom_initial == 'C'>
+		<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+			<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+		</li>
+	</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'D'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'E'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'F'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'G'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'H'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'I'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'J'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'K'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'L'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'M'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'N'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'O'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'P'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'Q'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'R'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'S'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'T'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'U'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'V'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'W'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'X'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'Y'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+<ul class="contUl">
+	<#list cuslist as custom>
+	<#if custom.custom_initial == 'Z'>
+	<li class="contUlLi">
+                			<span class="contUlLiT">
+                				<i><img src="${custom.custom_icon}" alt="${custom.custom_name}" /></i>
+                				<b>${custom.custom_name}</b>
+                			</span>
+		<span class="contUlLiB">
+                				<p class="phone"><span>电话:</span>${custom.custom_tel!}</p>
+                				<p class="phone"><span>微信:</span>${custom.custom_weChat!}</p>
+                				<p class="phone"><span>网址:</span>${custom.custom_url!}</p>
+                			</span>
+	</li>
+</#if>
+</#list>
+</ul>
+</div>
+</div>
+</div>
+<div class="top" id="ltop">
+	<img src="/home/images/toptou.jpg">
+</div>
+</div>
+</div>
+</div>
+<!--#include virtual="/foots.html" -->
+<script src="/home/js/shfwnew.js" type="text/javascript"></script>
+<script type="text/javascript">
+    localStorage.topval = 112;
+    /* 鼠标滚动到行业筛选区域，左边浮动 */
+    //滚动到banner一下显示固定头部
+    $(document).scroll(function(){
+        var docTop=$(this).scrollTop();
+        var scheight=$('#industry').height();
+        var lefthei=$('.bandclass').height();
+        if(docTop>520 && docTop<scheight-160){
+            $(".bandclass").addClass('bandclasspos');
+            $(".bandclass").removeClass('bandclasspos1');
+        }else if(scheight-160<docTop && docTop<scheight+lefthei){
+            $(".bandclass").addClass('bandclasspos1');
+            $(".bandclass").removeClass('bandclasspos');
+        }else{
+            $(".bandclass").removeClass('bandclasspos');
+            $(".bandclass").removeClass('bandclasspos1');
+        }
+    });
+
+    /* 行业筛选左侧导航点击切换模块 */
+    function bandclick(obj){
+        var index1=$(obj).index();
+        $(obj).addClass('bandclassed').siblings().removeClass('bandclassed');
+        $(obj).parent('.bandclass').siblings('.cont').find('.conttabw').find('.conttab').eq(index1).show().siblings().hide();
+    }
+</script>
+</body>
+</html>

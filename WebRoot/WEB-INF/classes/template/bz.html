@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="applicable-device" content="pc">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="keywords" content="手机数码,电脑办公,家电,二哥网" />
+    <meta name="description" content="二哥网国家标准频道为大家介绍商品服务的国家标准和地区的政策法规，包括手机电脑,家居家电,美妆护理,服饰鞋包,母婴,户外旅游,汽车用品,食品生鲜,营养医药,金融,教育,房地产等行业的商品服务的国家标准和地区的政策法规，让购物消费更专业·更放心" />
+    <meta http-equiv="mobile-agent"content="format=html5;url=http://m.2ge.cn/bz/" />
+    <title>国家标准_二哥网</title>
+    <link href="/home/images/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="/home/css/yijuNew.css" />
+    <base target="_blank">
+    <style>
+        .titleSpan::after{
+            content:"";
+            width:19px;
+            height:11px;
+            background:url(/home/images/sanJiaoIcon.png) no-repeat;
+            position:absolute;
+            left:11px;
+            top:-11px;
+        }
+    </style>
+</head>
+<body class="backcolor">
+<!--#include virtual="/tops.html" -->
+<div class="outer">
+    <div class="banner">
+        <ul class="ban-yiju">
+            <#list imagelist as image>
+            <#if image_index == 0>
+            <li style="z-index:1;background-image:url(${image.image_path});"><a href="${image.link_url}"></a></li>
+            <#break>
+        </#if>
+    </#list>
+    <#list imagelist as image>
+    <#if image_index gt 0 && image_index lte 5>
+    <li style="background-image:url(${image.image_path});"><a href="${image.link_url}"></a></li>
+</#if>
+</#list>
+</ul>
+<ol>
+    <li class="current-yiju"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+<span class="left"></span>
+<span class="right"></span>
+</div>
+</div>
+<div class="wrap2">
+    <div class="wrap-inner footbottom">
+        <div class="inner yzpp biaoZhunWrap">
+            <div class="biaoZhunLeftWrap">
+                <h2 class="yh2 havet">
+                    <span class="title"><img src="/home/images/haveyy.png">政策法规</span>
+                    <a class="more" style="margin-top:0px;" href="/home/article-list/103-0"><span>MORE</span><strong>+</strong></a>
+                </h2>
+                <div class="biaoZhunInner">
+                    <div class="biaoZhunInnerTop">
+                        <#list ardfglist as yj>
+                        <#if yj_index == 0 >
+                        <a class="spanImg" href="/ard/${yj.article_id}.html"><img src="${yj.title_image}" alt="${yj.title}"/></a>
+                        <div class="divWordsWrap">
+                            <h3><a href="/ard/${yj.article_id}.html">${yj.title}</a></h3>
+                            <p><#if yj.content_intro?length gt 76> ${yj.content_intro?substring(0,76)}...<#else> ${yj.content_intro}</#if><a class="adetail" href="/ard/${yj.article_id}.html">详情</a></p>
+                        </div>
+                    </#if>
+                </#list>
+            </div>
+            <div class="biaoZhunInnerBottom">
+                <ul>
+                    <#list ardfglist as yj>
+                    <#if yj_index gt 0 >
+                    <li>
+                        <p class="spanLeft"><i></i><span class="spanWords"><a href="/ard/${yj.article_id}.html">${yj.title}</a></span></p>
+                        <span class="spanRight">${yj.source}</span>
+                    </li>
+                </#if>
+            </#list>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="biaoZhunLeftWrap biaoZhunRightWrap">
+    <h2 class="yh2 havet">
+        <span class="title"><img src="/home/images/haveyy.png">案例解析</span>
+        <a class="more" style="margin-top:0px;" href="/home/article-list/148-0"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="biaoZhunInner">
+        <div class="biaoZhunInnerTop">
+            <#list ardjdlist as yj>
+            <#if yj_index == 0 >
+            <a class="spanImg" href="/ard/${yj.article_id}.html"><img src="${yj.title_image}" alt="${yj.title}"/></a>
+            <div class="divWordsWrap">
+                <h3><a href="/ard/${yj.article_id}.html">${yj.title}</a></h3>
+                <p><#if yj.content_intro?length gt 76> ${yj.content_intro?substring(0,76)}...<#else> ${yj.content_intro}</#if><a class="adetail" href="/ard/${yj.article_id}.html">详情</a></p>
+            </div>
+        </#if>
+    </#list>
+</div>
+<div class="biaoZhunInnerBottom">
+    <ul>
+        <#list ardjdlist as yj>
+        <#if yj_index gt 0 >
+        <li>
+            <p class="spanLeft"><i></i><span class="spanWords"><a href="/ard/${yj.article_id}.html">${yj.title}</a></span></p>
+            <span class="spanRight">${yj.source}</span>
+        </li>
+    </#if>
+</#list>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="newYiJu shuma" >
+    <h2 class="yh2">
+        <span class="title">家用电器</span>
+        <a class="more" href="/fenlei/135/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="words">
+                <dl class="words-dl">
+                    <#if ardlist_101 ??>
+                    <#list ardlist_101 as yj>
+                    <#if yj_index == 0>
+                    <dt>
+                        <a href="/ard/${yj.article_id}.html">
+                            <img src="${yj.title_image}" height="81" width="120" alt="${yj.title}" />
+                            <span>${yj.title}</span>
+                        </a>
+                    </dt>
+                    <#break>
+                </#if>
+            </#list></#if>
+        <div class="news_key">
+            <#if ardlist_101 ??>
+            <#list ardlist_101 as yj>
+            <#if yj_index gt 0>
+            <dd>
+                <a class="a1" href="/ard/${yj.article_id}.html">${yj.title}</a>
+            </dd>
+        </#if>
+    </#list></#if>
+</div>
+</dl>
+</div>
+<div class="rightFenLei">
+    <p class="rightUl">
+        <#if wdlist_101 ??>
+        <#list wdlist_101 as yj>
+        <#if iswd_101 ??>
+        <a class="rightLi" href="/wdr/${yj.word_attr_code}.html">${yj.p_title}</a>
+        <#else>
+        <a class="rightLi" href="/g${yj.type_id}.html">${yj.show_name}</a>
+    </#if>
+</#list></#if>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="newYiJu shuma" >
+    <h2 class="yh2">
+        <span class="title">数码/运营商/手机</span>
+        <a class="more" href="/fenlei/1132/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="words">
+                <dl class="words-dl">
+                    <#if ardlist_105 ??>
+                    <#list ardlist_105 as yj>
+                    <#if yj_index == 0>
+                    <dt>
+                        <a href="/ard/${yj.article_id}.html">
+                            <img src="${yj.title_image}" height="81" width="120" alt="${yj.title}" />
+                            <span>${yj.title}</span>
+                        </a>
+                    </dt>
+                    <#break>
+                </#if>
+            </#list></#if>
+        <div class="news_key">
+            <#if ardlist_105 ??>
+            <#list ardlist_105 as yj>
+            <#if yj_index gt 0>
+            <dd>
+                <a class="a1" href="/ard/${yj.article_id}.html">${yj.title}</a>
+            </dd>
+        </#if>
+    </#list></#if>
+</div>
+</dl>
+</div>
+<div class="rightFenLei">
+    <p class="rightUl">
+        <#if wdlist_105 ??>
+        <#list wdlist_105 as yj>
+        <#if iswd_105 ??>
+        <a class="rightLi" href="/wdr/${yj.word_attr_code}.html">${yj.p_title}</a>
+        <#else>
+        <a class="rightLi" href="/g${yj.type_id}.html">${yj.show_name}</a>
+    </#if>
+</#list></#if>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="newYiJu shuma" >
+    <h2 class="yh2">
+        <span class="title">家居/家具/家装/厨具</span>
+        <a class="more" href="/fenlei/1178/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="words">
+                <dl class="words-dl">
+                    <#if ardlist_112 ??>
+                    <#list ardlist_112 as yj>
+                    <#if yj_index == 0>
+                    <dt>
+                        <a href="/ard/${yj.article_id}.html">
+                            <img src="${yj.title_image}" height="81" width="120" alt="${yj.title}" />
+                            <span>${yj.title}</span>
+                        </a>
+                    </dt>
+                    <#break>
+                </#if>
+            </#list></#if>
+        <div class="news_key">
+            <#if ardlist_112 ??>
+            <#list ardlist_112 as yj>
+            <#if yj_index gt 0>
+            <dd>
+                <a class="a1" href="/ard/${yj.article_id}.html">${yj.title}</a>
+            </dd>
+        </#if>
+    </#list></#if>
+</div>
+</dl>
+</div>
+<div class="rightFenLei">
+    <p class="rightUl">
+        <#if wdlist_112 ??>
+        <#list wdlist_112 as yj>
+        <#if iswd_112 ??>
+        <a class="rightLi" href="/wdr/${yj.word_attr_code}.html">${yj.p_title}</a>
+        <#else>
+        <a class="rightLi" href="/g${yj.type_id}.html">${yj.show_name}</a>
+    </#if>
+</#list></#if>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="newYiJu shuma" >
+    <h2 class="yh2">
+        <span class="title">男装/女装/童装/内衣</span>
+        <a class="more" href="/fenlei/191/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="words">
+                <dl class="words-dl">
+                    <#if ardlist_102 ??>
+                    <#list ardlist_102 as yj>
+                    <#if yj_index == 0>
+                    <dt>
+                        <a href="/ard/${yj.article_id}.html">
+                            <img src="${yj.title_image}" height="81" width="120" alt="${yj.title}" />
+                            <span>${yj.title}</span>
+                        </a>
+                    </dt>
+                    <#break>
+                </#if>
+            </#list></#if>
+        <div class="news_key">
+            <#if ardlist_102 ??>
+            <#list ardlist_102 as yj>
+            <#if yj_index gt 0>
+            <dd>
+                <a class="a1" href="/ard/${yj.article_id}.html">${yj.title}</a>
+            </dd>
+        </#if>
+    </#list></#if>
+</div>
+</dl>
+</div>
+<div class="rightFenLei">
+    <p class="rightUl">
+        <#if wdlist_102 ??>
+        <#list wdlist_102 as yj>
+        <#if iswd_102 ??>
+        <a class="rightLi" href="/wdr/${yj.word_attr_code}.html">${yj.p_title}</a>
+        <#else>
+        <a class="rightLi" href="/g${yj.type_id}.html">${yj.show_name}</a>
+    </#if>
+</#list></#if>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="newYiJu shuma" >
+    <h2 class="yh2">
+        <span class="title">运动/户外</span>
+        <a class="more" href="/fenlei/1165/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="words">
+                <dl class="words-dl">
+                    <#if ardlist_110 ??>
+                    <#list ardlist_110 as yj>
+                    <#if yj_index == 0>
+                    <dt>
+                        <a href="/ard/${yj.article_id}.html">
+                            <img src="${yj.title_image}" height="81" width="120" alt="${yj.title}" />
+                            <span>${yj.title}</span>
+                        </a>
+                    </dt>
+                    <#break>
+                </#if>
+            </#list></#if>
+        <div class="news_key">
+            <#if ardlist_110 ??>
+            <#list ardlist_110 as yj>
+            <#if yj_index gt 0>
+            <dd>
+                <a class="a1" href="/ard/${yj.article_id}.html">${yj.title}</a>
+            </dd>
+        </#if>
+    </#list></#if>
+</div>
+</dl>
+</div>
+<div class="rightFenLei">
+    <p class="rightUl">
+        <#if wdlist_110 ??>
+        <#list wdlist_110 as yj>
+        <#if iswd_110 ??>
+        <a class="rightLi" href="/wdr/${yj.word_attr_code}.html">${yj.p_title}</a>
+        <#else>
+        <a class="rightLi" href="/g${yj.type_id}.html">${yj.show_name}</a>
+    </#if>
+</#list></#if>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="newYiJu shuma" >
+    <h2 class="yh2">
+        <span class="title">房产/汽车/汽车用品</span>
+        <a class="more" href="/fenlei/1201/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="words">
+                <dl class="words-dl">
+                    <#if ardlist_115 ??>
+                    <#list ardlist_115 as yj>
+                    <#if yj_index == 0>
+                    <dt>
+                        <a href="/ard/${yj.article_id}.html">
+                            <img src="${yj.title_image}" height="81" width="120" alt="${yj.title}" />
+                            <span>${yj.title}</span>
+                        </a>
+                    </dt>
+                    <#break>
+                </#if>
+            </#list></#if>
+        <div class="news_key">
+            <#if ardlist_115 ??>
+            <#list ardlist_115 as yj>
+            <#if yj_index gt 0>
+            <dd>
+                <a class="a1" href="/ard/${yj.article_id}.html">${yj.title}</a>
+            </dd>
+        </#if>
+    </#list></#if>
+</div>
+</dl>
+</div>
+<div class="rightFenLei">
+    <p class="rightUl">
+        <#if wdlist_115 ??>
+        <#list wdlist_115 as yj>
+        <#if iswd_115 ??>
+        <a class="rightLi" href="/wdr/${yj.word_attr_code}.html">${yj.p_title}</a>
+        <#else>
+        <a class="rightLi" href="/g${yj.type_id}.html">${yj.show_name}</a>
+    </#if>
+</#list></#if>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="newYiJu shuma" >
+    <h2 class="yh2">
+        <span class="title">食品/酒类/生鲜/特产</span>
+        <a class="more" href="/fenlei/1152/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="words">
+                <dl class="words-dl">
+                    <#if ardlist_108 ??>
+                    <#list ardlist_108 as yj>
+                    <#if yj_index == 0>
+                    <dt>
+                        <a href="/ard/${yj.article_id}.html">
+                            <img src="${yj.title_image}" height="81" width="120" alt="${yj.title}" />
+                            <span>${yj.title}</span>
+                        </a>
+                    </dt>
+                    <#break>
+                </#if>
+            </#list></#if>
+        <div class="news_key">
+            <#if ardlist_108 ??>
+            <#list ardlist_108 as yj>
+            <#if yj_index gt 0>
+            <dd>
+                <a class="a1" href="/ard/${yj.article_id}.html">${yj.title}</a>
+            </dd>
+        </#if>
+    </#list></#if>
+</div>
+</dl>
+</div>
+<div class="rightFenLei">
+    <p class="rightUl">
+        <#if wdlist_108 ??>
+        <#list wdlist_108 as yj>
+        <#if iswd_108 ??>
+        <a class="rightLi" href="/wdr/${yj.word_attr_code}.html">${yj.p_title}</a>
+        <#else>
+        <a class="rightLi" href="/g${yj.type_id}.html">${yj.show_name}</a>
+    </#if>
+</#list></#if>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="newYiJu shuma" >
+    <h2 class="yh2">
+        <span class="title">医药保健/计生情趣</span>
+        <a class="more" href="/fenlei/1159/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="words">
+                <dl class="words-dl">
+                    <#if ardlist_109 ??>
+                    <#list ardlist_109 as yj>
+                    <#if yj_index == 0>
+                    <dt>
+                        <a href="/ard/${yj.article_id}.html">
+                            <img src="${yj.title_image}" height="81" width="120" alt="${yj.title}" />
+                            <span>${yj.title}</span>
+                        </a>
+                    </dt>
+                    <#break>
+                </#if>
+            </#list> </#if>
+        <div class="news_key">
+            <#if ardlist_109 ??>
+            <#list ardlist_109 as yj>
+            <#if yj_index gt 0>
+            <dd>
+                <a class="a1" href="/ard/${yj.article_id}.html">${yj.title}</a>
+            </dd>
+        </#if>
+    </#list> </#if>
+</div>
+</dl>
+</div>
+<div class="rightFenLei">
+    <p class="rightUl">
+        <#if wdlist_109 ??>
+        <#list wdlist_109 as yj>
+        <#if iswd_109 ??>
+        <a class="rightLi" href="/wdr/${yj.word_attr_code}.html">${yj.p_title}</a>
+        <#else>
+        <a class="rightLi" href="/g${yj.type_id}.html">${yj.show_name}</a>
+    </#if>
+</#list> </#if>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="newYiJu shuma" >
+    <h2 class="yh2">
+        <span class="title">机票/酒店/旅游/生活</span>
+        <a class="more" href="/fenlei/1218/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="words">
+                <dl class="words-dl">
+                    <#if ardlist_118 ??>
+                    <#list ardlist_118 as yj>
+                    <#if yj_index == 0>
+                    <dt>
+                        <a href="/ard/${yj.article_id}.html">
+                            <img src="${yj.title_image}" height="81" width="120" alt="${yj.title}" />
+                            <span>${yj.title}</span>
+                        </a>
+                    </dt>
+                    <#break>
+                </#if>
+            </#list></#if>
+        <div class="news_key">
+            <#if ardlist_118 ??>
+            <#list ardlist_118 as yj>
+            <#if yj_index gt 0>
+            <dd>
+                <a class="a1" href="/ard/${yj.article_id}.html">${yj.title}</a>
+            </dd>
+        </#if>
+    </#list></#if>
+</div>
+</dl>
+</div>
+<div class="rightFenLei">
+    <p class="rightUl">
+        <#if wdlist_118 ??>
+        <#list wdlist_118 as yj>
+        <#if iswd_118 ??>
+        <a class="rightLi" href="/wdr/${yj.word_attr_code}.html">${yj.p_title}</a>
+        <#else>
+        <a class="rightLi" href="/g${yj.type_id}.html">${yj.show_name}</a>
+    </#if>
+</#list></#if>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="newYiJu shuma" >
+    <h2 class="yh2">
+        <span class="title">教育/文娱/交友</span>
+        <a class="more" href="/fenlei/11992/"><span>MORE</span><strong>+</strong></a>
+    </h2>
+    <div class="cont showcont">
+        <div class="cont-txt">
+            <div class="words">
+                <dl class="words-dl">
+                    <#if ardlist_123 ??>
+                    <#list ardlist_123 as yj>
+                    <#if yj_index == 0>
+                    <dt>
+                        <a href="/ard/${yj.article_id}.html">
+                            <img src="${yj.title_image}" height="81" width="120" alt="${yj.title}" />
+                            <span>${yj.title}</span>
+                        </a>
+                    </dt>
+                    <#break>
+                </#if>
+            </#list></#if>
+        <div class="news_key">
+            <#if ardlist_123 ??>
+            <#list ardlist_123 as yj>
+            <#if yj_index gt 0>
+            <dd>
+                <a class="a1" href="/ard/${yj.article_id}.html">${yj.title}</a>
+            </dd>
+        </#if>
+    </#list></#if>
+</div>
+</dl>
+</div>
+<div class="rightFenLei">
+    <p class="rightUl">
+        <#if wdlist_123 ??>
+        <#list wdlist_123 as yj>
+        <#if iswd_123 ??>
+        <a class="rightLi" href="/wdr/${yj.word_attr_code}.html">${yj.p_title}</a>
+        <#else>
+        <a class="rightLi" href="/g${yj.type_id}.html">${yj.show_name}</a>
+    </#if>
+</#list></#if>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="top" id="ltop">
+    <img src="/home/images/toptou.jpg">
+</div>
+</div>
+</div>
+<!--#include virtual="/foots.html" -->
+</body>
+<script type="text/javascript">
+    localStorage.topval = 109;
+</script>
+</html>

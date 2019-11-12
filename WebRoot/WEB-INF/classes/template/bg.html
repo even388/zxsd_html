@@ -1,0 +1,741 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="applicable-device" content="pc">
+	<meta http-equiv="Cache-Control" content="no-siteapp"/>
+	<meta http-equiv="Cache-Control" content="no-transform"/>
+	<meta name="keywords" content="曝光线索,曝光品牌,二哥网" />
+	<meta name="description" content="二哥网曝光台频道是一个为消费者提供曝光不良商家的爆料网，在这里可以权威发布不良品牌，企业的黑暗爆料等，还大家一个干净健康放心的购物环境" />
+	<meta http-equiv="mobile-agent"content="format=html5;url=http://m.2ge.cn/bg/" />
+	<title>曝光台_二哥网</title>
+	<link href="/home/images/favicon.ico" rel="shortcut icon">
+	<link rel="stylesheet" type="text/css" href="/home/css/yijuNew.css" />
+	<link rel="stylesheet" type="text/css" href="/home/css/share.css" />
+	<link rel="stylesheet" type="text/css" href="/home/css/shfw.css" />
+	<link rel="stylesheet" type="text/css" href="/home/css/bgt.css" />
+	<link rel="stylesheet" type="text/css" href="/home/css/login.css" />
+	<link rel="stylesheet" href="/home/js/ztree/css/demo.css" type="text/css">
+	<link rel="stylesheet" href="/home/js/ztree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="/home/css/swiper.min.css">
+	<script type="text/javascript" src="/home/js/swiper.min.js"></script>
+	<base target="_blank">
+	<style>
+		.ke-dialog-default{
+			width:456px!important;
+			height:253px!important;
+		}
+		.ke-dialog-content{
+			box-sizing:border-box;
+			border:1px solid #ccc!important;
+		}
+		.ke-dialog-header{
+			height:37px!important;
+			line-height:37px!important;
+			background:#f3f3f3!important;
+			font-size:14px!important;
+			color:#404040!important;
+		}
+		.ke-dialog-icon-close{
+			background:url(/home/images/shazi.png) no-repeat!important;
+			top:11px!important;
+			right:11px!important;
+		}
+		.ke-upload-area{
+			width:87px!important;
+		}
+		.ke-form{
+			width:auto!important;
+		}
+		.ke-upload-button{
+			width:89px!important;
+			height:34px!important;
+			border-radius:5px!important;
+			box-sizing:border-box;
+			overflow:hidden;
+		}
+		.ke-button-common{margin-top:6px;}
+		.ke-dialog-body{
+			height:140px!important;
+		}
+		.ke-dialog-footer{
+			width:220px!important;
+			height:34px;
+			margin:0 auto;
+		}
+		.ke-dialog-yes{
+			width:100px!important;
+			height:34px!important;
+			text-align:center!important;
+			line-height:34px!important;
+			background:#2cbe1d!important;
+			border-radius:5px;
+			overflow:hidden!important;
+			float:left!important;
+			margin:0!important;
+			margin-right:20px!important;
+		}
+		.ke-dialog-yes .ke-button{
+			width:100px!important;
+			height:34px!important;
+			background:#2cbe1d!important;
+			font-size:15px!important;
+			color:#fff!important;
+		}
+		.ke-dialog-no{
+			width:100px!important;
+			height:34px!important;
+			text-align:center!important;
+			line-height:34px!important;
+			background:#b5b5b5!important;
+			border-radius:5px;
+			overflow:hidden!important;
+			float:left!important;
+			margin:0!important;
+		}
+		.ke-dialog-no .ke-button{
+			width:100px!important;
+			height:34px!important;
+			background:#b5b5b5!important;
+			font-size:15px!important;
+			color:#fff!important;
+		}
+		.ke-edit-iframe{height:100%!important;}
+		.fenLei .placeholder {position: absolute;top: 0;z-index: 10;color:rgba(213, 213, 213, 1);line-height:30px;font-size:14px;}
+		.exptitle{border:none;}
+	</style>
+</head>
+
+<body class="backcolor">
+<!--#include virtual="/tops.html" -->
+<div class="outer">
+	<div class="banner">
+		<ul class="ban-yiju">
+			<#list imagelist as image>
+			<#if image_index == 0>
+			<li style="z-index:1;background-image:url(${image.image_path});"><a href="${image.link_url}"></a></li>
+			<#break>
+		</#if>
+	</#list>
+	<#list imagelist as image>
+	<#if image_index gt 0 && image_index lte 5>
+	<li style="background-image:url(${image.image_path});"><a href="${image.link_url}"></a></li>
+</#if>
+</#list>
+</ul>
+<ol>
+	<li class="current-yiju"></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ol>
+<span class="left"></span>
+<span class="right"></span>
+
+</div>
+</div>
+<div class="wrap1">
+	<div class="wrap-inner">
+		<div class="top" id="ltop">
+			<img src="/home/images/toptou.jpg">
+		</div>
+		<div class="one">
+			<!--新闻资讯开始-->
+			<div class="xwzx">
+				<div style="height:auto;overflow:hidden;margin-bottom:14px;">
+				<div class="you">
+					<div class="pg">
+						<#list xwzx as bgt>
+						<#if bgt_index gte 0 && bgt_index lt 1>
+						<a href="${bgt.page_url!}.html">
+							<div class="bgtimgnew"><img src="${bgt.title_image}"/></div>
+							<label style="word-wrap:break-word;" class="lable1bgt lable3">${bgt.title}</label>
+						</a>
+						<#break>
+					</#if>
+				</#list>
+			</div>
+			<div class="xiaotu">
+				<#list xwzx as bgt>
+				<#if bgt_index gte 1 && bgt_index lt 2>
+				<div class="xiaot">
+					<a href="${bgt.page_url!}.html" >
+						<div class="bgtimgnew"><img src="${bgt.title_image}"/></div>
+						<label class="lable1bgt">${bgt.title}</label>
+					</a>
+				</div>
+			</#if>
+		</#list>
+		<#list xwzx as bgt>
+		<#if bgt_index gte 2 && bgt_index lt 3>
+		<div class="xiaot">
+			<a href="${bgt.page_url!}.html" >
+				<div class="bgtimgnew"><img style="height:100px;" src="${bgt.title_image}"/></div>
+				<label class="lable1bgt">${bgt.title}</label>
+			</a>
+		</div>
+	</#if>
+</#list>
+</div>
+</div>
+<div class="zuos">
+	<table width="100%">
+		<#list xwzx as bgt>
+		<#if bgt_index gte 4>
+		<tr>
+			<td>
+				<a class="xianzhis" href="${bgt.page_url!}.html">${bgt.title}</a>
+			</td>
+		</tr>
+	</#if>
+</#list>
+</table>
+</div>
+</div>
+</div>
+<!--最新曝光线索开始-->
+<div class="zxbg">
+	<div class="biaot">
+		<label class="shouce"><img src="/home/images/exposure.png"/>最新曝光线索</label><a href="/mds/104-0"><label class="gd">MORE<span>+</span></label></a>
+	</div>
+	<div class="your exposure">
+		<div class="expwrapper">
+			<div class="expli" style="opacity:1">
+				<#list bgtnewlist as bg>
+				<#if bg_index lt 3>
+				<#if bg_index % 2 == 0>
+				<div class="exp_one expleft">
+					<div class="exp_left"><div class="elposi"><#if bg.member_nickname?length gt 4>${bg.member_nickname?substring(0,4)}...<#else>${bg.member_nickname}</#if></div></div>
+				<div class="exp_right"><a href="${bg.page_url!}.html">${bg.title}</a></div>
+			</div>
+			<#else>
+			<div class="exp_one expright">
+				<div class="exp_left"><div class="elposi"><#if bg.member_nickname?length gt 4>${bg.member_nickname?substring(0,4)}...<#else>${bg.member_nickname}</#if></div></div>
+			<div class="exp_right"><a href="${bg.page_url!}.html">${bg.title}</a></div>
+		</div>
+	</#if>
+</#if>
+</#list>
+</div>
+<div class="expli">
+	<#list bgtnewlist as bg>
+	<#if bg_index gte 3 && bg_index lt 6>
+	<#if bg_index % 2 == 0>
+	<div class="exp_one expleft">
+		<div class="exp_left"><div class="elposi"><#if bg.member_nickname?length gt 4>${bg.member_nickname?substring(0,4)}...<#else>${bg.member_nickname}</#if></div></div>
+	<div class="exp_right"><a href="${bg.page_url!}.html">${bg.title}</a></div>
+</div>
+<#else>
+<div class="exp_one expright">
+	<div class="exp_left"><div class="elposi"><#if bg.member_nickname?length gt 4>${bg.member_nickname?substring(0,4)}...<#else>${bg.member_nickname}</#if></div></div>
+<div class="exp_right"><a href="${bg.page_url!}.html">${bg.title}</a></div>
+</div>
+</#if>
+</#if>
+</#list>
+</div>
+<div class="expli">
+	<#list bgtnewlist as bg>
+	<#if bg_index gte 6 && bg_index lt 9>
+	<#if bg_index % 2 == 0>
+	<div class="exp_one expleft">
+		<div class="exp_left"><div class="elposi"><#if bg.member_nickname?length gt 4>${bg.member_nickname?substring(0,4)}...<#else>${bg.member_nickname}</#if></div></div>
+	<div class="exp_right"><a href="${bg.page_url!}.html">${bg.title}</a></div>
+</div>
+<#else>
+<div class="exp_one expright">
+	<div class="exp_left"><div class="elposi"><#if bg.member_nickname?length gt 4>${bg.member_nickname?substring(0,4)}...<#else>${bg.member_nickname}</#if></div></div>
+<div class="exp_right"><a href="${bg.page_url!}.html">${bg.title}</a></div>
+</div>
+</#if>
+</#if>
+</#list>
+</div>
+<div class="expli">
+	<#list bgtnewlist as bg>
+	<#if bg_index gte 9 && bg_index lt 12>
+	<#if bg_index % 2 == 0>
+	<div class="exp_one expleft">
+		<div class="exp_left"><div class="elposi"><#if bg.member_nickname?length gt 4>${bg.member_nickname?substring(0,4)}...<#else>${bg.member_nickname}</#if></div></div>
+	<div class="exp_right"><a href="${bg.page_url!}.html">${bg.title}</a></div>
+</div>
+<#else>
+<div class="exp_one expright">
+	<div class="exp_left"><div class="elposi"><#if bg.member_nickname?length gt 4>${bg.member_nickname?substring(0,4)}...<#else>${bg.member_nickname}</#if></div></div>
+<div class="exp_right"><a href="${bg.page_url!}.html">${bg.title}</a></div>
+</div>
+</#if>
+</#if>
+</#list>
+</div>
+<div class="expli">
+	<#list bgtnewlist as bg>
+	<#if bg_index gte 12 && bg_index lt 15>
+	<#if bg_index % 2 == 0>
+	<div class="exp_one expleft">
+		<div class="exp_left"><div class="elposi"><#if bg.member_nickname?length gt 4>${bg.member_nickname?substring(0,4)}...<#else>${bg.member_nickname}</#if></div></div>
+		<div class="exp_right"><a href="${bg.page_url!}.html">${bg.title}</a></div>
+	</div>
+	<#else>
+	<div class="exp_one expright">
+		<div class="exp_left"><div class="elposi"><#if bg.member_nickname?length gt 4>${bg.member_nickname?substring(0,4)}...<#else>${bg.member_nickname}</#if></div></div>
+		<div class="exp_right"><a href="${bg.page_url!}.html">${bg.title}</a></div>
+	</div>
+</#if>
+</#if>
+</#list>
+</div>
+</div>
+	<img class="butposi" src="/home/images/exppos.png">
+	<div class="butback">
+		<div class="anniu" id="anniu" onclick="bgtletDivCenter('#model')">
+			<img src="/home/images/eximg.png"/>我要提供曝光线索
+		</div>
+	</div>
+	<div class="divyin" id="model">
+		<div  id="luru">
+			<div class="neirong">
+				<label class="fanxiang">曝光台<span class="shenHeChengGong">审核成功后获得5哥币</span></label><img  src="/home/images/shazi.png" class="qu quxiao"/>
+				<div class="fenLei">
+					<div class="fenLeiWrapOut" id="bgt_goods_out">
+						<div class="fenLeiWrap">
+							<div class="fenLeiOut">
+								<h2>选择分类<i><img src="/home/images/shazi.png"/></i></h2>
+								<div class="spfl">
+									<span style="float:left;">请选择行业分类：</span>
+									<label id="tishiuse" class="fenlei"></label>
+									<span style="float: right;margin-right:30px;">
+		                        <input type="checkbox" name="bgt" id="sp" value="001" /><label for="sp">暂不选择</label>
+		                        </span>
+								</div>
+								<div class="ztree" id="bgt_goods" style="overflow: auto;background: #f3f3f3;height: 390px;margin:0px 30px 20px 30px;">
+
+								</div>
+							</div>
+							<div class="fenLeiBtn">
+								<button class="baoCun" onclick="saveBgtGoods();">保存</button>
+								<button class="guanBi">关闭</button>
+							</div>
+						</div>
+					</div>
+					<table>
+						<tr>
+							<td>分类：</td>
+							<td colspan="3">
+								<input type="text" id="bgt_goods_text" disabled="disabled">
+								<input type="hidden" id="bgt_goods_val" >
+								<span class="xuanZeFenLei">选择分类</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;
+							</td>
+							<td >
+								<label id="tishi2" class="fenlei"></label>
+							</td>
+						</tr>
+						<tr>
+							<td>标题：</td>
+							<td colspan="3" style="position:relative;">
+								<input type="text" id="title" placeholder="请输入标题，建议30字以内" maxlength="30">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;
+							</td>
+							<td >
+								<label id="tishi1" class="fenlei"></label>
+							</td>
+						</tr>
+						<tr>
+							<td>品牌：</td>
+							<td style="position:relative;">
+								<input type="text" id="brand_id" placeholder="请输入品牌名称，点击搜索" style="width:200px;position:relative;">
+								<div class="selectDiv" id="brand_sel">
+									<ul>
+									</ul>
+								</div>
+								<button class="searchBrandBtn">搜索品牌</button>
+								<div class="brandDiv" id="brd_seled">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;
+							</td>
+							<td >
+								<label id="tishibd" class="fenlei"></label>
+							</td>
+						</tr>
+						<tr>
+							<td style="vertical-align:top;">内容：</td>
+							<td colspan="3">
+								<div style="width:799px; height:240px;">
+									<textarea id="comment" cols="100" rows="8" style="width:100px;height:250px;visibility:hidden;" runat="server"> </textarea>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;
+							</td>
+							<td >
+								<label id="tishiC1" class="fenlei"></label>
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>
+								<div class="shangchuan">
+									<div class="juzhong">
+										<div class="tijiao" onclick="bgtkinded('2')">提交 </div><div class="cunCaoGao" onclick="bgtkinded('1')">存草稿 </div><div class="quxiao">取消 </div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="addtos">
+				<div class="biaos"><label style="margin-left:5px;">我要提供曝光线索</label><!-- <label style="float:right" class="closed">关闭</label> --></div>
+				<div class="tabs">
+					<label>您的文章<span id="bgt_span"></span>，请进<a target="_blank" href="/member/memberaction/exposure.do">个人中心>我的曝光线索</a>查看审核进展</label>
+					<input type="button" id="clo" style="" class="closed" value="知道了"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<!--权威发布开始-->
+<div class="experience_share new_exper">
+	<div class="experience">
+		<h2 class="exptitle"><span>权威发布</span><a class="mores" href="/home/article-list/108-0">MORE <strong>+</strong></a></h2>
+		<div class="experw" style="height:252px">
+			<ul class="experw_left">
+				<#list qwfb as bgt>
+				<#if bgt_index == 0>
+				<li>
+					<a href="${bgt.page_url!}.html" class="dta">
+						<img src="${bgt.title_image}" alt="${bgt.title}">
+					</a>
+					<a href="${bgt.page_url!}.html" class="dtab">
+						<p>${bgt.title}</p>
+					</a>
+				</li>
+			</#if>
+		</#list>
+		</ul>
+		<ul class="experw_right">
+			<#list qwfb as bgt>
+			<#if bgt_index gt 0 && bgt_index lt 8>
+			<li><a href="${bgt.page_url!}.html">${bgt.title}</a></li>
+		</#if>
+	</#list>
+	</ul>
+</div>
+<ul class="experienimg">
+	<#list qwfb as bgt>
+	<#if bgt_index gte 7>
+	<li>
+		<a class="exper_img" href="${bgt.page_url!}.html">
+			<img src="${bgt.title_image}" alt="${bgt.title}">
+		</a>
+		<a class="exper_text" href="${bgt.page_url!}.html">
+			${bgt.title}
+		</a>
+	</li>
+</#if>
+</#list>
+</ul>
+</div>
+<!--曝光品牌开始-->
+<div class="zxbg">
+	<div class="biaot">
+		<label class="shouce"><img src="/home/images/exbrand.png"/>曝光品牌</label><a href="/home/article-list/105-0"><label class="gd">MORE<span>+</span></label></a>
+	</div>
+	<div class="brand">
+		<ul class="experienced_list">
+			<#list bgpp as bgt>
+			<#if bgt_index lt 3>
+			<li>
+				<div class="exlist_textr">
+					<div class="brandtext">
+						<a href="${bgt.page_url!}.html">
+							<#if (bgt.title?? && bgt.title?length>17)>
+								${bgt.title?substring(0,17)}...
+							<#else>
+								${bgt.title}
+							</#if>
+						</a>
+					</div>
+				</div>
+				<a class="exlistl" href="${bgt.page_url!}.html"><img src="${bgt.title_image}" alt="${bgt.title}"></a>
+			</li>
+		</#if>
+	</#list>
+	</ul>
+	<div class="brtexta" style="height:198px;">
+		<#list bgpp as bgt>
+		<#if bgt_index gte 3>
+		<a href="${bgt.page_url!}.html">${bgt.title}</a>
+	</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+<div class="one" style="margin-top:24px;">
+	<!--政策解读开始-->
+	<div class="xwzx" style="height:auto;">
+		<h2 class="exptitle"><span>政策解读</span><a class="mores" href="/home/article-list/109-0">MORE <strong>+</strong></a></h2>
+		<div class="you">
+			<div class="pg">
+				<#list zcjd as bgt>
+				<#if bgt_index == 0>
+				<a href="${bgt.page_url!}.html">
+					<div class="bgtimgnew"><img src="${bgt.title_image}"/></div>
+					<label style="word-wrap:break-word;" class="lable1bgt lable3">${bgt.title}</label>
+				</a>
+				<#break>
+			</#if>
+		</#list>
+	</div>
+	<div class="xiaotu">
+		<#list zcjd as bgt>
+		<#if bgt_index gt 0 && bgt_index lt 3>
+		<div class="xiaot">
+			<a href="${bgt.page_url!}.html" >
+				<div class="bgtimgnew"><img src="${bgt.title_image}" alt="${bgt.title}"/></div>
+				<label class="lable1bgt">${bgt.title}</label>
+			</a>
+		</div>
+	</#if>
+</#list>
+</div>
+</div>
+<div class="zuos">
+	<table width="100%">
+		<#list zcjd as bgt>
+		<#if bgt_index gte 3>
+		<tr>
+			<td>
+				<a class="xianzhis" href="${bgt.page_url!}.html">${bgt.title}</a>
+			</td>
+		</tr>
+	</#if>
+</#list>
+</table>
+</div>
+</div>
+<!--曝光企业开始-->
+<div class="zxbg">
+	<div class="biaot">
+		<label class="shouce"><img src="/home/images/excity.png"/>曝光企业</label><a href="/home/article-list/106-0"><label class="gd">MORE<span>+</span></label></a>
+	</div>
+	<div class="brand">
+		<div class="enterprise_w">
+			<div id="enterprise" class="swiper-container">
+				<div class="swiper-wrapper">
+					<#list bgqy as bgt>
+					<#if bgt_index lt 3>
+					<div class="swiper-slide">
+						<a href="${bgt.page_url!}.html">
+							<div class="bgimg"><img src="${bgt.title_image}" alt="${bgt.title}"></div>
+							<p>${bgt.title}</p>
+						</a>
+					</div>
+				</#if>
+			</#list>
+		</div>
+	</div>
+	<div id="pre" class="swiper-button-next"></div>
+	<div id="next" class="swiper-button-prev"></div>
+	<script>
+        var swiper = new Swiper('#enterprise', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed:1500,
+            navigation: {
+                nextEl: '#pre',
+                prevEl: '#next',
+            },
+        });
+	</script>
+</div>
+<div class="brtexta" style="height:164px">
+	<#list bgqy as bgt>
+	<#if bgt_index gte 3>
+	<a href="${bgt.page_url!}.html">${bgt.title}</a>
+</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+<!--黑暗爆料开始-->
+<div class="one blackbl">
+	<h2 class="exptitle"><span>黑暗爆料</span><a class="mores" href="/home/article-list/110-0">MORE <strong>+</strong></a></h2>
+	<div class="imgtext" style="margin-bottom:14px">
+		<#list habl as bgt>
+		<#if bgt_index lt 4>
+		<a href="${bgt.page_url!}.html">
+			<img src="${bgt.title_image}" alt="${bgt.title}">
+			<p>${bgt.title}</p>
+		</a>
+	    </#if>
+	    </#list>
+</div>
+<div class="titletext">
+	<#list habl as bgt>
+	<#if bgt_index gte 4>
+	<a href="${bgt.page_url!}.html">${bgt.title}</a>
+</#if>
+</#list>
+</div>
+</div>
+</div>
+</div>
+<!-- 登陆 -->
+<div class="divyinss" id="modelss">
+	<div id="logins">
+		<img  src="/home/images/shazi.png" class="qu quxiao"/>
+		<div class="dl" style="padding-top: 50px;">
+			<label class="ks" style="padding-left: 45px;">快速登录</label>
+			<table width="100%;" style="margin-top:28px;">
+				<tr>
+					<td>
+						<a target="_self" href="/user/qqLogin.html"><img src="/home/images/qq.png" width="50px" height="50px;"></a>
+					</td>
+					<td>
+						<a target="_self" href="/user/getWeChatLogin.html"><img src="/home/images/wx1.png" width="50px" height="50px;"></a>
+					</td>
+					<td>
+						<a target="_self" href="/user/weiboLogin.html"><img src="/home/images/xl.png" width="50px" height="50px;"></a>
+					</td>
+				</tr>
+				<tr>
+					<td><label class="tub">QQ</label></td>
+					<td><label class="tub">微信</label></td>
+					<td><label class="tubs">新浪微博</label></td>
+				</tr>
+			</table>
+			<a class="qu quxiao" style="padding-left: 20px;padding-top: 20px;"> <strong>暂不登录</strong>，随便看看</a>
+		</div>
+		<div class="c_input">
+			<p class="c_input_header">
+				<span class="c_active"><i class="icon1"></i>账户登录</span>
+				<i class="line"></i>
+				<span><i class="icon1 icon2"></i>手机短信登录</span>
+			</p>
+			<div class="c_input_body c_input_body_zhanghu">
+				<!-- 登陆跳转路径 -->
+				<p class="c_input_body_p1">
+					<input id="user_name" name="user_name" type="text" placeholder="请填写您注册时的手机号" />
+				</p>
+				<p id="user_name_er" class="alert"></p>
+				<p class="c_input_body_p1 c_input_body_p2" id="name_p">
+					<input  id="password" name="password" type="password" placeholder="请输入密码" />
+				</p>
+				<p id="password_er" class="alert"></p>
+				<p class="c_input_body_p1 c_input_body_p5"  >
+                        <span>
+                            <input name="auto" type="checkbox" value="auto" id="auto" checked="checked" /><label for="auto">自动登录</label>
+                        </span>
+					<span><a href="/member/memberaction/find.do"><label>忘记密码？</label></a></span>
+				</p>
+				<p class="c_input_body_p1 c_input_body_p3">
+					<input id="name_login" type="submit" value="立即登录" />
+				</p>
+				<a href="/user/regist.html"><label class="zhuce">注册新账号</label></a>
+			</div>
+			<div class="c_input_body"></div>
+			<div class="c_input_body c_input_body_duanxin c_input_body_active">
+				<p class="c_input_body_p1">
+					<input id="member_mobile" name="member_mobile"  type="text" placeholder="请填写手机号码" />
+				</p>
+				<p id="mobile_er" class="alert"></p>
+				<p class="c_input_body_p1 c_input_body_p2" id="pp">
+					<input id="valiCode" type="text" placeholder="请输入右侧验证码" maxlength="4"/>
+					<span class="yzm"><img style="width: 100%;height: 100%" id="img_code" src="" alt="" /></span>
+				</p>
+				<p id="valiCode_er" class="alert"></p>
+				<p class="c_input_body_p1 c_input_body_p2" id="sms_p">
+					<input id="SMScode" name="SMScode" type="text" placeholder="请输入短信验证码" />
+					<input id="sms_code" type="button" value="获取短信验证码"></input>
+					<input id="sms_code_dis" style="display: none;" type="button" value="获取短信验证码"></input>
+				</p>
+				<p id="sms_er" class="alert"></p>
+				<p class="c_input_body_p1 c_input_body_p3">
+					<input id="sms_login" type="submit" value="立即登录" />
+				</p>
+				<a href="/user/regist.html"><label class="zhuce">注册新账号</label></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--登录结束-->
+<!--#include virtual="/foots.html" -->
+<script type="text/javascript" src="/home/js/login.js"></script>
+<script src="/home/js/bgt.js" type="text/javascript"></script>
+<script charset="utf-8" src="/home/editor/kindeditor-all.js"></script>
+<script charset="utf-8" src="/home/editor/lang/zh-CN.js"></script>
+<script type="text/javascript" src="/home/js/bgt_goods.js"></script>
+<script type="text/javascript" src="/home/js/ztree/js/jquery.ztree.core.js"></script>
+</body>
+<script type="text/javascript">
+    localStorage.topval = 101;
+    KindEditor.ready(function(K) {
+        window.editor = K.create("#comment",{
+            allowImageUpload: true,
+            allowImageRemote: false,
+            allowFileUpload:false,
+            allowMediaUpload:false,
+            allowFlashUpload:false,
+            items:['image'],
+            htmlTags:{ img : ['src', 'width', 'height', 'border', 'alt', 'title', 'align', '.width', '.height', '.border'],
+                p : [],
+            },
+            newlineTag:"p",
+            uploadJson : "/home/savekind.html",
+        });
+    });
+    $(function(){
+        $("#luru .neirong .xuanZeFenLei").click(function(){
+            showBgtGoods(1);
+            $("input[name=bgt]").prop("checked",false);
+            $(".divyin #luru .neirong .fenLei .fenLeiWrapOut").css("display","block");
+        });
+        $(".divyin #luru .neirong .fenLei .fenLeiOut h2 i").click(function(){
+            $(".divyin #luru .neirong .fenLei .fenLeiWrapOut").css("display","none");
+        });
+        $(".divyin #luru .neirong .fenLei .fenLeiBtn .guanBi").click(function(){
+            $(".divyin #luru .neirong .fenLei .fenLeiWrapOut").css("display","none");
+        });
+        $(document).click(function(event){
+            $("#brand_sel").hide();
+            event.stopPropagation();
+        })
+    });
+    
+    /* 最新曝光线索效果 */
+	var speed=3000;
+	var index1=0;
+	var num=$('.expwrapper').find('.expli').length;
+	function Marquee(){
+		index1++;
+		if(index1>num-1){
+			index1=0;
+		}
+		$('.expwrapper').find('.expli').eq(index1).animate({opacity:"1"},1200);
+		$('.expwrapper').find('.expli').eq(index1).siblings().animate({opacity:"0"},1200);
+	}
+	setInterval(Marquee,speed); 
+</script>
+</html>

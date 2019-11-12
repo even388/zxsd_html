@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>经验分享_二哥网</title>
+	<meta name="keywords" content="购买经验,使用经验,二哥网" />
+	<meta name="description" content="二哥网经验分享频道是一个为消费者提供各种商品和服务的热门经验,最新经验,购买经验,使用经验,通用经验等交流的平台，用户可以这里分享自己的购物、使用的心得和体会" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" id="viewport">
+   	<link rel="canonical" href=" http://www.2ge.cn/fx/">
+    <link rel="stylesheet" href="/css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/jyfxindex.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gmyj.css" />
+    <link rel="stylesheet" type="text/css" href="/css/model1.css" media="(min-width:375px) and (max-width:413px)" />
+    <link rel="stylesheet" type="text/css" href="/css/model2.css" media="(min-width:414px) and (max-width:540px)" />
+</head>
+<style>
+.gmyj_wrap .yzpp_hysx .hysx dd.jydq{
+	width:40%;
+	float:right;}
+	.gmyj_wrap .yzpp_hysx .hysx dd.jydq span{
+		width:10%;
+		margin-top: 2px;
+	}
+.sel_Info{width:100%; position:relative;}
+.sel_Info input.txt{width: 90%;height: 30px;float: left;border:0px;background:#fff; display: block;}
+.sel_Info span.set_but{display:inline-block;position:absolute; right:12%; top:10px;}
+.sel_Info ul.ul_xz{z-index:99;width:93%;height:220px;overflow-x:hidden; background:#fff; position:absolute; left:0px; top:38px;border:1px solid #e5e7ee; border-radius:5px;display:none;}
+.sel_Info ul.ul_xz li{width:100%; float:left; font-size:14px;  line-height:30px;
+		border-bottom:1px dotted #ddd; text-align:center;}
+.sel_Info ul.ul_xz li.hover{color:#09bb07;}
+#yudu{position: absolute;bottom: 0px;left: 0px;font-size: 11px;line-height: 14px;color: #aaa;}
+@media screen and (min-width: 414px){
+		#yudu{
+			bottom:-16px;
+		}
+	}
+</style>
+<body>
+  <#include "/head.html"/>
+    <section class="gmyj_wrap foot100">
+    <div style="width: 100%; float: left; overflow: hidden;">
+        <section class="swiper-container">
+            <div class="swiper-wrapper active" id="gmcarousel">
+              <!-- 焦点图 -->
+	        <#include "/focusimg.html"/>
+            </div>
+            <div class="swiper-pagination"></div>
+        </section>
+        </div>
+         <#list columnList as list>
+         <input type="hidden" id="columnInfoType" value="${list.columnType}"/>
+        <input type="hidden" id="channelId" value="${channelId}"/>
+         <#if "${list.columnName}"=="购买经验"> 
+        <section class="shouye_jrjd yzpp_hysx">
+            <dl class="hysx">
+                 <dt>行业筛选</dt>
+                <dd class="jydq">
+                 <div class="sel_Info">
+                 <#list goodsMap as goodsMap>
+                 <#if goodsMap_index == 0>
+					
+					<div class="jyfxsxk" >
+					   <input readonly unselectable="on"  type="text"  class="txt xz" value="${goodsMap.goodsClassName}" ts_title="${goodsMap.goodsClassName}" name="xz"/>
+					   <i class="shuxiani"></i>
+					</div>
+					<span class="set_but"><img src="/images/yzpp_hysx.png" alt="" style="height: auto"/></span>
+					<ul class="ul_xz">
+					</#if>
+					<#if goodsMap_index gte 0>
+                  			 <li class="hover" href="#maodian" onclick="javascript:jysx('${goodsMap.goodsClassId}')">${goodsMap.goodsClassName}</li>
+                 	</#if>
+                  </#list>  
+					</ul>
+				</div>  
+                </dd>
+            </dl>
+        </section>
+        <section class="shouye_jrjd yzpp_hysx" id="Hysx">
+            <dl class="hysx">
+                <dt>行业筛选</dt>
+                <dd class="jydq">
+                 <div class="sel_Info">
+                 <#list goodsMap as goodsMap>
+                 <#if goodsMap_index == 0>
+	                 <div class="jyfxsxk">
+						<input readonly unselectable="on"  type="text"  class="txt xz" value="${goodsMap.goodsClassName}" ts_title="${goodsMap.goodsClassName}" name="xz"/>
+					 	<i class="shuxiani"></i>
+					 </div>	
+					<span class="set_but"><img src="/images/yzpp_hysx.png" alt="" style="height: auto"/></span>
+					<ul class="ul_xz">
+					</#if>
+					<#if goodsMap_index gte 0>
+                  			 <li class="hover" href="#maodian" onclick="javascript:jysx('${goodsMap.goodsClassId}')">${goodsMap.goodsClassName}</li>
+                 	</#if>
+                  </#list>  
+					</ul>
+				</div>  
+                </dd>
+            </dl>
+        </section>
+        </#if>
+          <#if list.pageModel==1> 
+          <#if list.columnId=='3'>
+          <section class="shouye_jrjd bgt_bgxs jyfx_bzjydr no-arrow">
+            <h2 id="gmindexh2">经验达人</h2>
+            <div class="bgxs">
+                <a class="button" onclick="fabu()">
+                    <span><img src="/images/bgt_button.png" alt=""/> </span>
+                    <span>我要发布经验</span>
+                </a>
+                <#list list.columnInfoList as infolist>
+                <dl>
+                    <dt>
+                        <i>${infolist_index+1}</i>
+                        <#if infolist.image ??>
+                       
+                        <i> <a href="/member/getMemberContent.do?id=${infolist.id?c}"><img src="${infolist.image}" alt=""/></a></i>
+                        
+                        <#else>
+                        <i></i>
+                        </#if>
+                        
+                        <i id="jyfxiwen" style="margin-left: 14px"><a href="/member/getMemberContent.do?id=${infolist.id?c}">${infolist.userTrueName}</a></i>
+                    </dt>
+                    <#if infolist.isBold??>
+	                    <#if infolist.isBold =='0'>
+	                    <dd style="font-weight:bold;">贡献 <a href="/member/getMemberContent.do?id=${infolist.id?c}"><ins>${infolist.title}</ins></a>条经验</dd>
+	                    <#else>
+	                    <dd>贡献<a href="/member/getMemberContent.do?id=${infolist.id?c}"><ins>${infolist.title}</ins></a>条经验</dd>
+	                    </#if>
+                    <#else>
+                    	<dd>贡献<a href="/member/getMemberContent.do?id=${infolist.id?c}"><ins>${infolist.title}</ins></a>条经验</dd>
+                    </#if>
+                </dl>
+              </#list>
+            </div>
+        </section> 
+          </#if> 
+       	<input type="hidden" id="columnId" value="${list.columnId}"/>
+        <#if list.columnId!='3'>
+        <#if "${list.columnName}"=="热门经验">
+        	<section id="${list.columnId}" name="mao" class="shouye_jrjd gmyj_jrjd jyfx_rmjy bgt_xwzx">
+        	<#elseif "${list.columnName}"=="最新经验">
+        	<section id="${list.columnId}" name="mao" class="shouye_jrjd gmyj_jrjd jyfx_rmjy ">
+        	<#else><section id="${list.columnId}" name="mao" class="shouye_jrjd gmyj_jrjd jyfx_rmjy  ">
+        </#if>
+           <#if "${list.columnName}"=="热门经验" || "${list.columnName}"=="最新经验"  >
+               	<a href="/exposure-list/${list.channelId!}-0-${list.columnId!}/0-${list.id!}/0"><h2 id="gmindexh2">${list.columnName}</h2></a>
+           <#else>
+            	<#list goodsMap as goodsMap>
+            		<#if goodsMap.goodsClassName=='服饰鞋包'>
+           				<a href="/exposure-list/${list.channelId!}-0-${list.columnId!}/0-${list.id!}/0"><h2 id="gmindexh2">${list.columnName}</h2></a>
+          	        </#if>
+          		</#list>
+           </#if>
+            <ul id="jyfxuli" class="jrjd">
+             <#list list.columnInfoList as infolist>
+                <li>
+                    <a class="jrjd_a"  href="/exposure/${list.columnId}/${infolist.id?c}" id="jyfximg">
+                        <img src="${infolist.image!}" style="height: 100%" alt="" onerror="this.src='/images/mrtu.png'" />
+                    </a>
+                    <p id="jyfxpimg">
+                        <a href="/exposure/${list.columnId}/${infolist.id?c}" >
+                           <#if infolist.isBold??>
+	                           <#if infolist.isBold =='0'>
+	                            <span id="jingyan" style="font-weight:bold;">${infolist.title}</span>
+	                            <#else>
+	                            <span id="jingyan">${infolist.title}</span>
+	                           </#if>
+	                        <#else>
+	                            <span id="jingyan">${infolist.title}</span>
+	                        </#if>
+                        
+                            <span id="jyfxtx"><i><img src="/images/bgt_bgxs_dd.svg" alt="" /></i><s>${infolist.userTrueName!}</s></span>
+                        	<span id="yudu">阅读数：${infolist.browseSumShow}</span>
+                        </a>
+                    </p>
+                </li>
+                </#list>
+            </ul>
+        </section>       
+         </#if>
+        
+        </#if> 
+        </#list>
+           <input id="pathName" type="hidden" value="">
+    </section>
+    <#include "/foot.html"/>
+<script src="/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="/js/TouchSlide.1.1.js" type="text/javascript"></script>
+<script src="/js/loginhtml.js" type="text/javascript"></script>
+<script src="/js/swiper-3.3.1.min.js"></script>
+<script src="/js/style.js" type="text/javascript"></script>
+<script src="/js/xiangqing.js" type="text/javascript"></script>
+<script src="/js/fenlei.js" type="text/javascript"></script>
+<script src="/js/divselect.js" type="text/javascript"></script>
+<script src="/js/sessionStorage.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var mySwiper = new Swiper('.swiper-container',{
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 5000,
+            autoplayDisableOnInteraction: false,
+        }); 
+        var swiper = new Swiper('.gmyj_nav', {
+            slidesPerView: 3.5,
+        });
+        
+      
+    }); 
+    $(function(){
+        //12频道页导航
+        var wW=$(window).width();
+        var sW=$('.gmyj_nav .swiper-wrapper a').width()/*/3.5*/;
+        var sindex=$('.gmyj_nav .swiper-wrapper .currentN').index();
+        console.log(wW)
+        console.log(sW);
+        $('.gmyj_nav .swiper-wrapper').css({
+            "webkitTransitionDuration": 0,
+            "transitionDuration": 0,
+            "transform": "translate3d("+-sW*8.5+"px, 0, 0)",
+            "webkitTransform": "translate3d("+-sW*8.5+"px, 0, 0)"
+        });
+    });
+    function fabu(){
+  		window.location.href="/memberContent/fabu.do?type=1";
+    }
+    function jydr(id){
+    	window.location.href="/member/getMemberContent.do?id="+id;
+    }
+    //行业筛选
+ 	 $(".gmyj_wrap .yzpp_hysx .hysx_more a").click(function(){
+		 
+        	$(this).css("color", "#09bb07").siblings().css("color","#"+666);
+        	$(".gmyj_wrap .yzpp_hysx .hysx a").css("color","#"+666);
+        	
+        }); 
+        $(".gmyj_wrap .yzpp_hysx .hysx a").click(function(){
+        	
+        	$(this).css("color", "#09bb07").siblings().css("color","#"+666);
+        	 $(".gmyj_wrap .yzpp_hysx .hysx_more a").css("color","#"+666);
+        });   
+        
+
+        $(document).scroll(function(){
+            var scrollTop=$(document).scrollTop();
+            var HhH=$(".yzpp_hysx").offset().top;
+           	if(scrollTop > HhH){
+           		$("#Hysx").css("display","block");
+           	}else{
+           		$("#Hysx").css("display","none");
+           	}
+        });
+        //点击小按扭，出现下拉选项
+    	var mark=1;
+    	$(".sel_Info").click(function(e){
+    			e.stopPropagation();//阻止冒泡事件
+    		if(mark==1){
+    			$(this).css({"background-image":"url(images/select2.png)"});
+    			$(".sel_Info ul.ul_xz").slideDown();
+    			mark=2;
+    			//下拉后，选中的项应该和输入框里面对应的内容项是一样的
+    			var obj=$(".sel_Info ul.ul_xz li");
+    			var len=obj.length;
+    			for(var i=0;i<len;i++){
+    				if(obj.eq(i).html()==$(".sel_Info input.xz").val()){
+    					obj.eq(i).addClass("hover").siblings("li").removeClass("hover");
+    				}
+    			}
+    	
+    		}else{
+    			$(this).css({"background-image":"url(images/select1.png)"});
+    			$(".sel_Info ul.ul_xz").slideUp();
+    			mark=1;
+    		}
+    	});
+    	
+    	//下拉内容鼠标移动上面显示效果
+    	$(".sel_Info ul.ul_xz li").mouseover(function(){
+    		$(this).addClass("hover").siblings("li").removeClass("hover");
+    	});
+    	//下拉内容点击后要赋值给 input 输入框
+    	$(".sel_Info ul.ul_xz li").click(function(){
+    		$(".sel_Info input.xz").val($(this).html());// 把获取到的值赋给输入框 
+    	});
+    	
+    	//浏览器窗口的点击事件
+    	$(document).click(function(){
+    		$(this).css({"background-image":"url(images/select1.png)"});
+    		$(".sel_Info ul.ul_xz").slideUp();
+    		mark=1;
+    	});
+</script>
+</body>
+</html>

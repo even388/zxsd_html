@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>曝光台_二哥网</title>
+    <meta name="keywords" content="曝光线索,曝光品牌,二哥网" />
+    <meta name="description" content="二哥网曝光台频道是一个为消费者提供曝光不良商家的爆料网，在这里可以权威发布不良品牌，企业的黑暗爆料等，还大家一个干净健康放心的购物环境" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" id="viewport">
+    <link rel="canonical" href=" http://www.2ge.cn/bg/">
+    <link rel="stylesheet" href="/css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/channel/public1.css" />
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/bgtindex.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gmyj.css" />
+    <link rel="stylesheet" type="text/css" href="/css/model1.css" media="(min-width:375px) and (max-width:413px)" />
+    <link rel="stylesheet" type="text/css" href="/css/model2.css" media="(min-width:414px) and (max-width:540px)" />
+    <style type="text/css">
+    .gmyj_wrap{overflow:hidden;}
+    	.gmyj_wrap .jrjd li p{
+		    font-size:13px;
+		    line-height:42px;
+		    height:76px !important;
+		    max-height: none;
+		}
+    	
+		
+		.shouye_jrjd .ly li .right a {
+		    height: 72px;
+		    display: block;
+		    font-size: 14px !important;
+		}
+	  .minback {
+	        position: fixed;
+		    top: 0;
+		    left: 0;
+		    z-index: 109;
+		    width: 100%;
+		    height: 100vh;
+		    background: rgba(0,0,0,0.8);
+		    display: none;
+		}
+	.egg21 {
+	    width: 5.37rem;
+	    height: 7.9rem;
+	    margin: 0 auto;
+	    margin-top: 1.5rem;
+	    border: .12rem solid #6e2c03;
+	    border-radius: .2rem;
+	    box-sizing: border-box;
+	    background: #ffeecf;
+	    padding-top: .2rem;
+	    z-index: 9999;
+	}
+	.zhuanGeBi .egg21 {
+	    height: 5.1rem;
+	    width: 5.17rem;
+	    padding-top: 1.5rem;
+	    position: relative;
+	}
+	.zhuanGeBi .jieShu {
+	    padding-top: 1.8rem;
+	}
+	.zhuanGeBi .egg21 p {
+	    font-size: .3rem;
+	    color: #660012;
+	    line-height: 1.37rem;
+	    text-align: center;
+	}
+	.zhuanGeBi .jieShu p {
+	    line-height: .42rem;
+	}
+	.zhuanGeBi .jieShu p:last-child {
+	    width: 4.8rem;
+	    border-top: 1px solid rgba(102,0,18,0.2);
+	    position: absolute;
+	    bottom: 0;
+	    left: 50%;
+	    margin-left: -2.4rem;
+	    line-height: 1.1rem;
+	}
+	.fontww{
+		font-weight: bold;
+		font-size: 0.34rem;
+		color:#fff8c4;
+		position: absolute;
+		z-index: 9999;
+		width:6.75rem;
+		left: 50%;
+		margin-left: -3.375rem;
+		top:-1.5rem;
+		text-align: center;
+	}
+	
+	.egg18{
+		position: absolute;
+		top: -0.22rem;
+		right: 0;
+		width: 0.44rem;
+		height: 0.44rem;
+		z-index: 9999;
+	}
+	.egg20{
+		position: fixed;
+		top:50%;
+		left: 50%;
+		z-index: 201;
+		height: 9.4rem;
+		width: 7.34rem;
+		margin-top: -4.5rem;
+		margin-left: -3.67rem;
+	}
+	
+    </style>
+    <script type="text/javascript">
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 750*100 + 'px';
+	</script>
+</head>
+<body>
+<#include "/head.html"/>
+    <section class="gmyj_wrap foot100 gmyj_wrap1">
+    <div style="width: 100%; float: left; overflow: hidden;">
+        <section class="swiper-container">
+            <div class="swiper-wrapper active" id="gmcarousel">
+           	<!-- 焦点图 -->
+	            <#include "/focusimg.html"/>
+            </div>
+            <div class="swiper-pagination"></div>
+        </section>
+      </div>
+  <#list columnList as list>
+      
+  <#if list.pageModel==1>  
+   <section class="shouye_jrjd gmyj_dffg">
+            <a href="/article-list/${list.channelId}-0-${list.columnId}-0/0-0/0"><h2 id="gmindexh2">${list.columnName}</h2></a>
+            <ul id="bgtjrjd" class="jrjd ly">
+            <#list list.columnInfoList as infolist>
+                <li>
+                   <#if list.columnName !='黑暗爆料' && list.columnName !='曝光企业' >
+	                    <p class="left">
+	                    	<a id="btga" class="bgtka" href="/article/${channelId}/${list.columnId}/${infolist.id?c}">${infolist.title}</a>
+	                    	<#if infolist.source ??&&(infolist.source) !="">
+	                	    	<span id="bgtspan">${infolist.source}</span>
+	                	  	</#if>
+	                	  	 <#if  list.columnName !='政策解读'>
+	                	  		<span class="bgtupdate">${infolist.updateTime!}</span>
+	                	  	</#if>
+	                    </p>
+	                    <a class="jrjd_a" style="float: left; margin-right: 0px;" href="/article/${channelId}/${list.columnId}/${infolist.id?c}">
+	                        <img src="${infolist.image}" alt="" onerror="this.src='/images/empty.png'"/>
+	                    </a>
+                    <#else>
+	                     <a href="/article/${channelId}/${list.columnId}/${infolist.id?c}" >
+	                        <div id="bgdivimg" class="jrjd_a" style=" float: left; background: url(${infolist.image});background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;" ></div>
+		                 </a>
+	                     <p class="right">
+	                     	<a id="btga" style="height:50px;" href="/article/${channelId}/${list.columnId}/${infolist.id?c}">${infolist.title}</a>
+	                     	 <#if list.columnName =='黑暗爆料'>
+		                     	<#if infolist.source ??&&(infolist.source)!="">
+		                	    	<span>${infolist.source}</span>
+		                	  	</#if>
+	                	  	</#if>
+	                     </p>
+                 
+                   </#if>
+                </li>
+             </#list> 
+            </ul>
+        </section>
+      </#if> 
+  
+     <#if list.pageModel==4>  
+            <section class="shouye_jrjd gmlc_gjzc gmyj_jrjd">
+            <a href="/article-list/${list.channelId}-0-${list.columnId}-0/0-0/0"><h2 id="gmindexh2">${list.columnName}</h2></a>
+            <ul class="jrjd">
+                <li>
+                 <#list list.columnInfoList as infolist>
+                 <#if infolist_index gte 0&&infolist_index lte 1>
+                    <div class="jrjd_a" >
+                    <a  href="/article/${channelId}/${list.columnId}/${infolist.id?c}">
+                        <img src="${infolist.image}" id="qwfbimg" onerror="this.src='/images/empty.png'">
+                        <span id="bgty">${infolist.title}</span>
+                     </a>
+                    </div>
+                  </#if>  
+                 </#list>
+                </li>
+                <li>
+                  <#list list.columnInfoList as infolist>
+                	 <#if infolist_index gte 2&&infolist_index lte 3>
+                    <div class="jrjd_a" >
+                    	<a href="/article/${channelId}/${list.columnId}/${infolist.id?c}">
+                        <img src="${infolist.image}" id="qwfbimg" onerror="this.src='/images/empty.png'">
+                        <span id="bgty">${infolist.title}</span>
+                        </a>
+                    </div>
+                  </#if>  
+                 </#list>
+                </li>
+                <li>
+                    <#list list.columnInfoList as infolist>
+                	 <#if infolist_index gte 4&&infolist_index lte 5>
+                    <div class="jrjd_a" >
+                    	<a href="/article/${channelId}/${list.columnId}/${infolist.id?c}">
+                        <img src="${infolist.image}" id="qwfbimg" onerror="this.src='/images/empty.png'">
+                       	 <span id="bgty">${infolist.title}</span>
+                        </a>
+                    </div>
+                  </#if>  
+                 </#list>
+                </li>
+            </ul>
+        </section>
+        </#if> 
+        <#if list.pageModel==5>  
+           <section class="shouye_jrjd bgt_bgqy bgt_bgpp">
+           <a href="/article-list/${list.channelId}-0-${list.columnId}-0/0-0/0"><h2 id="gmindexh2">${list.columnName}</h2></a>
+            <ul class="jrjd" id="bgtuljrjds">
+                <li >
+                  <#list list.columnInfoList as infolist>
+                 <#if infolist_index gte 0&&infolist_index lte 3>
+                    <div class="jrjd_a" >
+                     <a  href="/article/${channelId}/${list.columnId}/${infolist.id?c}">
+                        <div id="qwfbimgs"   style=" float: left;background: url(${infolist.image});background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;" ></div>
+                        <span id="bgtsspan">${infolist.title}</span>
+                     </a>
+                    </div>
+                    </#if>
+                   </#list> 
+                
+                <#list list.columnInfoList as infolist>
+                <#if infolist_index gte 4&&infolist_index lte 7>
+                    <div class="jrjd_a" >
+                    	<a  href="/article/${channelId}/${list.columnId}/${infolist.id?c}">
+                        	<!-- <img src="${infolist.image}" alt="" id="qwfbimgs" onerror="this.src='/images/empty.png'"> -->
+                        	 <div id="qwfbimgs"   style=" float: left;background: url(${infolist.image});background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;" ></div>
+                        	 
+                       			 <span>${infolist.title}</span>
+                        </a>
+                    </div>
+                      </#if>
+                  </#list>  
+                </li>               
+            </ul>
+        </section>
+        </#if>  
+         <#if list.pageModel==7>
+         <section class="shouye_jrjd gmyj_dffg gmyj_list tongyong_list zxbg">
+            <a href="/exposure-list/${channelId}-0-${list.columnId}/0-${list.id}/0"><h2 id="gmindexh2">最新曝光线索</h2></a>
+            <ul class="jrjd bgxs" id="bgtul">
+                <a class="button" onclick="fabu()">
+                    <span><img src="/images/bgt_button.png" onerror="this.src='/images/empty.png'" alt="" style="height: auto" onclick="fabu()"></span>
+                    <label id="wytg">我要提供曝光线索</label>
+                </a>
+                 <#list list.columnInfoList as infolist>
+                <li>
+                    <dl class="list_dl">
+                      <#if infolist.isBold ??>
+	                       	 <dt><a id="bgtzuixina" href="/exposure/${list.columnId}/${infolist.id?c}">${infolist.title}</a></dt>
+	                   <#else>
+	                        <dt><a id="bgtzuixina" href="/exposure/${list.columnId}/${infolist.id?c}">${infolist.title}</a></dt>
+                       </#if>
+                        
+                        <dd>
+                        <#if infolist.image??>
+                       		<a href="/exposure/${list.columnId}/${infolist.id?c}">
+                          		 <i style="background: url('${infolist.image}'); background-repeat: no-repeat; background-size: 100% 100%"></i><s id="bgttx">${infolist.userTrueName}</s>
+                        	</a>
+                           <#else>
+                            <a href="/exposure/${list.columnId}/${infolist.id?c}">
+                           		<i style="background: url('/images/user_avatar.png'); background-repeat: no-repeat; background-size: 100% 100%"></i><s id="bgttx">${infolist.userTrueName}</s>
+                         	</a>
+                          </#if>
+  						</dd>
+                    </dl>
+                </li>
+               </#list>
+            </ul>
+        </section>
+        </#if> 
+         </#list>
+         <input id="pathName" type="hidden" value="">
+    </section>
+    	<div class="minback"></div>	
+	<!--活动弹框-->
+	<div class="egg20 zhuanGeBi" style="display:none">
+		<div class="fontww"><img src="/images/tanTop.png" /></div>
+		<div class="egg21 jieShu">
+			<p><b>恭喜认真阅读的您</b></p>
+			<p><b>获得一次抽奖机会</b></p>
+			<p onclick="myknow()">我知道了</p>
+		</div>
+	</div>
+    <section class="goTop"></section>
+	<a href="/index.html"><section class="goTops"></section></a>
+	
+    <div class="footer">
+    	<div class="footer1">
+    		<a href="/indexPage/computer.do"><img src="/images/windows.png" class="dianimg">电脑版</a>
+    	</div>
+    	<div class="footer2">Copyright 2014 - 2018 © 智行时代国际传媒（北京）有限公司</div>
+    </div>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1264353497'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1264353497' type='text/javascript'%3E%3C/script%3E"));</script>
+<!-- 自动推送 -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script src="/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="/js/loginhtml.js" type="text/javascript"></script>
+<script src="/js/TouchSlide.1.1.js" type="text/javascript"></script>
+<script src="/js/swiper-3.3.1.min.js"></script>
+<script src="/js/style.js" type="text/javascript"></script>
+<script src="/js/xiangqing.js" type="text/javascript"></script>
+<script src="/js/divselect.js" type="text/javascript"></script>
+<script src="/js/common/special.js" type="text/javascript"></script>
+<script src="/js/sessionStorage.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var mySwiper = new Swiper('.swiper-container',{
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 5000,
+            autoplayDisableOnInteraction: false,
+        }); 
+        var swiper = new Swiper('.gmyj_nav', {
+            slidesPerView: 3.5,
+        });
+        
+    }); 
+    function GetRequest() {  
+ 	   var url = location.search; //获取url中"?"符后的字串  
+ 	   var theRequest = new Object();  
+ 	   if (url.indexOf("?") != -1) {  
+ 		  var str = url.substr(1);  
+ 		  strs = str.split("&");  
+ 		  for(var i = 0; i < strs.length; i ++) {  
+ 			 theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);  
+ 		  }  
+ 	   }  
+ 	  
+ 	   return theRequest;  
+ 	}
+    function myknow(){
+		$(".minback").css("display","none");
+		$(".zhuanGeBi").css("display","none");
+	}
+    function fabu(){
+    		window.location.href="/memberContent/fabu.do?type=2";
+   	 }
+    function getCookie(cookie_name)  
+	  {  
+	  	var allcookies = document.cookie;  
+	  	var cookie_pos = allcookies.indexOf(cookie_name);   //索引的长度  
+	  	// 如果找到了索引，就代表cookie存在，  
+	  	// 反之，就说明不存在。  
+	  	if (cookie_pos != -1)  
+	  	{  
+	  		// 把cookie_pos放在值的开始，只要给值加1即可。  
+	  		cookie_pos += cookie_name.length + 1;      //这里我自己试过，容易出问题，所以请大家参考的时候自己好好研究一下。。。  
+	  		var cookie_end = allcookies.indexOf(";", cookie_pos);  
+	  		if (cookie_end == -1)  
+	  		{  
+	  			cookie_end = allcookies.length;  
+	  		}  
+	  		var value = unescape(allcookies.substring(cookie_pos, cookie_end)); //这里就可以得到你想要的cookie的值了。。。  
+	  		
+	  	} 
+	  		return value; 
+	  } 
+</script>
+</body>
+</html>

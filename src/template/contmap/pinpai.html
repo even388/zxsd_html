@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>优质品牌_二哥</title>
+    <meta name="keywords" content="二哥,购物消费指导,购物指导,消费指南,消费指导" />
+    <meta name="description" content="二哥网是顾问型购物消费指导网站,为消费者提供专业的购物消费知识,帮助消费者解决购物消费中的各种困扰,让消费者在购买商品或服务时都能有依有据,快速做出正确的购买决策。" />
+    <link href="/home/images/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="/home/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="/home/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="/home/css/ditu.css" />
+    <link rel="stylesheet" type="text/css" href="/home/css/pinpai.css" />
+    <base target="_blank">
+</head>
+<body>
+<!--#include virtual="tops.html" -->
+<div class="wrap2">
+    <div class="wrap-inner">
+        <div class="diTu">
+            <h4>品牌新闻</h4>
+            <div class="diTu-inner">
+                <ul class="inner">
+                	<#list contlist as cont>
+   					<#if cont.column_name == "品牌新闻">
+                    <li>
+                        <a href="http://www.2ge.cn/home${cont.page_url}">${cont.title}</a>
+                    </li>
+                    </#if>
+                    </#list>
+                </ul>
+            </div>
+        </div>
+        <div class="diTu">
+            <h4>品牌详情</h4>
+            <div class="diTu-inner">
+                <ul class="inner">
+                	<#list contlist as cont>
+   					<#if cont.column_name == "品牌详情">
+                    <li>
+                        <a href="/home${cont.page_url}">${cont.title}</a>
+                    </li>
+                    </#if>
+                    </#list>
+                </ul>
+            </div>
+        </div>
+        <div class="diTu">
+            <h4>品牌故事</h4>
+            <div class="diTu-inner">
+                <ul class="inner">
+                	<#list contlist as cont>
+   					<#if cont.column_name == "品牌故事">
+                    <li>
+                        <a href="/home${cont.page_url}">${cont.title}</a>
+                    </li>
+                    </#if>
+                    </#list>
+                </ul>
+            </div>
+        </div>
+        <div class="diTu">
+            <h4>品牌人物</h4>
+            <div class="diTu-inner">
+                <ul class="inner">
+                	<#list contlist as cont>
+   					<#if cont.column_name == "品牌人物">
+                    <li>
+                        <a href="/home${cont.page_url}">${cont.title}</a>
+                    </li>
+                    </#if>
+                    </#list>
+                </ul>
+            </div>
+        </div>
+         <div class="top" id="ltop">
+      		<img src="/home/images/toptou.jpg">
+     	</div>
+    </div>
+</div>
+<!--#include virtual="foots.html" -->
+<script type="text/javascript">
+	localStorage.topval = null;
+</script>
+</body>
+</html>

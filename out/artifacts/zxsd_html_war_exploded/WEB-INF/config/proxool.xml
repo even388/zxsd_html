@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- the proxool configuration can be embedded within your own application's.
+Anything outside the "proxool" tag is ignored. -->
+<something-else-entirely>
+  <proxool>
+    <alias>dbname</alias>
+    <driver-url>jdbc:mysql://192.168.1.175:3306/zxcms?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;zeroDateTimeBehavior=convertToNull</driver-url>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <driver-properties>
+      <property name="user" value="zxcms"/>
+      <property name="password" value="zxcmscs"/>
+    </driver-properties>
+    <maximum-connection-count>150</maximum-connection-count>
+    <minimum-connection-count>10</minimum-connection-count>
+    <house-keeping-sleep-time>60000</house-keeping-sleep-time>
+    <maximum-connection-lifetime>1800000</maximum-connection-lifetime>
+    <simultaneous-build-throttle>30</simultaneous-build-throttle>
+    <prototype-count>5</prototype-count>
+    <test-before-use>true</test-before-use>
+    <house-keeping-test-sql>select 1 from dual</house-keeping-test-sql>
+  </proxool>
+
+  <proxool>
+    <alias>logname</alias>
+    <driver-url>jdbc:mysql://192.168.1.175:3306/2ge_log?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;zeroDateTimeBehavior=convertToNull</driver-url>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <driver-properties>
+      <property name="user" value="zxcms"/>
+      <property name="password" value="zxcmscs"/>
+    </driver-properties>
+    <maximum-connection-count>150</maximum-connection-count>
+    <minimum-connection-count>10</minimum-connection-count>
+    <house-keeping-sleep-time>60000</house-keeping-sleep-time>
+    <maximum-connection-lifetime>1800000</maximum-connection-lifetime>
+    <simultaneous-build-throttle>30</simultaneous-build-throttle>
+    <prototype-count>5</prototype-count>
+    <test-before-use>true</test-before-use>
+    <house-keeping-test-sql>select 1 from dual</house-keeping-test-sql>
+  </proxool>
+
+  <proxool>
+    <alias>codename</alias>
+    <driver-url>jdbc:mysql://192.168.1.175:3307/zxcms?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;zeroDateTimeBehavior=convertToNull</driver-url>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <driver-properties>
+      <property name="user" value="zxcms"/>
+      <property name="password" value="zxcmscs"/>
+    </driver-properties>
+    <maximum-connection-count>150</maximum-connection-count>
+    <minimum-connection-count>10</minimum-connection-count>
+    <house-keeping-sleep-time>60000</house-keeping-sleep-time>
+    <maximum-connection-lifetime>1800000</maximum-connection-lifetime>
+    <simultaneous-build-throttle>30</simultaneous-build-throttle>
+    <prototype-count>5</prototype-count>
+    <test-before-use>true</test-before-use>
+    <house-keeping-test-sql>select 1 from dual</house-keeping-test-sql>
+  </proxool>
+</something-else-entirely>

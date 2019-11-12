@@ -1,0 +1,104 @@
+<#list fImageList as fimage> 
+<#if fimage.projectType ??>
+ <#if fimage.projectType=='7'>
+	<#if fimage.projectId=='100'><!-- 首页 -->
+	 <a href="/index" class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+	<#elseif fimage.projectId=='113'><!-- 优惠折扣首页 -->
+    <a href="/discount" class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+	<#else>
+	<!-- 频道页 -->
+	<a href="/channel/0/${fimage.projectId}" class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+	</#if>
+<#elseif fimage.projectType=='5'>
+	<!-- 问卷调查 -->
+	<a href="/indexPage/wenjuan.do" class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+<#elseif fimage.projectType=='8'>
+	<!--店铺 -->
+	<a href="/shop/${fimage.projectId}" class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+<#elseif fimage.projectType=='9' || fimage.projectType=='14'>
+	<!-- 优惠折扣栏目列表，优惠折扣列表页 -->
+	<#if fimage.projectId=='1' || fimage.projectId=='2'>
+	<!-- 今日推荐、天天特价  -->
+	<a href="/trade-list/${fimage.goodsClassId!0}/${fimage.projectId}-110000/0-0-0/0"
+		class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+	<#elseif fimage.projectId=='3'>
+	<!-- 专享好价 -->
+	<a	href="/spec-list/${fimage.goodsClassId!0}/110000/0-0-0-0-0-0-0-0-0/0-0-0/0"
+		class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+	<#elseif fimage.projectId=='4'>
+	<!-- 行业特惠 -->
+	<a href="/trade-list/${fimage.goodsClassId!0}/3-110000/0-0-0/0"
+		class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+	<#elseif fimage.projectId=='5'>
+	<!-- 优惠券 -->
+	<a href="/coupon-list/0/0/0" class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+	<#elseif fimage.projectId=='6'>
+	<!-- 品牌特惠 -->
+	<a href="/brddis-list/${fimage.goodsClassId!0}/110000/0/0-0-0/0"
+		class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+	<#elseif fimage.projectId=='7'>
+	<!-- 电商折扣 -->
+	<a href="/tmail-list/${fimage.goodsClassId!0}/0/0-0-0/0"
+		class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+	<#elseif fimage.projectId=='8'>
+	<!-- 卖场优惠 -->
+	<a href="/sales-list/${fimage.goodsClassId!0}/0-110000/0-0-0/0"
+		class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+	<#elseif fimage.projectId=='9'>
+	<!-- 海淘优惠 -->
+	<a href="/seaamoy-list/${fimage.goodsClassId!0}/0-0-0-0/0-0-0/0"
+		class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+	<#elseif fimage.projectId=='10'>
+	<!-- 用户推荐 -->
+	<a href="/udis-list/${fimage.goodsClassId!0}/0/0/2_1"
+		class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+	</#if>
+
+<#elseif fimage.projectType=='10'>
+	<!-- 专题-->
+	<a href="/special/${fimage.projectId}/0/0/${fimage.linkUrl}"
+		class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+<#elseif fimage.projectType=='11'>
+	<!--海淘 -->
+	<a href="/sea/${fimage.projectId}" class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+<#elseif fimage.projectType=='12'>
+	<!--优惠信息 -->
+	<a href="/dis/${fimage.projectId}" class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+<#elseif fimage.projectType=='13'>
+	<!--优惠券 -->
+	<a href="/cop/${fimage.projectId}" class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+
+<#elseif fimage.projectType=='1'||fimage.projectType=='2'||fimage.projectType=='3'||fimage.projectType=='4'>
+	<a onclick="JrjdXq('${fimage.projectId}','${fimage.projectType}')"
+		class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+</#if>
+<#else>
+    <#if fimage.linkUrl?? >
+	<!-- 配置连接 -->
+	<a href="${fimage.linkUrl}" class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+	<#else>
+	<a class="swiper-slide"
+		style="background: url(${fimage.imagePath}) no-repeat; background-position: 0 bottom; background-size: cover;background-size: 100% 100%;"></a>
+	</#if> 
+	</#if> 
+</#list>

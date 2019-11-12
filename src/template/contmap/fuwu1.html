@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>服务地图1_二哥</title>
+    <meta name="keywords" content="二哥,购物消费指导,购物指导,消费指南,消费指导" />
+    <meta name="description" content="二哥网是顾问型购物消费指导网站,为消费者提供专业的购物消费知识,帮助消费者解决购物消费中的各种困扰,让消费者在购买商品或服务时都能有依有据,快速做出正确的购买决策。" />
+    <link href="/home/images/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="/home/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="/home/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="/home/css/ditu.css" />
+    <link rel="stylesheet" type="text/css" href="/home/css/pinpai.css" />
+    <base target="_blank">
+</head>
+<body>
+<!--#include virtual="tops.html" -->
+<div class="wrap2">
+    <div class="wrap-inner">
+    	<#list goodsList as good>
+    	<#if good.goods_class_name == "理财金融" || good.goods_class_name == "商务服务" || good.goods_class_name == "休闲娱乐" || good.goods_class_name == "教育培训" || good.goods_class_name == "婚恋/交友">
+        <div class="diTu">
+            <h4>${good.goods_class_name}</h4>
+            <#if good.getChildren() ??>
+				<#list good.getChildren() as good2>
+	            <div class="diTu-inner">
+	                <h5>${good2.goods_class_name}</h5>
+	                <ul class="inner">
+	                	<#list contlist as cont>
+	                	<#if cont.goods_class_id?contains(good2.goods_class_id)>
+	                    <li>
+	                        <a href="http://www.2ge.cn/home${cont.page_url}">${cont.title}</a>
+	                    </li>
+	                    </#if>
+	                    </#list>
+	                </ul>
+	            </div>
+	        	</#list>
+        	</#if>
+        </div>
+        </#if>
+        </#list>
+         <div class="top" id="ltop">
+      		<img src="/home/images/toptou.jpg">
+     	</div>
+    </div>
+</div>
+<!--#include virtual="foots.html" -->
+<script type="text/javascript">
+	localStorage.topval = null;
+</script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">	
+<meta name="format-detection" content="telephone=no">
+<meta name="applicable-device" content="pc,mobile">
+<title>话题集锦——${talkinfo.title}</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="image/favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="css/header20190422.css">
+<link rel="stylesheet" type="text/css" href="css/topic.css">
+<link rel="stylesheet" type="text/css" href="css/footer20190422.css">
+</head>
+<body>
+	<!-- 左侧分享开始 -->
+	<div id="posi" class="details_posi posi1">
+		<div class="bdsharebuttonbox">
+			<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+			<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+			<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+		</div>
+		<script>window._bd_share_config={"common":{"bdSnsKey":{"tqq":"http://share.baidu.com/code#"},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["tsina","weixin","qzone"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","weixin","qzone"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+	</div>
+	<!-- 左侧分享结束 -->
+	<div class="header">
+		<div class="ht">
+			<div class="ht-inner">
+				<ul class="ht-left">
+					<li><a href="http://www.2ge.cn/">网站首页</a></li>
+					<li><a href="http://www.2ge.cn/home/help/1" rel="nofollow">帮助中心</a></li>
+					<li><a href="http://www.2ge.cn/home/plaint.html" rel="nofollow">建议投诉</a></li>
+					<li><a href="//tj.2ge.cn" rel="nofollow">图集</a></li>
+				</ul>
+				<ul class="ht-right" id="login_msg">
+					<li class="rightLi1" id="collect_msg"></li><li><a target="_self" href="http://www.2ge.cn/user/regist.html">免费注册</a><a target="_self" href="http://www.2ge.cn/user/login.html?oldurl=http://www.2ge.cn/yj/" class="denglur"> 请登录</a></li><li><a href="http://www.2ge.cn/user/login.html">收藏夹</a></li><li id="wei_xb"><a href="http://www.2ge.cn/hd/download.html" id="wei_sp"><i id="weixin" class="iconfont" style="float:left;"><img style="width:8px;margin-top:8px;float:left;" src="image/shouji.png"></i><label id="wx" class="wx" style="float: left">手机二哥</label></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="hc">
+			<div class="h1 simg">
+				<a target="_self" href="//www.2ge.cn"><span class="shade"></span></a>
+			</div>
+			<div class="hc-right">
+				<div class="inp">
+					<div class="inp-txt">
+						<input type="text" placeholder="${hotmessage}" id="serch_val" value="">
+						<i onclick="serchVal()"><img src="image/searchBtn.png"></i>
+						<ul class="dxiao2" style="display: none">
+						</ul>
+					</div>
+				</div>
+				<div class="related_search" id="searchLog">
+					<#list hotwords as hot>
+					<a href=http://www.2ge.cn/search/s.html?pages=1&key=${hot}&sortKey=&channel=&type=&order=">${hot}</a>
+					</#list>
+				</div>
+			</div>
+			<div class="realRight">
+				<ul class="wapAccountsApplet">
+					<li>
+						<span></span>
+						<p>移动端</p>
+					</li>
+					<li>
+						<span></span>
+						<p>公众号</p>
+					</li>
+					<li>
+						<span></span>
+						<p>小程序</p>
+					</li>
+				</ul>
+				<div class="hoverDiv">
+					<div class="wapHover" style="display: none;">
+						<span><img src="image/ty.png"></span>
+						<label>下载二哥APP</label>
+						<p>通过app扫一扫功能即可获取：专业购物知识、优惠折扣信息、实用消费资讯</p>
+					</div>
+					<div class="accountHover" style="display: none;">
+						<span><img src="image/ergepns.jpg"></span>
+						<label>关注二哥</label>
+						<p style="text-align:center; ">让购物消费更<br>专业更简单</p>
+					</div>
+					<div class="appletHover" style="display: none;">
+						<span><img src="image/smallChengXu.jpg"></span>
+						<label>二哥网微信公众号</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="nav-inner">
+				<ul class="nav-r" style="padding-left:0;width:100%;">
+					<li value="100" class="index_home"><a id="tag_100" target="_self" href="http://www.2ge.cn/"><img src="image/home_index.png">首页</a>
+					</li><li class="line"></li>
+					
+					<li value="103"><a id="tag_103" target="_self" href="http://www.2ge.cn/yj/">购买依据</a>
+					</li>
+					<li value="104"><a id="tag_104" target="_self" href="http://www.2ge.cn/jq/">购买技巧</a>
+					</li>
+					<li value="105"><a id="tag_105" target="_self" href="http://www.2ge.cn/ts/">购买提示</a>
+					</li>
+					<li value="106"><a id="tag_106" target="_self" href="http://www.2ge.cn/wq/">购买误区</a>
+					</li>
+					<li value="107"><a id="tag_107" target="_self" href="http://www.2ge.cn/xj/">购买陷阱</a>
+					</li>
+					<li value="108"><a id="tag_108" target="_self" href="http://www.2ge.cn/lc/">购买流程</a>
+					</li>
+					<li class="line"></li>
+					<li value="109"><a id="tag_109" target="_self" href="http://www.2ge.cn/bz/">国家标准</a>
+					</li>
+					<li value="101"><a id="tag_101" target="_self" href="http://www.2ge.cn/bg/">曝光台</a>
+					</li>
+					<li value="110"><a id="tag_110" target="_self" href="http://www.2ge.cn/yp/">优质品牌</a>
+					</li>
+					<li class="line"></li>
+					<li value="111"><a id="tag_111" target="_self" href="http://www.2ge.cn/hl/">保养护理</a>
+					</li>
+					<li value="112"><a id="tag_112" target="_self" href="http://www.2ge.cn/fw/">售后服务</a>
+					</li>
+					<li value="102"><a id="tag_102" target="_self" href="http://www.2ge.cn/fx/">经验分享</a>
+					</li>
+					<li value="113"><a id="tag_113" target="_blank" href="http://zhe.2ge.cn/" rel="nofollow"><img src="image/discountWords.png"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="headerFixed">
+		<div class="headerFixedInner">
+			<div class="indexa">
+				<a href="http://www.2ge.cn/">首页</a>
+				<i></i>
+			</div>
+			<ul class="headerFixedNav">
+				<li value="103"><a id="tag_103" target="_self" href="http://www.2ge.cn/yj/">购买依据</a>
+				</li>
+				<li value="104"><a id="tag_104" target="_self" href="http://www.2ge.cn/jq/">购买技巧</a>
+				</li>
+				<li value="105"><a id="tag_105" target="_self" href="http://www.2ge.cn/ts/">购买提示</a>
+				</li>
+				<li value="106"><a id="tag_106" target="_self" href="http://www.2ge.cn/wq/">购买误区</a>
+				</li>
+				<li value="107"><a id="tag_107" target="_self" href="http://www.2ge.cn/xj/">购买陷阱</a>
+				</li>
+				<li value="108"><a id="tag_108" target="_self" href="http://www.2ge.cn/lc/">购买流程</a>
+				</li>
+				<li value="109"><a id="tag_109" target="_self" href="http://www.2ge.cn/bz/">国家标准</a>
+				</li>
+				<li value="101"><a id="tag_101" target="_self" href="http://www.2ge.cn/bg/">曝光台</a>
+				</li>
+				<li value="110"><a id="tag_110" target="_self" href="http://www.2ge.cn/yp/">优质品牌</a>
+				</li>
+				<li value="111"><a id="tag_111" target="_self" href="http://www.2ge.cn/hl/">保养护理</a>
+				</li>
+				<li value="112"><a id="tag_112" target="_self" href="http://www.2ge.cn/fw/">售后服务</a>
+				</li>
+				<li value="102"><a id="tag_102" target="_self" href="http://www.2ge.cn/fx/">经验分享</a>
+				</li>
+				<li value="113"><a id="tag_113" target="_blank" href="//zhe.2ge.cn" rel="nofollow"><img src="image/discountWords.png"></a>
+				</li>
+			</ul>
+			<ul class="wapAccounts">
+				<li>移动端</li>
+				<li>公众号</li>
+				<li>小程序</li>
+			</ul>
+			<div class="hoverDiv">
+				<div class="wapHover" style="display: none;">
+					<span><img src="image/ty.png"></span>
+					<label>下载二哥APP</label>
+					<p>通过app扫一扫功能即可获取：专业购物知识、优惠折扣信息、实用消费资讯</p>
+				</div>
+				<div class="accountHover" style="display: none;">
+					<span><img src="image/ergepns.jpg"></span>
+					<label>关注二哥</label>
+					<p style="text-align:center; ">让购物消费更<br>专业更简单</p>
+				</div>
+				<div class="appletHover" style="display: none;">
+					<span><img src="image/smallChengXu.jpg"></span>
+					<label>二哥网微信公众号</label>
+				</div>
+			</div>
+			<div class="headerFixedSearch">
+				<input id="serchfix_val" type="text" placeholder="">
+				<i></i>
+			</div>
+		</div>
+	</div>
+	<div class="zjcontent">
+		<div class="zjbanner"><img src="${talkinfo.pc_image}" width="1200px" height="100px"></div>
+		<div class="zjonew">
+			<#list columnList as talk>
+			<div class="zjone">
+				<div class="zjone_title">${talk.column_title}</div>
+				<div class="zjone_content">
+					<#if talk.list ??>
+					<#list talk.list as temp>
+					<#if temp.type?number == 1 && temp.order_num?number == 1>
+					<a class="zj_c1" target="_blank" href="${temp.pc_url}">
+						<img src="${temp.image_url}">
+						<p>${temp.title}</p>
+					</a>
+					</#if>
+					</#list>
+					<div class="zj_c2">
+						<#list talk.list as temp>
+						<#if temp.type?number == 1 && temp.order_num?number == 2>
+						<a target="_blank" href="${temp.pc_url}" class="ptext1">${temp.title}</a>
+						<p class="pcontent"><#if temp.cont_intro?length gt 130>${temp.cont_intro?substring(0,130)}...<#else>${temp.cont_intro}</#if></p>
+						</#if>
+						</#list>
+						<div class="titlew">
+							<#list talk.list as temp>
+							<#if temp.type?number == 1 && temp.order_num?number gt 2>
+							<a target="_blank" href="${temp.pc_url}">${temp.title}</a>
+							</#if>
+							</#list>
+						</div>
+					</div>
+					<div class="zj_c3">
+						<#list talk.list as temp>
+						<#if temp.type?number == 2 && temp.order_num?number lt 8>
+						<a target="_blank" href="${temp.pc_url}">${temp.title}</a>
+						</#if>
+						</#list>
+						</div>
+					</#if>
+				</div>
+			</div>
+			</#list>
+		</div>
+		<#if ismore ??>
+		<div class="load_morew">
+			<a class="load_more" href="javascript:void(0)" onclick="talkMore()">加载更多</a>
+		</div>
+		</#if>
+	</div>
+	<div class="bottomWrap">
+		<div class="yqlj puclic_foot">
+			<div class="dibu">
+				<div class="foot">
+					<ul class="footUl">
+						<li><a target="_blank" href="http://www.2ge.cn/home/aboutus.html" rel="nofollow">关于我们</a></li>
+						<li class="margin35"></li>
+						<li><a target="_blank" href="http://www.2ge.cn/home/copyright.html" rel="nofollow">版权所有</a></li>
+						<li class="margin35"></li>
+						<li><a target="_blank" href="http://www.2ge.cn/home/policy.html" rel="nofollow">隐私政策</a></li>
+						<li class="margin35"></li>
+						<li><a target="_blank" href="http://www.2ge.cn/home/legaldec.html" rel="nofollow">法律声明</a></li>
+						<li class="margin35"></li>
+						<li><a target="_blank" href="http://www.2ge.cn/home/intelpro.html" rel="nofollow">知识产权</a></li>
+						<li class="margin35"></li>
+						<li><a target="_blank" href="http://www.2ge.cn/home/cooperation.html" rel="nofollow">商务合作</a></li>
+						<li class="margin35"></li>
+						<li><a target="_blank" href="http://www.2ge.cn/home/contactus.html" rel="nofollow">联系我们</a></li>
+					</ul>
+					<div class="footWords">
+						<p>客服热线电话：010-87562727&nbsp;&nbsp;&nbsp;问题建议邮箱：<b style="font-weight:normal; position:relative;"><input id="emails" type="text" value="jy@zhixingshidai.com" style="position:absolute;top:0;left:0;opacity:0; cursor:pointer;">jy@zhixingshidai.com</b>
+							&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.12377.cn/" rel="nofollow">不良信息举报</a>
+						</p>
+						<p>Copyright 2014-2018 ©&nbsp;&nbsp;&nbsp;智行时代国际传媒（北京）有限公司&nbsp;&nbsp;&nbsp;版权所有&nbsp;&nbsp;&nbsp;京 ICP备14039455号-2&nbsp;&nbsp;&nbsp;
+							<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010602030108" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" rel="nofollow"><img src="image/beian.png" style="float:left;margin-right:5px;">京公网安备 11010602030108号</a>
+						</p>
+					</div>
+					<div class="footCodeWrap">
+						<div class="codeDiv">
+							<span><img src="image/smallChengXu.jpg"></span>
+							<p>二哥网微信小程序</p>
+						</div>
+						<div class="codeDiv">
+							<span><img src="image/ty.png"></span>
+							<p>二哥网app扫描下载</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/index20190422.js"></script>
+	<script type="text/javascript" src="js/base64.js"></script>
+	<script type="text/javascript" src="js/searchlog.js"></script>
+	<script type="text/javascript" src="js/display.js"></script>
+	<script type="text/javascript" src="js/talk-more.js"></script>
+	<script type="text/javascript">
+	var talkId = '${talkinfo.id}';
+	function serchVal(){
+		var key=$.trim($("#serch_val").val());
+		if(key==""){
+			return;
+		}
+		window.location.href="http://www.2ge.cn/search/s.html?pages=1&key="+key+"&sortKey=&channel=&type=";	
+	}
+	$(document).scroll(function(){
+		var docTop=$(this).scrollTop();
+		var scheight=$('.zjcontent').height();
+		var ccc=$('#posi').height();
+		/*console.log(docTop);
+		console.log(scheight-ccc-270);*/
+		if(docTop>216 && docTop<scheight-ccc-270){
+			$("#posi").addClass('posi3');
+			$("#posi").removeClass('posi1');
+			$("#posi").removeClass('posi2');
+		}else if(docTop>=scheight-ccc-270){
+			$("#posi").addClass('posi2');
+			$("#posi").removeClass('posi1');
+			$("#posi").removeClass('posi3');
+		}else{
+			$("#posi").addClass('posi1');
+			$("#posi").removeClass('posi2');
+			$("#posi").removeClass('posi3');
+		}
+	});
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1264353277'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1264353277' type='text/javascript'%3E%3C/script%3E"));
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?0f2a592e85c9d1d8167f5baad229d4b5";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var push_s = document.getElementsByTagName("script")[0];
+        push_s.parentNode.insertBefore(bp, push_s);
+    })(); 
+	</script>
+</body>
+</html>

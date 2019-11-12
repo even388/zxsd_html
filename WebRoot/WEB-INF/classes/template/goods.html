@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>二哥_商品</title>
+<meta name="keywords" content="二哥,二哥网,家用电器,手机,数码,家居,家装,厨具,服饰鞋包,个人护理,化妆品,汽车,食品,生鲜,酒饮,营养保健,图书音像,医疗,医药,电脑,办公" />
+<meta name="description" content="二哥网的商品分类信息" />
+<link href="/home/images/favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="/home/css/shangpin.css" />
+</head>
+<script type="text/javascript">
+localStorage.topval = null;
+function liebiao(goods_class_id)
+{
+	var url = "/home/words.html?goods_class_id="+goods_class_id;
+	window.open(url);
+}
+</script>
+<body>
+<!--#include virtual="/tops.html" -->
+<div class="wrap">
+    <div class="wrap-inner">
+        <div class="c-t">
+            <div class="c-t-menu">
+               <#list goodsList as goods>
+               		<#if goods.goods_class_id?length == 3>
+               	 	<a class="${goods.goods_class_id}_a" href="#${goods.goods_class_id}_a">${goods.goods_class_name}</a>
+                	</#if>
+                </#list>
+            </div>
+        </div>
+     	<#list goodsList as goods>
+     	<#if goods.goods_class_id?length == 3>
+        <div class="c-b" id="${goods.goods_class_id}_a">
+           	<h2> <a href="/home/words/${goods.goods_class_id}">${goods.goods_class_name}</a> </h2>
+            <#if goods.getChildren() ??>
+        	<#list goods.getChildren() as good2>
+            <div class="zhengji" id="wenju">
+                <h3><a href="/home/words/${good2.goods_class_id}"><span>${good2.goods_class_name}<i></i></span></a></h3>
+                <div class="fenzu1">
+                	<#if good2.getChildren() ??>
+                	<#list good2.getChildren() as good3>
+	                	<#if !good3.getChildren() ??>
+	                		<a href="/home/words/${good3.goods_class_id}">${good3.goods_class_name}</a>
+	                	</#if>
+                	</#list>
+                	<#list good2.getChildren() as good3>
+	                	<#if good3.getChildren() ??>
+	                		<div class="fenzu2">
+                       			<h4 ><a href="/home/words/${good3.goods_class_id}">${good3.goods_class_name}</a></h4>
+                       					<div class="fenzu3">
+                       			<#list good3.getChildren() as good4>
+                       				<#if !good4.getChildren() ??>
+                       					<a href="/home/words/${good4.goods_class_id}">${good4.goods_class_name}</a>
+                       				</#if>
+                       			</#list>
+                       					</div>
+                       			<#list good3.getChildren() as good4>
+                       				<#if good4.getChildren() ??>
+                       					<div class="fenzu3">
+                       						<h5><a href="/home/words/${good4.goods_class_id}">${good4.goods_class_name}</a></h5>
+                       								<div class="fenzu4">
+                       						<#list good4.getChildren() as good5>
+                       							<#if !good5.getChildren() ??>
+                       								<a href="/home/words/${good5.goods_class_id}">${good5.goods_class_name}</a>
+                       							</#if>
+                       						</#list>
+                       								</div>
+                       						<#list good4.getChildren() as good5>
+                       							<#if good5.getChildren() ??>
+                       								<div class="fenzu4">
+                               						<h6><a href="/home/words/${good5.goods_class_id}">${good5.goods_class_name}</a></h6>
+                               									<div class="fenzu5">
+                               							<#list good5.getChildren() as good6>
+                               								<#if !good6.getChildren() ??>
+                               									<a href="/home/words/${good6.goods_class_id}">${good6.goods_class_name}</a>
+                               								</#if>
+                               							</#list>
+                               									</div>
+                               							<#list good5.getChildren() as good6>
+                               								<#if good6.getChildren() ??>
+                               									<div class="fenzu5">
+                                    								<p class="h7"><a href="/home/words/${good6.goods_class_id}">${good6.goods_class_name}</a></p>
+                                    										<div class="fenzu6">
+                                    								<#list good6.getChildren() as good7>
+                                    										<a href="/home/words/${good7.goods_class_id}">${good7.goods_class_name}</a>
+                                    								</#list>
+                                    										</div>
+                                    							</div>
+                               								</#if>
+                               							</#list>
+                               						</div>
+                       							</#if>
+                       						</#list>
+                       					</div>
+                       				</#if>
+                       			</#list>
+                       		</div>
+	                	</#if>
+                	</#list>
+                	</#if>
+                </div>
+            </div>
+           	</#list>
+           	</#if>
+        </div>
+        </#if>
+       </#list>
+        <!--  <div class="code">
+            <a class="wechat" href="#"><i class="iconfont">&#x3433;</i>微<br />信</a>
+            <a class="wechat sina" href="#"><i class="iconfont">&#xe60a;</i>微<br />博</a>
+            <a class="wechat app" href="#"><i class="iconfont">&#xe601;</i>APP <span class="arrow4"></span> <span class="appcode"></span></a>
+        </div> -->
+        <div class="top" id="ltop">
+            <img src="/home/images/toptou.jpg">
+        </div>
+    </div> 
+</div>
+<div class="wrap2">
+    <div class="wrap2-inner">
+        <div class="c-t">
+            <div class="c-t-menu">
+                <#list goodsList as goods>
+               	 	<a class="${goods.goods_class_id}_a" href="#${goods.goods_class_id}_a">${goods.goods_class_name}</a>
+                </#list>
+            </div>
+        </div>
+    </div>
+</div>
+<!--#include virtual="/foots.html" -->
+<script src="/home/js/shangpin.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.header .nav .service .goods').addClass('current-goods');
+    var timerh=null;
+    function mouseover1(){
+        $('.header .nav .service .goods a').css({'background':'url(/home/images/nav-goods.png) no-repeat -1px 2px','background-size':'132px 30px'});
+        $('.header .nav .menu-goods').css('display','block');
+        $('.header .nav .service .goods i').css({
+            'background':'url(/home/images/arrow2.png) no-repeat',
+            'width':'5px',
+            'height':'7px'
+        });
+    };
+    function mouseout1(){
+        $('.header .nav .service .goods a').css({'background':'url(/home/images/navhover.png) no-repeat 3px center','background-size':'120px 26px'});
+        $('.header .nav .menu-goods').css('display','none');
+        $('.header .nav .service .goods i').css({
+            'background':'url(/home/images/arrow.png) no-repeat',
+            'width':'7px',
+            'height':'5px'
+        });
+    };
+    $('.header .nav .service .goods a').mouseover(function(){
+        clearInterval(timerh);
+        mouseover1();
+    });
+    $('.header .nav .menu-goods').mouseover(function(){
+        clearInterval(timerh);
+        mouseover1();
+    });
+    $('.header .nav .service .goods a').mouseout(function(event){
+        clearInterval(timerh);
+        timerh=setInterval(mouseout1(),500);
+    });
+    $('.header .nav .menu-goods').mouseout(function(event){
+        clearInterval(timerh);
+        timerh=setInterval(mouseout1(),500);
+    });
+});
+</script>
+</body>
+</html>

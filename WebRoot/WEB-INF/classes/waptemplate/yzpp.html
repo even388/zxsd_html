@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>优质品牌_二哥网</title>
+    <meta name="keywords" content="品牌新闻,十大品牌,二哥网" />
+    <meta name="description" content="二哥网优质品牌频道是一个为消费者推荐国内外,各行业的优质品牌的平台，包括品牌新闻，十大品牌，国内品牌，国际品牌等" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" id="viewport">
+    <link rel="canonical" href=" http://www.2ge.cn/yp/">
+    <link rel="stylesheet" href="/css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gmyj.css" />
+    <link rel="stylesheet" type="text/css" href="/css/yzppindex.css" />
+    <link rel="stylesheet" type="text/css" href="/css/model1.css" media="(min-width:375px) and (max-width:413px)" />
+    <link rel="stylesheet" type="text/css" href="/css/model2.css" media="(min-width:414px) and (max-width:540px)" />
+</head>
+
+<style>
+.gmyj_wrap .yzpp_hysx .hysx dd.jydq{
+	width:55%;
+	float:right;}
+	.gmyj_wrap .yzpp_hysx .hysx dd.jydq span{
+		width:7%;
+		margin-top: 2px;
+	}
+.sel_Info{width:100%; position:relative;}
+.sel_Info input.txt{width: 90%;height: 27px;float: left;border:0px;background:#fff; display: block; font-size: 16px;}
+.sel_Info span.set_but{display:inline-block;position:absolute; right:12%; top:10px;}
+.sel_Info .ul_xz .xb{display:inline-block;position:absolute; right:12%; top:10px; width: 7%;}
+.sel_Info ul.ul_xz{z-index:99;width:93%;height:219px;overflow-x:hidden; background:#fff; position:absolute; left:0px; top:38px;border:1px solid #e5e7ee; border-radius:5px;display:none;}
+.sel_Info ul.ul_xz li{width:100%; float:left; font-size:16px; line-height:30px;border-bottom:1px dotted #ddd; text-align:left; position: relative; padding-left: 5px}
+
+	
+	
+	@media screen and (min-width: 320px){
+		.gmyj_wrap #Hysx{
+			display:none;
+			position:fixed;
+			top:38px;
+			left:0;
+			margin-top:0;
+			background:#fff;
+			z-index:9999;
+		}
+	}
+	@media screen and (min-width: 360px){
+		.gmyj_wrap #Hysx{
+			display:none;
+			position:fixed;
+			top:41px;
+			left:0;
+			margin-top:0;
+			background:#fff;
+			z-index:9999;
+		}
+	}
+	@media screen and (min-width: 375px){
+		.gmyj_wrap #Hysx{
+			display:none;
+			position:fixed;
+			top:42px;
+			left:0;
+			margin-top:0;
+			background:#fff;
+			z-index:9999;
+		}
+	}
+</style>
+<body>
+  <#include "/head.html"/>
+ 
+    <section class="gmyj_wrap foot100 gmyj_wrap1">
+     <div style="width: 100%; float: left; overflow: hidden;">
+        <section class="swiper-container">
+            <div class="swiper-wrapper active" id="gmcarousel">
+  			 <!-- 焦点图 -->
+	        <#include "/focusimg.html"/>
+            </div>
+            <div class="swiper-pagination"></div>
+        </section>
+        </div>
+       
+       <section class="shouye_jrjd yzpp_hysx bgt_xwzx" style="margin-top: 12px;">
+            <dl class="hysx">
+                <dl class="hysx">
+                <dt>行业筛选</dt>
+                <dd class="jydq">
+                 <div class="sel_Info">
+                 <#list goodsMap as goodsMap>
+                 <#if goodsMap_index == 0>
+	                 <div class="yzppsxdq" >
+						<input readonly="readonly" id="ppsx"  type="text"  class="txt xz" value="${goodsMap.goodsClassName}"  name="xz"/>
+					 	<i class="shuxiani"></i>
+					 </div>
+					<span class="set_but"><img src="/images/yzpp_hysx.png" alt="" style="height: auto"/></span>
+				</#if>
+				</#list>
+					<ul class="ul_xz">
+					<#list goodsMap as goodsMap>
+					<#if goodsMap_index gte 0>
+                  			<li id="${goodsMap.goodsClassId}">
+                  			     <lable class="hover"  onclick="javascript:ppsx('${goodsMap.goodsClassId}','${goodsMap.goodsClassName}')">${goodsMap.goodsClassName}</lable>
+                  			    <!--  <img class="xb" src="/images/yzpp_hysx.png" onclick="ppType(1,1,'${goodsMap.goodsClassId}',2)" style="height: auto"/> -->
+                  			</li>
+                  			
+                 	</#if>
+                  </#list>  
+					</ul>
+				</div>  
+                </dd>
+            </dl>
+       	 </section> 
+ 	    <section class="shouye_jrjd yzpp_hysx bgt_xwzx" id="Hysx">
+            <dl class="hysx">
+                <dt>行业筛选</dt>
+                <dd class="jydq">
+                 <div class="sel_Info">
+                 <#list goodsMap as goodsMap>
+                 	<#if goodsMap_index == 0>
+                 	<div class="yzppsxdq" style="">
+						<input readonly="readonly" id="ppsxs"  type="text"  class="txt xz" value="${goodsMap.goodsClassName}"  name="xz"/>
+						<i class="shuxiani"></i>
+					</div>
+					<span class="set_but"><img src="/images/yzpp_hysx.png" alt="" style="height: auto"/></span>
+					</#if>
+				 </#list>  
+					<ul class="ul_xz">
+					 <#list goodsMap as goodsMap>
+					<#if goodsMap_index gte 0>
+                  			 <li id="${goodsMap.goodsClassId}">
+                  			      <lable class="hover"  onclick="javascript:ppsx('${goodsMap.goodsClassId}','${goodsMap.goodsClassName}')">${goodsMap.goodsClassName}</lable>
+                  			     <!--  <img class="xb" src="/images/yzpp_hysx.png" onclick="ppTypes(1,1,'${goodsMap.goodsClassId}',2)" style="height: auto"/> -->
+                  			  </li>
+                  			
+                 	</#if>
+                  </#list>  
+					</ul>
+				</div>  
+                </dd>
+            </dl>
+       	 </section> 
+       	   <#list columnList as list>
+       	   <#if list.pageModel==5 && '${list.columnName}' != '十大品牌'> 
+        <section id="${list.columnId}" name="maodian" class="shouye_jrjd bgt_bgqy" >
+            <h2 id="gmindexh2"><a href="#">${list.columnName}</a></h2>
+            <ul class="jrjd" >
+                <li>
+                <#list list.columnInfoList as infolist>
+                	
+                      <#if infolist_index gte 0&&infolist_index lte 4>
+                    <a class="jrjd_a"  href="/brand/${channelId}/${infolist.id?c}">
+                        <img src="${infolist.image}" alt="" />
+                        <span class="shida"></span>
+                    </a>
+                    </#if> 
+                     </#list> 
+                </li>
+            </ul>
+        </section>
+        </#if>
+          <#if list.pageModel==5 && '${list.columnName}' == '十大品牌'> 
+        <section id="${list.columnId}" name="maodian" class="shouye_jrjd bgt_bgqy no-arrow" >
+            <h2 id="gmindexh2"><a href="#">${list.columnName}</a></h2>
+            <ul class="jrjd" id="yzppaimg">
+           
+                <li >
+                 <#list list.columnInfoList as infolist>
+                    <a id="yzppa"  class="jrjd_a" href="/brand/${channelId}/${infolist.id?c}">
+                        <img src="${infolist.image}" alt=""/>
+                        <#if infolist.isBold??>
+	                        <#if infolist.isBold =='0'>
+	                        	<span class="shida" style="font-weight:bold;">${infolist.title}</span>
+	                        	<#else>
+	                        	<span class="shida">${infolist.title}</span>
+	                        </#if>
+                        <#else>
+                        	<span class="shida">${infolist.title}</span>
+                        </#if>
+                    </a>
+                    
+                   </#list>   
+                </li>
+                        
+            </ul>
+        </section>
+        </#if>
+        <#if list.pageModel==2> 
+        <section id="${list.columnId}"  class="shouye_jrjd bgt_bgqy">
+            <a href="/brand-list/${channelId}-104-${list.columnId}/0"><h2 id="gmindexh2">${list.columnName}</h2></a>
+            <ul class="jrjd" id="yzppaimg">
+            
+                <li>
+                <#list list.columnInfoList as infolist>
+                      <#if infolist_index gte 0&&infolist_index lte 4>
+                    <a id="yzppa" style="border-bottom: 1px solid #e8eaf0 !important;" class="jrjd_a" href="/brand/${channelId}/${infolist.id?c}">
+                        <img src="${infolist.image}" alt="" />
+                         <#if infolist.isBold??>
+	                        <#if infolist.isBold =='0'>
+	                        	<span class="shida" style="font-weight:bold;">${infolist.title}</span>
+	                        	<#else>
+	                        	<span class="shida">${infolist.title}</span>
+	                        </#if>
+                        <#else>
+                        	<span class="shida">${infolist.title}</span>
+                        </#if>
+                    </a>
+                        </#if> 
+                     </#list>    
+                </li>  
+                
+                       
+            </ul>
+        </section>
+        </#if>
+         <#if "${list.columnName}"=="品牌新闻" >
+        <section class="shouye_jrjd gmyj_jrjd bgt_xwzx">
+            <a href="/article-list/${channelId}-104-${list.columnId}-0/0-${list.id}/0"><h2 id="gmindexh2">${list.columnName}</h2></a>
+            <ul class="jrjd ly" id="jrjdulpp">
+            <#list list.columnInfoList as infolist>
+                <li>
+                    <a class="jrjd_a" href="/brand/${channelId}/0/${infolist.id?c}">
+                        <img src="${infolist.image}" alt="" />
+                    </a>
+                     <#if infolist.isBold =='0'>
+                    	<p class="right">
+                    		<a id="newspp" style="font-weight:bold;" href="/brand/${channelId}/0/${infolist.id?c}">${infolist.title}</a>
+                    	<#if (infolist.source)!="">
+                	    		<span id="newslai">${infolist.source}</span>
+                	  		</#if> 
+                	  		<span class="yzppupdate">${infolist.updateTime}</span>
+                    	</p>
+                    	<#else>
+                    	<p class="right">
+                    	   <a id="newspp" href="/brand/${channelId}/0/${infolist.id?c}">${infolist.title}</a>
+                    	   	<#if (infolist.source)!="">
+                	    		<span id="newslai">${infolist.source}</span>
+                	  		</#if>
+                	  		<span class="yzppupdate">${infolist.updateTime}</span>
+                    	</p>
+                		</#if>
+                </li>
+              </#list>
+            </ul>
+        </section>
+        </#if>
+        
+       </#list>
+       <#list columnList as list>
+         <input id="pathName" type="hidden" value="">
+       		 <#if (list.pageModel==1) && list.columnName!='品牌新闻' >
+        <section class="shouye_jrjd gmyj_jrjd ty">
+          <a  href="/article-list/${channelId}-0-${list.columnId}-0/0-${list.id}/0" onclick="javascript:ltable('${list.columnId}','${list.columnName}','${channelId}','${list.columnType}','${list.id}');"><h2 id="gmindexh2">${list.columnName}</h2></a>
+            <ul class="jrjd ly" id="ppxinwen">
+             <#list list.columnInfoList as infolist>
+                  <#if infolist_index gte 0&&infolist_index lte 4>
+                <li>
+                    <a class="jrjd_a" href="/brand/${channelId}/0/${infolist.id?c}" >
+                        <img src="${infolist.image}" alt="" />
+                    </a>
+                    
+                     <#if infolist.isBold =='0'>
+                      	<p class="right" id="rightgs">
+                      		<a style="font-weight:bold;" href="/brand/${channelId}/0/${infolist.id?c}">${infolist.title}</a>
+	                	    		<span id="rightgsa">${infolist.source}</span>
+                      	</p>
+                      <#else>
+                        <p class="right" id="rightgs">
+                        	<a href="/brand/${channelId}/0/${infolist.id?c}">${infolist.title}</a>
+	                	    		<span id="rightgsa">${infolist.source}</span>
+	                	    	
+                        </p>
+                   </#if>
+                </li>
+               </#if> 
+           </#list> 
+            </ul>
+        </section>
+        </#if>
+        </#list>
+    </section>
+    <input type="hidden" id="goodsClassId" value="104"/>
+   <#include "/foot.html"/>
+<script src="/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="/js/TouchSlide.1.1.js" type="text/javascript"></script>
+<script src="/js/swiper-3.3.1.min.js"></script>
+<script src="/js/loginhtml.js" type="text/javascript"></script>
+<script src="/js/style.js" type="text/javascript"></script>
+<script src="/js/divselect.js" type="text/javascript"></script>
+<script src="/js/xiangqing.js" type="text/javascript"></script>
+<script src="/js/fenlei.js" type="text/javascript"></script>
+<script src="/js/sessionStorage.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    	$(".sel_Info input.xz").val("家用电器");
+        var mySwiper = new Swiper('.swiper-container',{
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 5000,
+            autoplayDisableOnInteraction: false,
+        }); 
+        var swiper = new Swiper('.gmyj_nav', {
+            slidesPerView: 3.5,
+        });
+     
+       $(".gmyj_wrap .yzpp_hysx .hysx_more a").click(function(){
+        	
+        	$(this).css("color", "#09bb07").siblings().css("color","#"+666);
+        	$(".gmyj_wrap .yzpp_hysx .hysx a").css("color","#"+666);
+        }); 
+        $(".gmyj_wrap .yzpp_hysx .hysx a").click(function(){
+        	
+        	$(this).css("color", "#09bb07").siblings().css("color","#"+666);
+        	 $(".gmyj_wrap .yzpp_hysx .hysx_more a").css("color","#"+666);
+        });  
+    }); 
+    $(document).scroll(function(){
+        var scrollTop=$(document).scrollTop();
+        var HhH=$(".yzpp_hysx").offset().top;
+        var HhHs=$(".ty").offset().top;
+       	if(scrollTop >  HhH){
+       		$("#Hysx").css("display","block");
+       	}else{
+       		$("#Hysx").css("display","none");
+       	}
+       	if(scrollTop > HhHs){
+       		$("#Hysx").css("display","none");
+       	}
+       	
+    });
+    
+  //点击小按扭，出现下拉选项
+ 	 var mark=1;
+	$(".sel_Info").click(function(e){
+			e.stopPropagation();//阻止冒泡事件
+		if(mark==1){
+			$(".sel_Info ul.ul_xz").slideDown();
+			mark=2;
+			//下拉后，选中的项应该和输入框里面对应的内容项是一样的
+			var obj=$(".sel_Info ul.ul_xz li lable");
+			var len=obj.length;
+			for(var i=0;i<len;i++){
+				/* if(obj.eq(i).html()==$(".sel_Info input.xz").val()){
+					obj.eq(i).addClass("hover");
+					obj.eq(i).parent("li").siblings("li").children("lable").removeClass("hover");
+				}else if(obj.eq(i).html()=="服饰鞋包"){
+					obj.eq(i).addClass("hover");
+					obj.eq(i).parent("li").siblings("li").children("lable").removeClass("hover");
+				} */
+			}
+	
+		}else{
+		/* 	$(".sel_Info ul.ul_xz").slideUp(); */
+			mark=1;
+		}
+	}); 
+	 
+	//下拉内容鼠标移动上面显示效果
+	$(".sel_Info ul.ul_xz li").mouseover(function(){
+		$(this).addClass("hover").siblings("li").removeClass("hover");
+	});
+	//下拉内容点击后要赋值给 input 输入框
+	/* $(".sel_Info ul.ul_xz li").click(function(){
+		alert($(this).html());
+		$(".sel_Info input.xz").val($(this).html());// 把获取到的值赋给输入框 
+	}); */
+	
+	//浏览器窗口的点击事件
+	$(document).click(function(){
+		$(this).css({"background-image":"url(images/select1.png)"});
+		$(".sel_Info ul.ul_xz").slideUp();
+		mark=1;
+	});
+</script>
+</body>
+</html>

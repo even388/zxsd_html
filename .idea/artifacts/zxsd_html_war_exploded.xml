@@ -1,0 +1,45 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="zxsd_html:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/zxsd_html_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="zxsd_html" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="activemq-client-5.10.1.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="activemq-spring-5.10.1.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="aopalliance-1.0.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="commons-beanutils-1.8.3.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="commons-codec-1.9.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="commons-collections-3.1.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="commons-lang-2.4.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="commons-logging-1.1.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="ezmorph-1.0.4.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="freemarker.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="geronimo-j2ee-management_1.1_spec-1.0.1.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="geronimo-jms_1.1_spec-1.1.1.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="hawtbuf-1.10.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="javax.jms.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="json-lib-2.4-jdk15.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="mysql-connector-5.1.8.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="persistence-api-1.0.2.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="proxool-0.9.1.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="proxool-cglib.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="slf4j-api-1.7.5.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="spring-aop-3.2.6.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="spring-beans-3.2.6.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="spring-context-3.2.6.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="spring-core-3.2.6.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="spring-expression-3.2.6.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="spring-jdbc-3.2.6.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="spring-jms-3.2.6.RELEASE.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="spring-tx-3.2.6.jar" module-name="zxsd_html" />
+          <element id="library" level="module" name="spring-web-3.2.6.jar" module-name="zxsd_html" />
+          <element id="library" level="project" name="zxsd_html" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="zxsd_html/web/Web" />
+    </root>
+  </artifact>
+</component>

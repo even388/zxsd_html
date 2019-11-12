@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="zxsd_html"
+  id="myeclipse.1476860791308"
+  context-root="/zxsd_html"
+  j2ee-spec="6.0"
+  archive="zxsd_html.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

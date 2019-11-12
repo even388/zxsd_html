@@ -1,0 +1,125 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>wap头部</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" id="viewport">
+    <link rel="stylesheet" href="/css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gmyj.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gmindex.css" />
+    <link rel="stylesheet" type="text/css" href="/css/search.css" />
+    <link rel="stylesheet" type="text/css" href="/css/model1.css" media="(min-width:375px) and (max-width:413px)" />
+    <link rel="stylesheet" type="text/css" href="/css/model2.css" media="(min-width:414px) and (max-width:540px)" />
+</head>
+ 
+    <header class="shouye_head xhead" id="xhead" style="overflow: visible;">
+      <section class="head_left" style="width: 94%;">
+            <div class="xuanfk" id="xuanfk">
+            	<img class="erg" src="/images/erg.png" style="">
+            	<div class="fdj">
+                	<img src="/images/shouyefdj.svg" alt="" class="fangdajing" onclick="sousuo()"/>
+               	</div>
+            	<form id="searchForm1" name="searchForm" action="" method = 'post' style="width: 80%; float: left;">
+      			  <a href="/searchTransit/${channelId}">
+	               		 <input type="search"  readonly unselectable="on"  placeholder="${pMessage}" autocomplete="off"  id="key" name="key" class="key"/>
+					</a>
+				</form>  
+            </div>
+           
+        </section>
+     </header>
+    <section class="gmyj_search">
+        <section class="search">
+            <div class="input">
+                <div class="fdj">
+                	<img src="/images/shouyefdj.svg" alt="" class="fangdajing" onclick="sousuo()"/>
+               	</div>
+               	<img src="/images/logowan.png" class="ergelogoso"/>
+				<form id="searchForm" name="searchForm" action="" method = 'post' >
+         		   <a href="/searchTransit/${channelId}">
+               		 <input type="search"  readonly unselectable="on"  placeholder="${pMessage}" autocomplete="off"  id="key" name="key" class="key"/>
+				    </a>
+          		    <input type="hidden" id="channelId" value="${channelId}"/>
+				</form>  
+            </div>
+        </section>
+    </section>
+    <section class="gmyj_nav">
+        <div class="swiper-wrapper">
+           <#if channelId == '103'> <a href="/yj.html" class="swiper-slide currentN swiper-slide-active" > <#else><a href="/yj.html" class="swiper-slide" ></#if>购买依据</a>
+           <#if channelId == '104'> <a href="/jq.html" class="swiper-slide currentN swiper-slide-active" > <#else><a href="/jq.html" class="swiper-slide" ></#if>购买技巧 </a>
+           <#if channelId == '105'> <a href="/ts.html" class="swiper-slide currentN swiper-slide-active" > <#else><a href="/ts.html" class="swiper-slide" ></#if>购买提示</a>
+           <#if channelId == '106'> <a href="/wq.html" class="swiper-slide currentN swiper-slide-active" > <#else><a href="/wq.html" class="swiper-slide" ></#if>购买误区</a>
+           <#if channelId == '107'> <a href="/xj.html" class="swiper-slide currentN swiper-slide-active" > <#else><a href="/xj.html" class="swiper-slide" ></#if>购买陷阱</a>
+           <#if channelId == '108'> <a href="/lc.html"  class="swiper-slide currentN swiper-slide-active" > <#else><a href="/lc.html" class="swiper-slide" ></#if>购买流程</a>
+           <#if channelId == '109'> <a href="/bz.html" class="swiper-slide currentN swiper-slide-active" > <#else><a href="/bz.html" class="swiper-slide" ></#if>国家标准</a>
+           <#if channelId == '101'> <a href="/bg.html" class="swiper-slide currentN swiper-slide-active" > <#else><a href="/bg.html" class="swiper-slide" ></#if>曝光台</a>
+           <#if channelId == '110'> <a href="/yp.html" class="swiper-slide currentN swiper-slide-active" > <#else><a href="/yp.html" class="swiper-slide" ></#if>优质品牌</a>
+           <#if channelId == '111'> <a href="/hl.html" class="swiper-slide currentN swiper-slide-active" > <#else><a href="/hl.html" class="swiper-slide" ></#if>保养护理</a>
+           <#if channelId == '112'> <a href="/fw.html" class="swiper-slide currentN swiper-slide-active" > <#else><a href="/fw.html" class="swiper-slide" ></#if>售后服务</a>
+           <#if channelId == '102'> <a href="/fx.html"  class="swiper-slide currentN swiper-slide-active" > <#else><a href="/fx.html" class="swiper-slide" ></#if>经验分享</a>
+           <a href="http://m.2ge.cn/tj/" class="swiper-slide" >图集</a>  
+           <a href="http://m.2ge.cn/discount" class="swiper-slide" >优惠折扣</a>  
+        </div>
+    </section>
+   <input id="pathName" type="hidden" value="">
+   <script src="/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+   <script src="/js/rsearch.js" type="text/javascript"></script>
+   	<script type="text/javascript">
+		
+		//统计
+		var _hmt = _hmt || [];
+		(function() {
+	  		var hm = document.createElement("script");
+	 		hm.src = "https://hm.baidu.com/hm.js?4ec479bafd6209b4fb3a7dc0d7f1a48b";
+	  		var s = document.getElementsByTagName("script")[0];
+	  		s.parentNode.insertBefore(hm, s);
+		})();
+		  function Login(){
+		    	
+		    	window.location.href="/login";
+		    }
+		  
+		  $(document).ready(function(){
+		    var memberId = getCookie("ZX_USERID");
+			if(memberId=='534' || memberId=='1' || memberId=='370' || memberId=='1301' || memberId=='301' ||memberId=='426' ||memberId=='4171' ||memberId=='44267'
+					||memberId=='867' ||memberId=='1589' ||memberId=='292'||memberId=='46877'||memberId=='519'||memberId=='435'){ 
+				$(".discount").css("display","block");
+			}
+			         
+		 }); 
+	    //自动推送代码
+		  (function(){
+		    var bp = document.createElement('script');
+		    var curProtocol = window.location.protocol.split(':')[0];
+		    if (curProtocol === 'https') {
+		        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		    }
+		    else {
+		        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		    }
+		    var s = document.getElementsByTagName("script")[0];
+		    s.parentNode.insertBefore(bp, s);
+		})();
+		  function getCookie(cookie_name)  
+		  {  
+		  	var allcookies = document.cookie;  
+		  	var cookie_pos = allcookies.indexOf(cookie_name);   //索引的长度  
+		  	// 如果找到了索引，就代表cookie存在，  
+		  	// 反之，就说明不存在。  
+		  	if (cookie_pos != -1)  
+		  	{  
+		  		// 把cookie_pos放在值的开始，只要给值加1即可。  
+		  		cookie_pos += cookie_name.length + 1;      //这里我自己试过，容易出问题，所以请大家参考的时候自己好好研究一下。。。  
+		  		var cookie_end = allcookies.indexOf(";", cookie_pos);  
+		  		if (cookie_end == -1)  
+		  		{  
+		  			cookie_end = allcookies.length;  
+		  		}  
+		  		var value = unescape(allcookies.substring(cookie_pos, cookie_end)); //这里就可以得到你想要的cookie的值了。。。  
+		  		
+		  	} 
+		  		return value; 
+		  } 
+	</script>
+   
+    

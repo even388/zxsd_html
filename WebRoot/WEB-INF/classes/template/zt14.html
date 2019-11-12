@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>${subject.subject_name}_首页_二哥网</title>
+<meta name="keywords" content="二哥,二哥网,${subject.subject_keyword}" />
+<meta name="description" content="${subject.subject_introduction}" />
+<link href="/home/images/favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="css/zhuanti1.css"/>
+<link rel="stylesheet" type="text/css" href="css/headerZhuanTi.css" />
+<base target="_blank">
+</head>
+<script type="text/javascript">
+	var is_mobi = navigator.userAgent.toLowerCase().match(/(ipod|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i) != null;  
+	if (is_mobi) { 
+		window.location.href = "http://m.2ge.cn/special/${subject.subject_id}/0/0/${subject.subject_style_id}"; 
+	}  
+</script>
+<body>
+<div class="start">
+	  
+		<div class="header" style="height:35px;background:none;margin-bottom:0;">
+   	  	  <div class="ht">
+			<div class="ht-inner">
+				<ul class="ht-left">
+					<li><!-- <i class="iconfont">&#xe602;</i> --><!--客服热线： <span>400-600-3031 --><!-- </span> -->
+					<a href="/home/help/1">帮助中心</a>
+					<a href="/home/plaint.html" style="margin-left: 0;">建议投诉</a>
+					<a href="http://www.2ge.cn/"><img src="/home/images/logoTop.png" style="width:48px;height:28px;margin-top:3px; margin-right: 20px;"></a>
+					</li>
+				</ul>
+				<ul class="ht-right" id="login_msg">
+					<li class="rightLi1" id="collect_msg"></li>
+				</ul>
+			</div>
+		</div>
+        <div class="hc" style="height:0;">
+		<!-- 微信显示开始 -->
+			<div class="weih" id="weih">
+                <div style="overflow:hidden;height:120px; ">
+					<span class="apps" style="overflow: hidden;">
+						<img src="/home/images/ty.png"  style="width: 95px;height:95px;float: left;margin-left:0px;margin-right:9px;"/>
+						<div class="follows" style="float: left;margin-top:22px;text-align: left;">
+							<label style="font-weight: bold;">二哥购物指导APP</label><br>
+							<label>身边的购物专家</label><br>
+							<label class="foll">安卓/IOS</label>
+						</div>
+					</span>
+                </div>
+				<div style="overflow:hidden;height:120px; ">
+                    <img src="/home/images/signal.jpg" style="float: left;margin-right:3px;"/>
+                    <div class="follows" style="float: left;margin-top:22px;text-align: left;">
+                        <label style="font-weight: bold;">关注二哥</label><br>
+                        <label>让购物消费</label><br>
+						<label>更专业更简单</label>
+                    </div>
+				</div>
+			</div>
+		<!-- 微信显示结束 -->
+       </div>
+     </div>
+        <#list templelist as temp>
+			<#if temp_index=0>
+			<div class="kuanping"  style="background-image: url('${temp.column0[0].t_subject_image!}');">
+			</div>
+		</#if>
+		</#list>
+		
+    <div class="zhonei" style="width:1000px;">
+   <#list templelist as map>
+   <#if map_index=1>
+        <span class="zt14span">${map.column1[0].section_name}</span>
+        <div class="xf zt14s">
+        	<#list map.column1 as column1>
+		    <#if column1_index lte 4>
+        	<div class="xfnr">
+            	<a href="${column1.t_subject_article_url}"><img src="${column1.t_subject_image}" alt="${column1.t_subject_title}"/></a>
+                <div class="neifx">
+                	<p><a href="${column1.t_subject_article_url}">${column1.t_subject_title}</a></p>
+                    <div class="labdiv">
+                    	<label>${column1.t_subject_introduction}</label><a href="${column1.t_subject_article_url}">详细</a>
+                    </div>
+                </div>
+            </div>
+           <#elseif column1_index=5>
+           <div class="xfnr zhzt14">
+            	<a href="${column1.t_subject_article_url}"><img src="${column1.t_subject_image}" alt="${column1.t_subject_title}"/></a>
+                <div class="neifx">
+                	<p><a href="${column1.t_subject_article_url}">${column1.t_subject_title}</a></p>
+                    <div class="labdiv">
+                    	<label>${column1.t_subject_introduction}</label><a href="${column1.t_subject_article_url}">详细</a>
+                    </div>
+                </div>
+            </div>
+            </#if>
+		 </#list> 
+            <!--曝光线索开始-->
+            <#elseif map_index=2>
+                	<span class="zt14span">${map.column2[0].section_name}</span>
+                    <div class="zt10bg zt12img zt14jyfx" style="margin-right:0px; width:100%;">
+                	 <#list map.column2 as column2>
+				    <#if column2_index=0>
+                    <div class="zt10nei" style="margin-bottom:25px;">
+                    	<span class="zt12span zt11k" style="margin-top:0px;">
+                        	<a href="${column2.t_subject_article_url}">${column2.t_subject_title}</a>
+                        </span>
+                        <#list column2.t_subject_image?split(",") as image>
+                        <#if image_index == 0> 
+                        <a href="${column2.t_subject_article_url}"><img src="${image}" width="310px" height="210px" alt="${column2.t_subject_title}"></a>
+                        <#elseif image_index == 1>
+                        <a href="${column2.t_subject_article_url}"><img src="${image}" width="310px" height="210px" class="img22" alt="${column2.t_subject_title}"></a>
+                        <#elseif image_index == 2>
+                        <a href="${column2.t_subject_article_url}"><img src="${image}" width="310px" height="210px" class="img3" alt="${column2.t_subject_title}"></a>
+                        </#if>
+                        </#list>
+                    </div>
+                   
+				    <#elseif column2_index=1>
+                    <div class="zt10nei" style="margin-top:0px;">
+                        <span class="zt12span zt11k">
+                        	<a href="${column2.t_subject_article_url}">${column2.t_subject_title}</a>
+                        </span>
+                        <#list column2.t_subject_image?split(",") as image>
+                        <#if image_index == 0> 
+                        <a href="${column2.t_subject_article_url}"><img src="${image}" width="310px" height="210px" alt="${column2.t_subject_title}"></a>
+                        <#elseif image_index == 1>
+                        <a href="${column2.t_subject_article_url}"><img src="${image}" width="310px" height="210px" class="img22" alt="${column2.t_subject_title}"></a>
+                        <#elseif image_index == 2>
+                        <a href="${column2.t_subject_article_url}"><img src="${image}" width="310px" height="210px" class="img3" alt="${column2.t_subject_title}"></a>
+                        </#if>
+                        </#list>
+                    </div>
+                    
+				    <#elseif column2_index=2>
+                    <div class="zt10nei" style="margin-bottom:25px;">
+                    	<span class="zt12span zt11k">
+                        	<a href="${column2.t_subject_article_url}">${column2.t_subject_title}</a>
+                        </span>
+                        <#list column2.t_subject_image?split(",") as image>
+                        <#if image_index == 0> 
+                        <a href="${column2.t_subject_article_url}"><img src="${image}" width="310px" height="210px" alt="${column2.t_subject_title}"></a>
+                        <#elseif image_index == 1>
+                        <a href="${column2.t_subject_article_url}"><img src="${image}" width="310px" height="210px" class="img22" alt="${column2.t_subject_title}"></a>
+                        <#elseif image_index == 2>
+                        <a href="${column2.t_subject_article_url}"><img src="${image}" width="310px" height="210px" class="img3" alt="${column2.t_subject_title}"></a>
+                        </#if>
+                        </#list>
+                    </div>
+					</#if>
+					</#list>
+                </div>
+                    <!--曝光线索结束-->
+                <!--推荐阅读开始-->
+                <#elseif map_index=3>
+                	<span class="zt14span">${map.column3[0].section_name}</span>
+                    <div class="xf zt14s">
+                    <#list map.column3 as column3>
+					    <#if column3_index lte 2>
+                        <div class="xfnr zt14xfnr">
+                            
+                            <div class="neifx zt14xf">
+                                <p><a href="${column3.t_subject_article_url}">${column3.t_subject_title}</a></p>
+                                <div class="labdiv">
+                                    <label>${column3.t_subject_introduction}</label><a href="${column3.t_subject_article_url}">详细</a>
+                                </div>
+                               
+                            </div>
+                     </div>
+                    
+                    <#elseif column3_index=3>
+                    <div class="xfnr zt14xfnr" style="border:0px; padding-bottom:0px;">
+                        <div class="neifx zt14xfnr">
+                            <p><a href="${column3.t_subject_article_url}">${column3.t_subject_title}</a></p>
+                                <div class="labdiv">
+                                    <label>${column3.t_subject_introduction}</label><a href="${column3.t_subject_article_url}">详细</a>
+                                </div>
+                        </div>
+                    </div>
+                    </#if>
+						</#list>
+                <!--推荐阅读结束-->
+        </div>
+       </#if>
+		</#list> 
+        <div class="foot foot1">
+        <div class="bdsharebuttonbox" style="width: 260px;margin:30px 0 0;float:none; overflow:hidden;">
+		        <a href="#" class="bds_tsina" style="dispaly:block;width:28px;height:28px;background-image:url(/home/images/fweibo.png);background-repeat:no-repeat;background-size:100%;background-position:0 0;margin:6px 17px 6px 0;" data-cmd="tsina" title="分享到新浪微博"></a>
+		     	<a href="#" class="bds_douban" style="width:28px;height:28px;background-image:url(/home/images/fdouban.png);background-repeat:no-repeat;background-size:100%;background-position:0 0;margin:6px 17px 6px 0;" data-cmd="douban" title="分享到豆瓣网"></a>
+		     	<a href="#" class="bds_tqq" style="width:28px;height:28px;background-image:url(/home/images/frenren.png);background-repeat:no-repeat;background-size:100%;background-position:0 0;margin:6px 17px 6px 0;" data-cmd="renren" title="分享到人人网"></a>
+		     	<a href="#" class="bds_bdhome" style="width:28px;height:28px;background-image:url(/home/images/fbaidu.png);background-repeat:no-repeat;background-size:100%;background-position:0 0;margin:6px 17px 6px 0;" data-cmd="bdhome" title="分享到百度"></a>
+		     	<a href="#" class="bds_weixin" style="width:28px;height:28px;background-image:url(/home/images/fweixin.png);background-repeat:no-repeat;background-size:100%;background-position:0 0;margin:6px 17px 6px 0;" data-cmd="weixin" title="分享到微信"></a>
+		     	<a href="#" class="bds_more" style="width:28px;height:28px;background-image:url(/home/images/fgengduo.png);background-repeat:no-repeat;background-size:100%;background-position:0 0;" data-cmd="more"></a>
+		  </div>	
+        	<div class="moreZhuanTi">
+		            <h2>
+		                <p><span>更多精彩专题</span></p>
+		            </h2>
+		            <ul class="moreZhuanTiImg">
+		            	<#list subjectlist as subject>
+		                <li><a href="${subject.subject_url}"><span><img src="${subject.subject_image}" alt="${subject.subject_name}" width="295px;" height="110px;"/></span><p>${subject.subject_name}</p></a></li>
+		                </#list>
+		                <!-- <li><a href="/home/subject-list/0/0/0"><span>查看全部专题</span></a></li> -->
+		            </ul>
+                	<a class="moreaZhuanTi" href="/home/subject-list/0/0/0"><span>查看全部</span></a>
+	        	</div>	
+        	<ul class="ul2">
+            <li><a target="_blank" href="/home/aboutus.html">关于我们</a></li>
+                    <li class="margin35">|</li>
+                    <li><a target="_blank" href="/home/contactus.html">联系我们</a></li>
+                    <li class="margin35">|</li>
+                    <li><a target="_blank" href="/home/copyright.html">版权所有</a></li>
+                    <li class="margin35">|</li>
+                    <li><a target="_blank" href="/home/policy.html">隐私政策</a></li>
+                    <li class="margin35">|</li>
+                    <li><a target="_blank" href="/home/legaldec.html">法律声明</a></li>
+                    <li class="margin35">|</li>
+                    <li><a target="_blank" href="/home/intelpro.html">知识产权</a></li>                         
+                </ul>
+                <div>
+                <p>客服热线电话：<span>400-600-3031</span>&nbsp;&nbsp;&nbsp;问题建议邮箱：<b style="font-weight:normal; position:relative;"><input id="emails" type="text" value="jy@zhixingshidai.com" style="position:absolute;top:0;left:0;opacity:0; cursor:pointer;"/>jy@zhixingshidai.com</b>
+				&nbsp;&nbsp;&nbsp;<a target="_blank" style="display: inline-block;" href="http://www.12377.cn/">不良信息举报</a>
+		        </p>
+		        <p>Copyright 2014-2018 &copy;&nbsp;&nbsp;&nbsp;智行时代国际传媒（北京）有限公司&nbsp;&nbsp;&nbsp;版权所有&nbsp;&nbsp;&nbsp;京 ICP备14039455号-2&nbsp;&nbsp;&nbsp;
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010602030108" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/home/images/beian.png" style="float:left;"/>京公网安备 11010602030108号</a>
+		        </p>
+                </div>
+      		</div>
+            </div>
+        	
+        </div>
+    	
+    </div>
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+     <script type="text/javascript" src="js/index.js"></script>
+     <script src="/home/js/msg.js" type="text/javascript"></script>
+     <script type="text/javascript" src="/home/js/share.js"></script>
+     <script type="text/javascript">
+     	var project_id= '${subject.subject_id}';
+	 	var project_type="9";//专题
+	 	//百度统计
+	 	var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?0f2a592e85c9d1d8167f5baad229d4b5";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		//百度推送
+		(function(){
+		    var bp = document.createElement("script");
+		    var curProtocol = window.location.protocol.split(':')[0];
+		    if (curProtocol === 'https') {
+		        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+		    }
+		    else {
+		        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		    }
+		    var push_s = document.getElementsByTagName("script")[0];
+		    push_s.parentNode.insertBefore(bp, push_s);
+		})();
+	 </script>
+    
+</body>
+</html>

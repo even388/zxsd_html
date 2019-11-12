@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<project name="html" default="compile">
+	<property name="debug_it" value="on"/>
+	<property name="deprecation_it" value="on"/>
+	<property name="optimize_it" value="on"/>
+
+	<property name="src.dir" value="src" />
+	<property name="class.dir" value="bin" />
+	<property name="dist.dir" value="dist"/>
+	<property name="webclass.dir" value="WebRoot/WEB-INF/classes"/>
+
+	<property environment="env"/>
+
+	<path id="all_lib">
+		<fileset dir="WebRoot/WEB-INF/lib">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+
+	<target name="init" description="Initializing builder...">
+	</target>
+
+	<target name="compile">
+		<mkdir dir="build"/>
+		<javac srcdir="src" destdir="build" encoding="utf-8"
+					debug="${debug_it}" optimize="${optimize_it}"
+					deprecation="${deprecation_it}"
+					classpathref="all_lib"
+				/>
+		<copy todir="build">
+			<fileset dir="src" excludes="**/*.java">
+			</fileset>
+		</copy>
+		<echo message="		Compilation complete."/>
+		<echo message="		Use 'ant deploy' for deploying college."/>
+	</target>
+
+	<target name="deploy" depends="compile">
+		<property name="deploy.home" value="/app/html"/>
+		<echo message="Deploy merchant to [${deploy.home}]."/>
+		<mkdir dir="${deploy.home}"/>
+		<copy todir="${deploy.home}">
+			<fileset dir="WebRoot">
+			</fileset>
+		</copy>
+		
+		<mkdir dir="${deploy.home}/WEB-INF/classes"/>
+		<copy todir="${deploy.home}/WEB-INF/classes">
+			<fileset dir="build"/>
+		</copy>
+		<!--
+		<delete file="${deploy.home}/WEB-INF/lib/gateway-client-3.9.1-IEST.jar"/>
+		<delete file="${deploy.home}/WEB-INF/classes/appConfig.properties" />
+		<copy tofile="${deploy.home}/WEB-INF/classes/appConfig.properties" file="${deploy.home}/WEB-INF/classes/appConfig.properties.www" />
+		<delete file="${deploy.home}/WEB-INF/classes/logback.xml" />
+		<copy tofile="${deploy.home}/WEB-INF/classes/logback.xml" file="${deploy.home}/WEB-INF/classes/logback.xml.www" />
+		-->
+	</target>
+	
+	
+
+	<target name="pack" depends="compile" description="Making jar file...">
+		<mkdir dir="${dist.dir}"/>
+		<jar destfile="${dist.dir}/html.jar" basedir="${class.dir}">
+		</jar>
+	</target>
+
+	
+</project>

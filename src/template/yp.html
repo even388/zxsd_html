@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="applicable-device" content="pc">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <title>优质品牌_二哥网</title>
+    <meta name="keywords" content="品牌新闻,十大品牌,二哥网" />
+    <meta name="description" content="二哥网优质品牌频道是一个为消费者推荐国内外,各行业的优质品牌的平台，包括品牌新闻，十大品牌，国内品牌，国际品牌等" />
+    <meta http-equiv="mobile-agent"content="format=html5;url=http://m.2ge.cn/yp/" />
+    <link href="/home/images/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="/home/css/yijuNew.css" />
+    <base target="_blank">
+</head>
+<body class="backcolor">
+<!--#include virtual="/tops.html" -->
+<!--回到顶部开始-->
+<div class="top" id="ltop">
+	<img src="/home/images/toptou.jpg">
+</div>
+<div class="outer">
+    <div class="banner">
+        <ul class="ban-yiju">
+            <#list imagelist as image>
+            <#if image_index == 0>
+            <li style="z-index:1;background-image:url(${image.image_path});"><a href="${image.link_url}"></a></li>
+            <#break>
+        </#if>
+    </#list>
+    <#list imagelist as image>
+    <#if image_index gt 0 && image_index lte 5>
+    <li style="background-image:url(${image.image_path});"><a href="${image.link_url}"></a></li>
+</#if>
+</#list>
+</ul>
+<ol>
+    <li class="current-yiju"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+<span class="left"></span>
+<span class="right"></span>
+</div>
+</div>
+<div class="premium_wraper">
+    <!-- 品牌新闻 -->
+    <div classs="premium">
+        <h2 class="exptitle htab">
+            <span>品牌新闻</span>
+            <ul class="extab" id="bdnews_ul">
+                <li onmouseover="tab(this)" value="101" class="extabed"><div class="after"></div>家用电器</li>
+                <li onmouseover="tab(this)" value="105"><div class="after"></div>数码手机</li>
+                <li onmouseover="tab(this)" value="106"><div class="after"></div>电脑办公</li>
+                <li onmouseover="tab(this)" value="104"><div class="after"></div>美妆个护</li>
+                <li onmouseover="tab(this)" value="107"><div class="after"></div>母婴玩具</li>
+                <li onmouseover="tab(this)" value="109"><div class="after"></div>医药保健</li>
+                <li onmouseover="tab(this)" value="102"><div class="after"></div>服装内衣</li>
+                <li onmouseover="tab(this)" value="113"><div class="after"></div>鞋靴饰品</li>
+                <li onmouseover="tab(this)" value="115"><div class="after"></div>汽车房产</li>
+                <li onmouseover="tab(this)" value="108"><div class="after"></div>食品生鲜</li>
+                <li onmouseover="tab(this)" value="112"><div class="after"></div>家居家装</li>
+            </ul>
+            <a class="mores" href="/brand-list/0/111-2-0/0">MORE <strong>+</strong></a>
+        </h2>
+        <div class="premconw">
+            <div class="premium_content">
+                <div class="imgtext">
+                    <#list list_101 as article>
+                    <#if article_index gte 0 && article_index lt 3>
+                    <a href="${article.page_url}.html">
+                        <img src="${article.title_image!}" alt="${article.title}">
+                        <p>${article.title}</p>
+                    </a>
+                </#if>
+            </#list>
+        </div>
+        <div class="titletext">
+            <#list list_101 as article>
+            <#if article_index gte 3>
+            <a href="${article.page_url}.html">${article.title}</a>
+        </#if>
+    </#list>
+</div>
+</div>
+<div class="premium_content">
+    <div class="imgtext">
+        <#list list_105 as article>
+        <#if article_index gte 0 && article_index lt 3>
+        <a href="${article.page_url}.html">
+            <img src="${article.title_image!}" alt="${article.title}">
+            <p>${article.title}</p>
+        </a>
+    </#if>
+</#list>
+</div>
+<div class="titletext">
+    <#list list_105 as article>
+    <#if article_index gte 3>
+    <a href="${article.page_url}.html">${article.title}</a>
+</#if>
+</#list>
+</div>
+</div>
+<div class="premium_content">
+    <div class="imgtext">
+        <#list list_106 as article>
+        <#if article_index gte 0 && article_index lt 3>
+        <a href="${article.page_url}.html">
+            <img src="${article.title_image!}" alt="${article.title}">
+            <p>${article.title}</p>
+        </a>
+    </#if>
+</#list>
+</div>
+<div class="titletext">
+    <#list list_106 as article>
+    <#if article_index gte 3>
+    <a href="${article.page_url}.html">${article.title}</a>
+</#if>
+</#list>
+</div>
+</div>
+<div class="premium_content">
+    <div class="imgtext">
+        <#list list_104 as article>
+        <#if article_index gte 0 && article_index lt 3>
+        <a href="${article.page_url}.html">
+            <img src="${article.title_image!}" alt="${article.title}">
+            <p>${article.title}</p>
+        </a>
+    </#if>
+</#list>
+</div>
+<div class="titletext">
+    <#list list_104 as article>
+    <#if article_index gte 3>
+    <a href="${article.page_url}.html">${article.title}</a>
+</#if>
+</#list>
+</div>
+</div>
+
+<div class="premium_content">
+    <div class="imgtext">
+        <#list list_107 as article>
+        <#if article_index gte 0 && article_index lt 3>
+        <a href="${article.page_url}.html">
+            <img src="${article.title_image!}" alt="${article.title}">
+            <p>${article.title}</p>
+        </a>
+    </#if>
+</#list>
+</div>
+<div class="titletext">
+    <#list list_107 as article>
+    <#if article_index gte 3>
+    <a href="${article.page_url}.html">${article.title}</a>
+</#if>
+</#list>
+</div>
+</div>
+
+<div class="premium_content">
+    <div class="imgtext">
+        <#list list_109 as article>
+        <#if article_index gte 0 && article_index lt 3>
+        <a href="${article.page_url}.html">
+            <img src="${article.title_image!}" alt="${article.title}">
+            <p>${article.title}</p>
+        </a>
+    </#if>
+</#list>
+</div>
+<div class="titletext">
+    <#list list_109 as article>
+    <#if article_index gte 3>
+    <a href="${article.page_url}.html">${article.title}</a>
+</#if>
+</#list>
+</div>
+</div>
+
+<div class="premium_content">
+    <div class="imgtext">
+        <#list list_102 as article>
+        <#if article_index gte 0 && article_index lt 3>
+        <a href="${article.page_url}.html">
+            <img src="${article.title_image!}" alt="${article.title}">
+            <p>${article.title}</p>
+        </a>
+    </#if>
+</#list>
+</div>
+<div class="titletext">
+    <#list list_102 as article>
+    <#if article_index gte 3>
+    <a href="${article.page_url}.html">${article.title}</a>
+</#if>
+</#list>
+</div>
+</div>
+
+<div class="premium_content">
+    <div class="imgtext">
+        <#list list_113 as article>
+        <#if article_index gte 0 && article_index lt 3>
+        <a href="${article.page_url}.html">
+            <img src="${article.title_image!}" alt="${article.title}">
+            <p>${article.title}</p>
+        </a>
+    </#if>
+</#list>
+</div>
+<div class="titletext">
+    <#list list_113 as article>
+    <#if article_index gte 3>
+    <a href="${article.page_url}.html">${article.title}</a>
+</#if>
+</#list>
+</div>
+</div>
+
+<div class="premium_content">
+    <div class="imgtext">
+        <#list list_115 as article>
+        <#if article_index gte 0 && article_index lt 3>
+        <a href="${article.page_url}.html">
+            <img src="${article.title_image!}" alt="${article.title}">
+            <p>${article.title}</p>
+        </a>
+    </#if>
+</#list>
+</div>
+<div class="titletext">
+    <#list list_115 as article>
+    <#if article_index gte 3>
+    <a href="${article.page_url}.html">${article.title}</a>
+</#if>
+</#list>
+</div>
+</div>
+
+<div class="premium_content">
+    <div class="imgtext">
+        <#list list_108 as article>
+        <#if article_index gte 0 && article_index lt 3>
+        <a href="${article.page_url}.html">
+            <img src="${article.title_image!}" alt="${article.title}">
+            <p>${article.title}</p>
+        </a>
+    </#if>
+</#list>
+</div>
+<div class="titletext">
+    <#list list_108 as article>
+    <#if article_index gte 3>
+    <a href="${article.page_url}.html">${article.title}</a>
+</#if>
+</#list>
+</div>
+</div>
+
+<div class="premium_content">
+    <div class="imgtext">
+        <#list list_112 as article>
+        <#if article_index gte 0 && article_index lt 3>
+        <a href="${article.page_url}.html">
+            <img src="${article.title_image!}" alt="${article.title}">
+            <p>${article.title}</p>
+        </a>
+    </#if>
+</#list>
+</div>
+<div class="titletext">
+    <#list list_112 as article>
+    <#if article_index gte 3>
+    <a href="${article.page_url}.html">${article.title}</a>
+</#if>
+</#list>
+</div>
+</div>
+
+</div>
+</div>
+<!-- 十大品牌 -->
+<div classs="premium">
+    <h2 class="exptitle htab">
+        <span>十大品牌</span>
+        <ul class="extab" id="ten_ul">
+            <li onmouseover="tab(this)" value="101" class="extabed"><div class="after"></div>家用电器</li>
+            <li onmouseover="tab(this)" value="105"><div class="after"></div>数码手机</li>
+            <li onmouseover="tab(this)" value="106"><div class="after"></div>电脑办公</li>
+            <li onmouseover="tab(this)" value="104"><div class="after"></div>美妆个护</li>
+            <li onmouseover="tab(this)" value="107"><div class="after"></div>母婴玩具</li>
+            <li onmouseover="tab(this)" value="109"><div class="after"></div>医药保健</li>
+            <li onmouseover="tab(this)" value="102"><div class="after"></div>服装内衣</li>
+            <li onmouseover="tab(this)" value="113"><div class="after"></div>鞋靴饰品</li>
+            <li onmouseover="tab(this)" value="115"><div class="after"></div>汽车房产</li>
+            <li onmouseover="tab(this)" value="108"><div class="after"></div>食品生鲜</li>
+            <li onmouseover="tab(this)" value="112"><div class="after"></div>家居家装</li>
+        </ul>
+    </h2>
+    <div class="premconw">
+        <div class="premium_content">
+            <div class="flul">
+                <#list tenlist_101 as brand>
+                <div class="flli">
+                    <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+                    <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+                </div>
+            </#list>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="premium_content">
+        <div class="flul">
+            <#list tenlist_105 as brand>
+            <div class="flli">
+                <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+                <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+            </div>
+        </#list>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list tenlist_106 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list tenlist_104 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list tenlist_107 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list tenlist_109 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+
+<div class="premium_content">
+    <div class="flul">
+        <#list tenlist_102 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list tenlist_113 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list tenlist_115 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list tenlist_108 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list tenlist_112 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 国内品牌 -->
+<div classs="premium">
+    <h2 class="exptitle htab">
+        <span>国内品牌</span>
+        <ul class="extab" id="home_ul">
+            <li onmouseover="tab(this)" value="101" class="extabed"><div class="after"></div>家用电器</li>
+            <li onmouseover="tab(this)" value="105"><div class="after"></div>数码手机</li>
+            <li onmouseover="tab(this)" value="106"><div class="after"></div>电脑办公</li>
+            <li onmouseover="tab(this)" value="104"><div class="after"></div>美妆个护</li>
+            <li onmouseover="tab(this)" value="107"><div class="after"></div>母婴玩具</li>
+            <li onmouseover="tab(this)" value="109"><div class="after"></div>医药保健</li>
+            <li onmouseover="tab(this)" value="102"><div class="after"></div>服装内衣</li>
+            <li onmouseover="tab(this)" value="113"><div class="after"></div>鞋靴饰品</li>
+            <li onmouseover="tab(this)" value="115"><div class="after"></div>汽车房产</li>
+            <li onmouseover="tab(this)" value="108"><div class="after"></div>食品生鲜</li>
+            <li onmouseover="tab(this)" value="112"><div class="after"></div>家居家装</li>
+        </ul>
+        <a class=" mores" href="/vbds/0/2/0">MORE <strong>+</strong></a>
+    </h2>
+    <div class="premconw">
+        <div class="premium_content">
+            <div class="flul">
+                <#list homelist_101 as brand>
+                <div class="flli">
+                    <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+                    <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+                </div>
+            </#list>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="premium_content">
+        <div class="flul">
+            <#list homelist_105 as brand>
+            <div class="flli">
+                <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+                <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+            </div>
+        </#list>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list homelist_106 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list homelist_104 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list homelist_107 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list homelist_109 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list homelist_102 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list homelist_113 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list homelist_115 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list homelist_108 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list homelist_112 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 国际品牌 -->
+<div classs="premium">
+    <h2 class="exptitle htab">
+        <span>国际品牌</span>
+        <ul class="extab" id="int_ul">
+            <li onmouseover="tab(this)" value="101" class="extabed"><div class="after"></div>家用电器</li>
+            <li onmouseover="tab(this)" value="105"><div class="after"></div>数码手机</li>
+            <li onmouseover="tab(this)" value="106"><div class="after"></div>电脑办公</li>
+            <li onmouseover="tab(this)" value="104"><div class="after"></div>美妆个护</li>
+            <li onmouseover="tab(this)" value="107"><div class="after"></div>母婴玩具</li>
+            <li onmouseover="tab(this)" value="109"><div class="after"></div>医药保健</li>
+            <li onmouseover="tab(this)" value="102"><div class="after"></div>服装内衣</li>
+            <li onmouseover="tab(this)" value="113"><div class="after"></div>鞋靴饰品</li>
+            <li onmouseover="tab(this)" value="115"><div class="after"></div>汽车房产</li>
+            <li onmouseover="tab(this)" value="108"><div class="after"></div>食品生鲜</li>
+            <li onmouseover="tab(this)" value="112"><div class="after"></div>家居家装</li>
+        </ul>
+        <a class=" mores" href="/vbds/0/1/0">MORE <strong>+</strong></a>
+    </h2>
+    <div class="premconw">
+        <div class="premium_content">
+            <div class="flul">
+                <#list intlist_101 as brand>
+                <div class="flli">
+                    <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+                    <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+                </div>
+            </#list>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="premium_content">
+        <div class="flul">
+            <#list intlist_105 as brand>
+            <div class="flli">
+                <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+                <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+            </div>
+        </#list>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list intlist_106 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list intlist_104 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list intlist_107 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list intlist_109 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list intlist_102 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list intlist_113 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list intlist_115 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list intlist_108 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list intlist_112 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 新进品牌 -->
+<div classs="premium">
+    <h2 class="exptitle htab">
+        <span>新进品牌</span>
+        <ul class="extab" id="new_ul">
+            <li onmouseover="tab(this)" value="101" class="extabed"><div class="after"></div>家用电器</li>
+            <li onmouseover="tab(this)" value="105"><div class="after"></div>数码手机</li>
+            <li onmouseover="tab(this)" value="106"><div class="after"></div>电脑办公</li>
+            <li onmouseover="tab(this)" value="104"><div class="after"></div>美妆个护</li>
+            <li onmouseover="tab(this)" value="107"><div class="after"></div>母婴玩具</li>
+            <li onmouseover="tab(this)" value="109"><div class="after"></div>医药保健</li>
+            <li onmouseover="tab(this)" value="102"><div class="after"></div>服装内衣</li>
+            <li onmouseover="tab(this)" value="113"><div class="after"></div>鞋靴饰品</li>
+            <li onmouseover="tab(this)" value="115"><div class="after"></div>汽车房产</li>
+            <li onmouseover="tab(this)" value="108"><div class="after"></div>食品生鲜</li>
+            <li onmouseover="tab(this)" value="112"><div class="after"></div>家居家装</li>
+        </ul>
+        <a class=" mores" href="/vbds/0/3/0">MORE <strong>+</strong></a>
+    </h2>
+    <div class="premconw" style="margin-bottom:8px;">
+        <div class="premium_content">
+            <div class="flul">
+                <#list newlist_101 as brand>
+                <div class="flli">
+                    <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+                    <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+                </div>
+            </#list>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="premium_content">
+        <div class="flul">
+            <#list newlist_105 as brand>
+            <div class="flli">
+                <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+                <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+            </div>
+        </#list>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list newlist_106 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list newlist_104 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list newlist_107 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list newlist_109 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list newlist_102 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list newlist_113 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list newlist_115 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list newlist_108 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+<div class="premium_content">
+    <div class="flul">
+        <#list newlist_112 as brand>
+        <div class="flli">
+            <a class="flliimg" href="/vbd/${brand.brand_id}/"><img src="${brand.brand_image!}" alt="${brand.brand_name_s!}"></a>
+            <a class="fllitext" href="/vbd/${brand.brand_id}/"><span></span>${brand.brand_name_s!}<span></span></a>
+        </div>
+    </#list>
+    <div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 品牌故事 -->
+<div classs="premium">
+    <h2 class="exptitle htab" style="border:none">
+        <span>品牌故事</span>
+        <a class="mores" href="/brand-list/0/112-2-0/0">MORE <strong>+</strong></a>
+    </h2>
+    <div class="prestory imgtext">
+        <#list storys_list as article>
+        <a href="${article.page_url}.html">
+            <img src="${article.title_image!}" alt="${article.title}">
+            <p>${article.title}</p>
+        </a>
+    </#list>
+</div>
+</div>
+<!-- 品牌人物 -->
+<div classs="premium">
+    <h2 class="exptitle htab" style="border:none">
+        <span>品牌人物</span>
+        <a class=" mores" href="/brand-list/0/113-2-0/0">MORE <strong>+</strong></a>
+    </h2>
+    <div class="characterhei">
+        <div class="character">
+            <#list pers_list as article>
+            <div class="chaonew">
+                <div class="characer_one">
+                    <a class="chimg" href="${article.page_url}.html"><img src="${article.title_image!}" alt="${article.title}"></a>
+                    <div class="chtitle">
+                        <a href="${article.page_url}.html">${article.title}</a>
+                    </div>
+                    <p class="chtext">
+                        <#if (article.content_intro?? && article.content_intro?length>30)>
+							${article.content_intro?substring(0,30)}...
+						<#else>
+							${article.content_intro}
+						</#if>
+                    </p>
+                </div>
+            </div>
+        </#list>
+    </div>
+</div>
+</div>
+</div>
+<!--#include virtual="/foots.html" -->
+<script type="text/javascript" src="/home/js/pinpai.js"></script>
+<script>
+    localStorage.topval = 110;
+    /* 各块导航点击切换模块 */
+    function tab(obj){
+        var index1=$(obj).index();
+        $(obj).addClass('extabed').siblings().removeClass('extabed');
+        $(obj).parent('.extab').parent('.htab').siblings('.premconw').find('.premium_content').eq(index1).show().siblings().hide();
+    }
+</script>
+</body>
+</html>
